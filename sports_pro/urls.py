@@ -22,5 +22,4 @@ urlpatterns = [
     path('basketball/', include('basketball.urls')),
     # path('blog/', include('blog.urls')),
     path('predictions/', include('predictions.urls')),
-    
 ]
