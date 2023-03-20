@@ -1,6 +1,4 @@
 from django.shortcuts import render, get_object_or_404, redirect
-
-
 from .forms import BlogPostForm
 from .models import BlogPostModel
 
@@ -63,3 +61,4 @@ def blog_delete(request, slug):
         blog_obj.delete()
 
     return redirect('/')
+

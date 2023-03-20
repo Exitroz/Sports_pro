@@ -1,8 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
-
 class Competition(models.Model):
     league_title = models.CharField(max_length=100)
     country = models.CharField(max_length=50)
@@ -15,3 +12,4 @@ class Fixtures(models.Model):
     date = models.DateField()
     time = models.TimeField()
     is_favoured = models.BooleanField(default=False)
+
