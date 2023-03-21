@@ -12,10 +12,7 @@ def add_blog(request):
     if request.method == 'POST' : # and request.FILES['image']
         form = BlogPostForm(request.POST, request.FILES)
         if form.is_valid():
-            blog_obj = form.save(commit=False)
-            blog_obj.user = request.user
-            
-            blog_obj.save()  
+            blog_obj = form.save() 
         return redirect('/') # see_blog
     else:
         form = BlogPostForm()
