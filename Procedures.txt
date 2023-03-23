@@ -28,3 +28,8 @@ With these steps, you should be able to connect your Django app to a football li
 
 
 
+
+
+
+CREATE PLUGGABLE DATABASE hr USING 'C:\Users\User\AppData\Local\Temp\hr.txt'
+FILE_NAME_CONVERT=('C:\Users\User\AppData\Local\Temp\','C:\app\oracle\product\21c\oradata\XE\hr\');

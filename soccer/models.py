@@ -1,4 +1,5 @@
 from django.db import models
+# from fontawesome_5.fields import IconField
 
 class Competition(models.Model):
     league_title = models.CharField(max_length=100)
@@ -13,3 +14,8 @@ class Fixtures(models.Model):
     time = models.TimeField()
     is_favoured = models.BooleanField(default=False)
 
+
+
+# class Category(models.Model):
+#     ...
+#     icon = IconField()
