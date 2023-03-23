@@ -4,30 +4,99 @@ from django.http import JsonResponse
 # Create your views here.
 
 def index(request):
-    url = "https://api-football-beta.p.rapidapi.com/fixtures"
-
-    querystring = {"date":"2023-03-19"}
+    
+    template_name = 'index.html'
+    
+    baseurl = "https://livescore6.p.rapidapi.com/matches/v2/"
+    endpoint = "list-live"
+    
+    url = baseurl+endpoint
+    
+    querystring = {"Category":"soccer","Timezone":"-7"}
 
     headers = {
-        "X-RapidAPI-Key": "bb17079e36msh74bf5d47086ca7ep13fc06jsnc033492ad114",
-        "X-RapidAPI-Host": "api-football-beta.p.rapidapi.com"
+        "X-RapidAPI-Key": "d31ffed9cdmshdd3b46d49113fffp17b050jsn36beb1a72767",
+        "X-RapidAPI-Host": "livescore6.p.rapidapi.com"
     }
-    
-    response = requests.get(url, headers=headers, params=querystring)
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+
+    # data = response.json()
+
+    # stages = data['Stages'][0]
+    # print(stages.keys())
+    # events = stages.get('Events')
+
+
+    # print(events)
+    # print(events[0].keys())
     
     # Check if the API call was successful
     if response.status_code == 200:
         # Convert the response content to JSON
         data = response.json()
+        
+        stages = data['Stages']
+        
+        context = {
+            'stages':stages,
+        }
+        return render(request, template_name, context)
         # Return the data as a JSON response to the frontend
-        jsonResponse = JsonResponse(data, safe=False)
-        return jsonResponse
+        # jsonResponse = JsonResponse(data, safe=False)
+        # return jsonResponse
     else:
         # If the API call failed, return the error message as a JSON response
         error_message = {'error': response.reason}
         return JsonResponse(error_message, status=response.status_code)
     
     return render(request, 'index.html', {'jsonResponse': jsonResponse})
+
+
+
+
+def fixtures(request):  #by date
+    
+    template_name = 'index.html'
+    
+    baseurl = "https://livescore6.p.rapidapi.com/matches/v2/"
+    endpoint = "list-by-date"
+    
+    url = baseurl+endpoint
+    
+    querystring = {"Category":"soccer", "Date":"20201028", "Timezone":"-7"}
+
+    headers = {
+        "X-RapidAPI-Key": "d31ffed9cdmshdd3b46d49113fffp17b050jsn36beb1a72767",
+        "X-RapidAPI-Host": "livescore6.p.rapidapi.com"
+    }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+
+
+    # Check if the API call was successful
+    if response.status_code == 200:
+        # Convert the response content to JSON
+        data = response.json()
+        
+        stages = data['Stages']
+        
+        context = {
+            'stages':stages,
+        }
+        
+        return render(request, template_name, context)
+    else:
+        # If the API call failed, return the error message as a JSON response
+        error_message = {'error': response.reason}
+        return JsonResponse(error_message, status=response.status_code)
+    
+    return render(request, 'index.html', {'jsonResponse': jsonResponse})
+
+
+
+
+
 
 
 # def get_livescore(request):
