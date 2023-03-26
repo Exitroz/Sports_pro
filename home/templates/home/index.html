@@ -3,10 +3,6 @@
 
 
 
-{% load bootstrap5 %}
-
-
-
    
         <!-- layout-->
         {% block content%}
@@ -46,7 +42,6 @@
                                         </thead>
 
                                         <tbody class="text-center">
-
                                             {% for stage in stages %}
                                                 {% for row in stage.LeagueTable.L.0.Tables %}
                                                     {% if row.LTT == 1 %}
@@ -73,138 +68,6 @@
                                                     {% endif %}
                                                 {% endfor %}
                                             {% endfor %}
-
-
-                                            <tr>
-                                                <td class="text-left number">1 <i class="fa fa-caret-up" aria-hidden="true"></i></td>
-                                                <td class="text-left">
-                                                   <a href="single-team.html">
-                                                        <img src="img/clubs-logos/colombia.png" alt="Colombia"><span>Colombia</span>
-                                                    </a>
-                                                </td>
-                                                <td>38</td>
-                                                <td>26</td>
-                                                <td>9</td>
-                                                <td>3</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="text-left number">2 <i class="fa fa-caret-up" aria-hidden="true"></i></td>
-                                                <td class="text-left">
-                                                   <a href="single-team.html">
-                                                        <img src="img/clubs-logos/bra.png" alt="Brazil"><span>Brazil</span>
-                                                    </a>
-                                                </td>
-                                                <td>38</td>
-                                                <td>24</td>
-                                                <td>7</td>
-                                                <td>7</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="text-left number">3 <i class="fa fa-caret-up" aria-hidden="true"></i></td>
-                                                <td class="text-left">
-                                                   <a href="single-team.html">
-                                                        <img src="img/clubs-logos/arg.png" alt="Argentina"><span>Argentina</span>
-                                                    </a>
-                                                </td>
-                                                <td>38</td>
-                                                <td>22</td>
-                                                <td>9</td>
-                                                <td>7</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="text-left number">4<i class="fa fa-caret-down" aria-hidden="true"></i></td>
-                                                <td class="text-left">
-                                                   <a href="single-team.html">
-                                                        <img src="img/clubs-logos/japan.png" alt="Japan"><span>Japan</span>
-                                                    </a>
-                                                </td>
-                                                <td>38</td>
-                                                <td>20</td>
-                                                <td>10</td>
-                                                <td>8</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="text-left number">5  <i class="fa fa-caret-up" aria-hidden="true"></td>
-                                                <td class="text-left">
-                                                   <a href="single-team.html">
-                                                        <img src="img/clubs-logos/sen.png" alt="Senegal"><span>Senegal</span>
-                                                    </a>
-                                                </td>
-                                                <td>38</td>
-                                                <td>19</td>
-                                                <td>7</td>
-                                                <td>12</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="text-left number">6<i class="fa fa-caret-down" aria-hidden="true"></i></td>
-                                                <td class="text-left">
-                                                   <a href="single-team.html">
-                                                        <img src="img/clubs-logos/pol.png" alt="Poland"><span>Poland</span>
-                                                    </a>
-                                                </td>
-                                                <td>38</td>
-                                                <td>18</td>
-                                                <td>8</td>
-                                                <td>12</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="text-left number">7<i class="fa fa-caret-down" aria-hidden="true"></i></td>
-                                                <td class="text-left">
-                                                   <a href="single-team.html">
-                                                        <img  src="img/clubs-logos/rusia.png" alt="Russia"><span>Russia</span>
-                                                    </a>
-                                                </td>
-                                                <td>38</td>
-                                                <td>18</td>
-                                                <td>6</td>
-                                                <td>14</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="text-left number">8<i class="fa fa-caret-up" aria-hidden="true"></i></td>
-                                                <td class="text-left">
-                                                   <a href="single-team.html">
-                                                        <img src="img/clubs-logos/irn.png" alt="Iran"><span>Iran</span>
-                                                    </a>
-                                                </td>
-                                                <td>38</td>
-                                                <td>12</td>
-                                                <td>11</td>
-                                                <td>15</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="text-left number">9 <i class="fa fa-circle" aria-hidden="true"></i></td>
-                                                <td class="text-left">
-                                                    <a href="single-team.html">
-                                                        <img src="img/clubs-logos/esp.png" alt="Spain"><span>Spain</span>
-                                                    </a>
-                                                </td>
-                                                <td>38</td>
-                                                <td>26</td>
-                                                <td>9</td>
-                                                <td>3</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="text-left number">10<i class="fa fa-circle" aria-hidden="true"></i></td>
-                                                <td class="text-left">
-                                                    <a href="single-team.html">
-                                                        <img src="img/clubs-logos/fra.png" alt="France">
-                                                        <span>France</span>
-                                                    </a>
-                                                </td>
-                                                <td>38</td>
-                                                <td>24</td>
-                                                <td>7</td>
-                                                <td>7</td>
-                                            </tr>
 
                                           </tbody>
                                     </table>

@@ -1,3 +1,9 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content%}
+
 <!DOCTYPE html>
 <html lang="en">
     
@@ -22,10 +28,20 @@
         <link rel="apple-touch-icon" sizes="114x114" href="img/icons/apple-touch-icon-114x114.png">
     </head>
 
+
     <body>
 
         <!-- layout-->
         <div id="layout">
+
+
+
+            {% include 'header.html'%}
+
+
+            <!-- Section Title -->
+            <div class="section-title" style="{% static 'background:url(img/slide/1.jpg)' %}">
+
             <!-- Header-->
             <header>
                 <!-- End headerbox-->
@@ -420,6 +436,7 @@
 
             <!-- Section Title -->
             <div class="section-title" style="background:url(img/slide/1.jpg)">
+
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8">
@@ -460,6 +477,29 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+
+                                    {% for l in stages %}
+                                    {% for event in  l.Events %}
+                                    <tr>
+                                        <td>
+                                            <img src="https://lsm-static-prod.livescore.com/medium/{{event.T1.0.Img}}" alt="icon">
+                                            <strong>{{event.T1.0.Nm}}</strong><br>
+                                            <small class="meta-text">{{l.Snm}}</small>
+                                        </td>
+                                        <td class="text-center">Vs</td>
+                                        <td>
+                                            <img src="https://lsm-static-prod.livescore.com/medium/{{event.T2.0.Img}}" alt="icon1">
+                                            <strong>{{event.T2.0.Nm}}</strong><br>
+                                            <small class="meta-text">{{l.Snm}}</small>
+                                        </td>
+                                        <td>
+                                            {{event.Esd}}<br>
+                                            <small class="meta-text">{{event.Eps}}</small>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                    {% endfor %}
+
                                     <tr>
                                         <td>
                                             <img src="img/clubs-logos/colombia.png" alt="icon">
@@ -664,6 +704,7 @@
                                             <small class="meta-text">Kazan Arena,Kazan</small>
                                         </td>
                                     </tr>
+
                                 </tbody>
                             </table>
                         </div>
@@ -722,6 +763,8 @@
             <div class="content-instagram">
                 <div id="instafeed"></div>
             </div>
+
+
 
             <!-- footer-->
             <footer id="footer">
@@ -866,6 +909,7 @@
                 </div>
             </div>
             <!-- footer Down-->
+
         </div>
         <!-- End layout-->
 
@@ -884,5 +928,9 @@
 
     </body>
 
+{% endblock %}
+
+
 <!-- Mirrored from html.iwthemes.com/sportscup/run/fixtures.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Mar 2023 00:02:21 GMT -->
 </html>
+
