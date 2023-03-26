@@ -1,10 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-
-
-
 {% load bootstrap5 %}
-
 
 
    
@@ -46,35 +42,6 @@
                                         </thead>
 
                                         <tbody class="text-center">
-
-                                            {% for stage in stages %}
-                                                {% for row in stage.LeagueTable.L.0.Tables %}
-                                                    {% if row.LTT == 1 %}
-                                                        {% for team in row.team %}
-                                                            <tr>
-                                                                <td class="text-left number">
-                                                                    {{team.rnk}}
-                                                                    {% comment %} {% if %}
-                                                                    <i class="fa fa-caret-up" aria-hidden="true"></i>
-                                                                    {% endif %} {% endcomment %}
-                                                                    
-                                                                </td>
-                                                                <td class="text-left">
-                                                                <a href="single-team.html">
-                                                                        <img src="https://lsm-static-prod.livescore.com/medium/{{team.Img}}" alt="Colombia"><span>{{team.Tnm}}</span>
-                                                                    </a>
-                                                                </td>
-                                                                <td>{{team.pld}}</td>
-                                                                <td>{{team.win}}</td>
-                                                                <td>{{team.drw}}</td>
-                                                                <td>{{team.pts}}</td>
-                                                            </tr>
-                                                        {% endfor %}
-                                                    {% endif %}
-                                                {% endfor %}
-                                            {% endfor %}
-
-
                                             <tr>
                                                 <td class="text-left number">1 <i class="fa fa-caret-up" aria-hidden="true"></i></td>
                                                 <td class="text-left">
@@ -205,7 +172,6 @@
                                                 <td>7</td>
                                                 <td>7</td>
                                             </tr>
-
                                           </tbody>
                                     </table>
                                      <a href="table-point.html" class="btn-iw full no-margin">View Full Table</a>

@@ -20,6 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
     path('soccer/', include('soccer.urls')),
+    path('soccer', include('soccer.urls')),
     path('basketball/', include('basketball.urls')),
     # path('blog/', include('blog.urls')),
     path('predictions/', include('predictions.urls')),
