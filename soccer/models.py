@@ -7,7 +7,11 @@ class Competition(models.Model):
 
 
 class Fixtures(models.Model):
+
     competition = models.ForeignKey(Competition, on_delete=models.CASCADE)
+
+    competiton = models.ForeignKey(Competition, on_delete=models.CASCADE)
+
     team_a = models.CharField(max_length=100)
     team_b = models.CharField(max_length=100)
     date = models.DateField()
