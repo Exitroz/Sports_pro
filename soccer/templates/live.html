@@ -3,6 +3,7 @@
 
 {% block content%}
     <body>
+        
 
         <!-- layout-->
         <div id="layout">
@@ -16,16 +17,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8">
-                            <h1>Fixtures</h1>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="breadcrumbs">
-                                <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li>Inner Page</li>
-                                </ul>
-                            </div>
+                            <h1>Live</h1>
                         </div>
                     </div>
                 </div>
@@ -37,13 +29,12 @@
 
                 <div class="container paddings-mini">
                     <div class="row">
-
                         <div class="col-lg-12">
                             <h3 class="clear-title">Matches</h3>
                         </div>
 
                         <div class="col-lg-12">
-                            <table class="table-striped table-responsive table-hover">
+                            <table class="table-striped table-responsive table-hover"> 
                                 <thead>
                                     <tr>
                                         <th>Team A</th>
@@ -52,29 +43,52 @@
                                         <th>Details</th>
                                     </tr>
                                 </thead>
+                            
+                                {% for st in stages %}
+
+                                {% for game in st.Events %}
                                 <tbody>
-                                    {% for l in stages %}
-                                    {% for event in  l.Events %}
                                     <tr>
                                         <td>
-                                            <img src="https://lsm-static-prod.livescore.com/medium/{{event.T1.0.Img}}" alt="icon">
-                                            <strong>{{event.T1.0.Nm}}</strong><br>
-                                            <small class="meta-text">{{l.Snm}}</small>
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <img src="https://lsm-static-prod.livescore.com/medium/{{game.T1.0.Img}}" alt="icon">
+                                                    <strong>{{game.T1.0.Nm}}</strong><br>
+                                                    <small class="meta-text">{% if st.CompN %} {{st.CompN}} {% else %} {{st.Snm}} {% endif %}</small></small>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                   
+                                                    <strong class="float-sm-right">{{game.Tr1}}</strong><br>
+                                                    
+                                                </div>
+                                            </div>
                                         </td>
                                         <td class="text-center">Vs</td>
                                         <td>
-                                            <img src="https://lsm-static-prod.livescore.com/medium/{{event.T2.0.Img}}" alt="icon1">
-                                            <strong>{{event.T2.0.Nm}}</strong><br>
-                                            <small class="meta-text">{{l.Snm}}</small>
+                                            <div class="row">
+                                                <div class="col-lg-3">
+                                                   
+                                                    <strong >{{game.Tr1}}</strong><br>
+                                                    
+                                                </div>
+                                                <div class="col-lg-9 float-sm-right">
+                                                    <img src="https://lsm-static-prod.livescore.com/medium/{{game.T2.0.Img}}" alt="icon1">
+                                                    <strong>{{game.T2.0.Nm}}</strong><br>
+                                                    <small class="meta-text">{% if st.CompN %} {{st.CompN}} {% else %} {{st.Snm}} {% endif %}</small> 
+                                                </div>
+                                            </div>
                                         </td>
                                         <td>
-                                            {{event.Esd}}<br>
-                                            <small class="meta-text">{{event.Eps}}</small>
+                                            {{game.Esd}}<br>
+                                            <small class="meta-text">{{game.Eps}}</small>
                                         </td>
                                     </tr>
-                                    {% endfor %}
-                                    {% endfor %}
                                 </tbody>
+                                {% endfor %}
+                                {% endfor %}
+                              
+
+
                             </table>
                         </div>
                     </div>
@@ -134,20 +148,7 @@
             </div>
 
         </div>
-        <!-- End layout-->
-
-        <!-- ======================= JQuery libs =========================== -->
-        <!-- jQuery local-->
-        <script type="text/javascript" src="assets/js/jquery.js"></script>
-        <!-- popper.js-->
-        <script type="text/javascript" src="assets/js/popper.min.js"></script>
-        <!-- bootstrap.min.js-->
-        <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-        <!-- required-scripts.js-->
-        <script type="text/javascript" src="assets/js/theme-scripts.js"></script>
-        <!-- theme-main.js-->
-        <script type="text/javascript" src="assets/js/theme-main.js"></script>
-        <!-- ======================= End JQuery libs =========================== -->
+        
 
     </body>
 {% endblock %}

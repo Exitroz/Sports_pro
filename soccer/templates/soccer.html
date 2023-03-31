@@ -26,7 +26,7 @@
                                 <div class="panel-box">
 
                                     <div class="titles no-margin border-0">
-                                        <h4>Points Table</h4>
+                                        <h4>Premier League Table</h4>
                                     </div>
 
                                     <table class="table-striped table-responsive table-hover result-point small">
@@ -49,14 +49,15 @@
                                                             <tr>
                                                                 <td class="text-left number">
                                                                     {{team.rnk}}
-                                                                    {% comment %} {% if %}
-                                                                    <i class="fa fa-caret-up" aria-hidden="true"></i>
-                                                                    {% endif %} {% endcomment %}
+
+                                                                    {% if team.rnk <= 4 %}
+                                                                        <i class="fa fa-caret-up" aria-hidden="true"></i>
+                                                                    {% endif %}
                                                                     
                                                                 </td>
                                                                 <td class="text-left">
-                                                                <a href="single-team.html">
-                                                                        <img src="https://lsm-static-prod.livescore.com/medium/{{team.Img}}" alt="Colombia"><span>{{team.Tnm}}</span>
+                                                                <a href="#">
+                                                                        <img src="https://lsm-static-prod.livescore.com/medium/{{team.Img}}" alt="{{team.Tnm}}"><span>{{team.Tnm}}</span>
                                                                     </a>
                                                                 </td>
                                                                 <td>{{team.pld}}</td>
@@ -71,7 +72,7 @@
 
                                           </tbody>
                                     </table>
-                                     <a href="table-point.html" class="btn-iw full no-margin">View Full Table</a>
+                                     <a href="{% url 'tablesByleague' "england" "premier-league" %}" class="btn-iw full no-margin">View Full Table</a>
                                 </div>
                                 <!-- End Point Table -->
 
@@ -110,62 +111,27 @@
                                                             <th>Details</th>
                                                         </tr>
                                                     </thead>
+                                                    {% for game in fixtures %}
                                                     <tbody>
                                                         <tr>
                                                             <td>
-                                                                <img src="img/clubs-logos/colombia.png" alt="icon">
-                                                                <strong>Colombia</strong><br>
-                                                                <small class="meta-text">GROUP H.</small>
+                                                                <img src="https://lsm-static-prod.livescore.com/medium/{{game.T1.0.Img}}" alt="icon">
+                                                                <strong>{{game.T1.0.Nm}}</strong><br>
+                                                                <small class="meta-text">{{Competion_name}}</small>
                                                             </td>
                                                             <td class="text-center">Vs</td>
                                                             <td>
-                                                                <img src="img/clubs-logos/japan.png" alt="icon1">
-                                                                <strong>Japan</strong><br>
-                                                                <small class="meta-text">GROUP H.</small>
+                                                                <img src="https://lsm-static-prod.livescore.com/medium/{{game.T2.0.Img}}" alt="icon1">
+                                                                <strong>{{game.T2.0.Nm}}</strong><br>
+                                                                <small class="meta-text">{{Competion_name}}</small> 
                                                             </td>
                                                             <td>
-                                                                Jun 19,  07:00<br>
-                                                                <small class="meta-text">Mordovia Arena,Saransk</small>
+                                                                {{game.Esd}}<br>
+                                                                <small class="meta-text">{{game.Eps}}</small>
                                                             </td>
                                                         </tr>
-
-                                                        <tr>
-                                                            <td>
-                                                                <img src="img/clubs-logos/pol.png" alt="icon1">
-                                                                <strong>Poland</strong><br>
-                                                                <small class="meta-text">GROUP H.</small>
-                                                            </td>
-                                                            <td class="text-center">Vs</td>
-                                                            <td>
-                                                                <img src="img/clubs-logos/colombia.png" alt="icon">
-                                                                <strong>Colombia</strong><br>
-                                                                <small class="meta-text">GROUP H.</small>
-                                                            </td>
-                                                            <td>
-                                                                Jun 24,  13:00<br>
-                                                                <small class="meta-text">Kazan Arena,Kazan</small>
-                                                            </td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td>
-                                                                <img src="img/clubs-logos/sen.png" alt="icon1">
-                                                                <strong>Senegal</strong><br>
-                                                                <small class="meta-text">GROUP H.</small>
-                                                            </td>
-                                                            <td class="text-center">Vs</td>
-                                                            <td>
-                                                                <img src="img/clubs-logos/colombia.png" alt="icon">
-                                                                <strong>Colombia</strong><br>
-                                                                <small class="meta-text">GROUP H.</small>
-                                                            </td>
-                                                            <td>
-                                                                Jun 28, 09:00<br>
-                                                                <small class="meta-text">Samara Arena,Samara</small>
-                                                            </td>
-                                                        </tr>
-                                                    
                                                     </tbody>
+                                                    {% endfor %}
                                                 </table>
                                             </div>
                                         </div>

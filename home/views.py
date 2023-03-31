@@ -8,11 +8,10 @@ from django.http import JsonResponse
 def index(request):    
     url = "https://livescore6.p.rapidapi.com/matches/v2/list-by-league"
     
-    query_string_premier_league = {"Category":"soccer","Ccd":"england","Scd":"premier-league","Timezone":"-7"}
     querystring = {"Category":"soccer","Ccd":"england","Scd":"premier-league","Timezone":"-7"}
 
     headers = {
-        "X-RapidAPI-Key": "d31ffed9cdmshdd3b46d49113fffp17b050jsn36beb1a72767",
+        "X-RapidAPI-Key": "6b988f2637msh4473b4fe6cd4359p151307jsn6639db590b7a",
         "X-RapidAPI-Host": "livescore6.p.rapidapi.com"
     }
 
@@ -28,14 +27,14 @@ def index(request):
         
         stages = data['Stages']
         
-        for stage in stages:
-            print(stage.keys())
+        # for stage in stages:
+        #     print(stage.keys())
             
-            table = stage['LeagueTable']['L'][0]['Tables']
+        #     table = stage['LeagueTable']['L'][0]['Tables']
             
-            for row in table:
-                print(row.keys())
-                print(row.values())
+        #     for row in table:
+        #         print(row.keys())
+        #         print(row.values())
             
         context = {
             'stages':stages,
