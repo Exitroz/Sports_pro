@@ -1,3 +1,4 @@
+
 from django.shortcuts import render
 import requests
 import datetime
@@ -62,3 +63,4 @@ def index(request):
         return JsonResponse(error_message, status=response.status_code)
     
     return render(request, 'home/index.html', {'jsonResponse': jsonResponse})
+
