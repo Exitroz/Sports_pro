@@ -38,15 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'fontawesome_5',
-
     'home',
     'soccer',
     'blog',
     'predictions',
     'basketball',
-
-    'bootstrap5'
-
 ]
 
 MIDDLEWARE = [
