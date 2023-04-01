@@ -17,7 +17,23 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8">
-                            <h1>Live</h1>
+                            {% if 'fixtures' in request.path %}
+                            <h1>Fixtures</h1>
+                            {% elif 'results' in request.path %}
+                            <h1>Results</h1>
+                            {% else %}
+                            <h1>Tables</h1>
+                            {% endif %}
+                            
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="breadcrumbs">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li>Inner Page</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -31,10 +47,17 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <h3 class="clear-title">Matches</h3>
+                            
+                            <h3>
+                                {{Competion_name}} ({{stage_name}})
+                            </h3>
+                           
+                            {% include "competions_navbar.html" %}
                         </div>
 
                         <div class="col-lg-12">
                             <table class="table-striped table-responsive table-hover"> 
+                                {% if 'table' not in request.path %}
                                 <thead>
                                     <tr>
                                         <th>Team A</th>
@@ -43,40 +66,22 @@
                                         <th>Details</th>
                                     </tr>
                                 </thead>
-                            
-                                {% for st in stages %}
-
-                                {% for game in st.Events %}
+                                {% endif %}
+                                {% if 'fixtures' in request.path %}
+                                {% for game in Fixtures %}
+                                
                                 <tbody>
                                     <tr>
                                         <td>
-                                            <div class="row">
-                                                <div class="col-lg-6">
-                                                    <img src="https://lsm-static-prod.livescore.com/medium/{{game.T1.0.Img}}" alt="icon">
-                                                    <strong>{{game.T1.0.Nm}}</strong><br>
-                                                    <small class="meta-text">{% if st.CompN %} {{st.CompN}} {% else %} {{st.Snm}} {% endif %}</small></small>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                   
-                                                    <strong class="float-sm-right">{{game.Tr1}}</strong><br>
-                                                    
-                                                </div>
-                                            </div>
+                                            <img src="https://lsm-static-prod.livescore.com/medium/{{game.T1.0.Img}}" alt="icon">
+                                            <strong>{{game.T1.0.Nm}}</strong><br>
+                                            <small class="meta-text">{{Competion_name}}</small>
                                         </td>
                                         <td class="text-center">Vs</td>
                                         <td>
-                                            <div class="row">
-                                                <div class="col-lg-3">
-                                                   
-                                                    <strong >{{game.Tr2}}</strong><br>
-                                                    
-                                                </div>
-                                                <div class="col-lg-9 float-sm-right">
-                                                    <img src="https://lsm-static-prod.livescore.com/medium/{{game.T2.0.Img}}" alt="icon1">
-                                                    <strong>{{game.T2.0.Nm}}</strong><br>
-                                                    <small class="meta-text">{% if st.CompN %} {{st.CompN}} {% else %} {{st.Snm}} {% endif %}</small> 
-                                                </div>
-                                            </div>
+                                            <img src="https://lsm-static-prod.livescore.com/medium/{{game.T2.0.Img}}" alt="icon1">
+                                            <strong>{{game.T2.0.Nm}}</strong><br>
+                                            <small class="meta-text">{{Competion_name}}</small> 
                                         </td>
                                         <td>
                                             {{game.Esd}}<br>
@@ -85,9 +90,33 @@
                                     </tr>
                                 </tbody>
                                 {% endfor %}
+                                {% elif 'results' in request.path %}
+                                {% for game in Results %}
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <img src="https://lsm-static-prod.livescore.com/medium/{{game.T1.0.Img}}" alt="icon">
+                                            <strong>{{game.T1.0.Nm}}</strong><br>
+                                            <strong>{{game.Tr1}}</strong><br>
+                                            <small class="meta-text">{{Competion_name}}</small>
+                                        </td>
+                                        <td class="text-center">Vs</td>
+                                        <td>
+                                            <img src="https://lsm-static-prod.livescore.com/medium/{{game.T2.0.Img}}" alt="icon1">
+                                            <strong>{{game.T2.0.Nm}}</strong><br>
+                                            <strong>{{game.Tr2}}</strong><br>
+                                            <small class="meta-text">{{Competion_name}}</small> 
+                                        </td>
+                                        <td>
+                                            {{game.Esd}}<br>
+                                            <small class="meta-text">{{game.Eps}}</small>
+                                        </td>
+                                    </tr>
+                                </tbody>
                                 {% endfor %}
-                              
-
+                                {% else %}
+                                {% include 'table-point.html' %}
+                                {% endif %}
 
                             </table>
                         </div>
@@ -148,7 +177,15 @@
             </div>
 
         </div>
-        
-
+             <!-- jQuery local-->
+             <script type="text/javascript" src="assets/js/jquery.js"></script>
+             <!-- popper.js-->
+             <script type="text/javascript" src="assets/js/popper.min.js"></script>
+             <!-- bootstrap.min.js-->
+             <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+             <!-- required-scripts.js-->
+             <script type="text/javascript" src="assets/js/theme-scripts.js"></script>
+             <!-- theme-main.js-->
+             <script type="text/javascript" src="assets/js/theme-main.js"></script>
     </body>
 {% endblock %}
