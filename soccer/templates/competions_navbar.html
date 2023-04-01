@@ -1,0 +1,352 @@
+
+<nav style="background-color: #333; height: 50px;">
+    <ul style="list-style: none; margin: 0; padding: 0; display: flex; justify-content: space-between; align-items: center; height: 100%;">
+      <!--England-->
+      <li class="dropdown">
+        <a href="#" style="color: #fff; display: inline-block; padding: 0 20px; line-height: 50px;">Champions League</a>
+        <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; background-color: #333; z-index: 1; display: none;">
+          
+          <!--Premier Leagues -->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group A</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "champions-league" "group-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "champions-league" "group-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "champions-league" "group-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li> 
+
+          <!--Championship -->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group B</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "champions-league" "group-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "champions-league" "group-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "champions-league" "group-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li> 
+
+          <!--League 1-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group C</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "champions-league" "group-c" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "champions-league" "group-c" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "champions-league" "group-c" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <!--League 2-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group D</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "champions-league" "group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "champions-league" "group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "champions-league" "group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li> 
+
+          <!--League 2-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group E</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "champions-league" "group-e" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "champions-league" "group-e" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "champions-league" "group-e" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li> 
+
+          <!--League 2-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group F</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "champions-league" "group-f" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "champions-league" "group-f" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "champions-league" "group-f" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li> 
+
+          <!--League 2-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group G</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "champions-league" "group-g" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "champions-league" "group-g" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "champions-league" "group-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li> 
+
+          <!--League 2-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group D</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "champions-league" "group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "champions-league" "group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "champions-league" "group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li> 
+
+          <!--League 2-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group D</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "champions-league" "group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "champions-league" "group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "champions-league" "group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li> 
+
+          <!--League 2-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group D</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "champions-league" "group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "champions-league" "group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "champions-league" "group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li> 
+        </ul>
+      </li>
+
+      <!--Spain-->
+      <li class="dropdown">
+        <a href="#" style="color: #fff; display: inline-block; padding: 0 20px; line-height: 50px;">Spain</a>
+        <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; background-color: #333; z-index: 1; display: none;">
+          
+          <!--LaLiga Santander-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">LaLiga</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague' "spain" "laliga-santander" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "spain" "laliga-santander" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "spain" "laliga-santander" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+            </ul>
+          </li>
+
+          <!--LaLiga Smartbank-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">LaLiga</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague' "spain" "laliga-smartbank" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "spain" "laliga-smartbank" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "spain" "laliga-smartbank" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+      </li>
+
+      <!--Italy-->
+      <li class="dropdown">
+        <a href="#" style="color: #fff; display: inline-block; padding: 0 20px; line-height: 50px;">Italy</a>
+        <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; background-color: #333; z-index: 1; display: none;">
+        
+          <!--Serie A-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Serie A</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague' "italy" "serie-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "italy" "serie-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "italy" "serie-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <!--Germany-->
+      <li class="dropdown">
+        <a href="#" style="color: #fff; display: inline-block; padding: 0 20px; line-height: 50px;">Germany</a>
+        <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; background-color: #333; z-index: 1; display: none;">
+          
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Product 3</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 1</a>
+              </li>
+              <li>
+                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 2</a>
+              </li>
+              <li>
+                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 3</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <!--France-->
+      <li class="dropdown">
+        <a href="#" style="color: #fff; display: inline-block; padding: 0 20px; line-height: 50px;">Products</a>
+        <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; background-color: #333; z-index: 1; display: none;">
+          <li>
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Product 1</a>
+          </li>
+          <li>
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Product 2</a>
+          </li>
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Product 3</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 1</a>
+              </li>
+              <li>
+                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 2</a>
+              </li>
+              <li>
+                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 3</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <!--Netherlands-->
+      <li class="dropdown">
+        <a href="#" style="color: #fff; display: inline-block; padding: 0 20px; line-height: 50px;">Products</a>
+        <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; background-color: #333; z-index: 1; display: none;">
+          <li>
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Product 1</a>
+          </li>
+          <li>
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Product 2</a>
+          </li>
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Product 3</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 1</a>
+              </li>
+              <li>
+                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 2</a>
+              </li>
+              <li>
+                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 3</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <!--Scotland-->
+      <li class="dropdown">
+        <a href="#" style="color: #fff; display: inline-block; padding: 0 20px; line-height: 50px;">Scotland</a>
+        <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; background-color: #333; z-index: 1; display: none;">
+          <li>
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Product 1</a>
+          </li>
+          <li>
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Product 2</a>
+          </li>
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Product 3</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 1</a>
+              </li>
+              <li>
+                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 2</a>
+              </li>
+              <li>
+                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 3</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+</nav>
+  
+  <script>
+    // Add click event listeners to dropdown toggle links
+    var dropdownToggles = document.querySelectorAll('.dropdown > a');
+    for (var i = 0; i < dropdownToggles.length; i++) {
+      dropdownToggles[i].addEventListener('click', function(e) {
+        e.preventDefault();
+        var dropdownMenu = this.nextElementSibling;
+        if (dropdownMenu.style.display === 'none') {
+          dropdownMenu.style.display = 'block';
+        } else {
+          dropdownMenu.style.display = 'none';
+        }
+      });
+    }
+  </script>
+  
+  
