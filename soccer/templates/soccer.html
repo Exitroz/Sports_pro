@@ -74,7 +74,14 @@
                                                 {% endfor %}
                                             {% endfor %}
 
-
+                                            <form method="GET" action="{% url 'soccer' %}">
+                                                {% csrf_token %}
+                                                <input type="date" name="date">
+                                                <button type="submit">Submit</button>
+                                            </form>
+                                            <h1>
+                                                {{data_param}}
+                                            </h1>
                                             <tr>
                                                 <td class="text-left number">1 <i class="fa fa-caret-up" aria-hidden="true"></i></td>
                                                 <td class="text-left">

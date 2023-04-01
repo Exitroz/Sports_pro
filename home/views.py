@@ -48,14 +48,14 @@ def index(request):
         
         stages = data['Stages']
         
-        for stage in stages:
-            print(stage.keys())
+        # for stage in stages:
+        #     print(stage.keys())
             
-            table = stage['LeagueTable']['L'][0]['Tables']
+        #     table = stage['Leaguetable']['L'][0]['Tables']
             
-            for row in table:
-                print(row.keys())
-                print(row.values())
+        #     for row in table:
+        #         print(row.keys())
+        #         print(row.values())
             
         context = {
             'stages':stages,
@@ -76,5 +76,5 @@ def index(request):
 
     return render(request, 'home/index.html', {'jsonResponse': jsonResponse})
 
-    return render(request, 'home/index-4.html', {'jsonResponse': jsonResponse})
+    # return render(request, 'home/index-4.html', {'jsonResponse': jsonResponse})
 

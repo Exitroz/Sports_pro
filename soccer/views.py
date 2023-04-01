@@ -8,15 +8,16 @@ from django.http import JsonResponse
 # Create your views here.
 
 def index(request):
-
+    
     template_name = 'soccer.html'
+    date_param = request.GET.get('date', None)
     
     url = "https://livescore6.p.rapidapi.com/matches/v2/list-by-league"
 
     query_string_premier_league = {"Category":"soccer","Ccd":"england","Scd":"premier-league","Timezone":"-7"}
 
     headers = {
-        "X-RapidAPI-Key": "d31ffed9cdmshdd3b46d49113fffp17b050jsn36beb1a72767",
+        'X-RapidAPI-Key': 'bb17079e36msh74bf5d47086ca7ep13fc06jsnc033492ad114',
         "X-RapidAPI-Host": "livescore6.p.rapidapi.com"
     }
 
@@ -32,6 +33,7 @@ def index(request):
         
         context = {
             'stages':stages,
+            'date': date_param
         }
         return render(request, template_name, context)
         # Return the data as a JSON response to the frontend
@@ -50,11 +52,11 @@ def live(request):
     querystring = {"Category":"soccer","Timezone":"-7"}
 
     headers = {
-        "X-RapidAPI-Key": "bb17079e36msh74bf5d47086ca7ep13fc06jsnc033492ad114",
+        'X-RapidAPI-Key': 'bb17079e36msh74bf5d47086ca7ep13fc06jsnc033492ad114',
 
         "X-RapidAPI-Host": "api-football-beta.p.rapidapi.com"
 
-        "X-RapidAPI-Host": "livescore6.p.rapidapi.com"
+        # "X-RapidAPI-Host": "livescore6.p.rapidapi.com"
 
     }
 
@@ -87,6 +89,15 @@ def live(request):
 
 
 
+# def my_view(request):
+    # get the date parameter from the URL query string
+    date_param = request.GET.get('date', None)
+    if date_param:
+        # do something with the date, e.g. format it or store it in a database
+        ...
+    
+    # render the response, e.g. a template with the processed date
+    return render(request, 'my_template.html', {'date': date_param})
 
 def fixturesByDate(request, date: str):
     template_name = 'fixtures.html'
@@ -98,7 +109,7 @@ def fixturesByDate(request, date: str):
     querystring = {"Category":"soccer","Date":date,"Timezone":"-7"}
 
     headers = {
-        "X-RapidAPI-Key": "d31ffed9cdmshdd3b46d49113fffp17b050jsn36beb1a72767",
+        'X-RapidAPI-Key': 'bb17079e36msh74bf5d47086ca7ep13fc06jsnc033492ad114',
         "X-RapidAPI-Host": "livescore6.p.rapidapi.com"
     }
 
