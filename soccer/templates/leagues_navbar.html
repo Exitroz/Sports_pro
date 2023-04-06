@@ -33,7 +33,7 @@
                 <a href="{% url 'resultsByleague' "england" "championship" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
               </li>
               <li>
-                <a href="{% url 'tablesByleague' "england" "championship" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+                <a href="{% url 'tablesByleague' "england" "championship" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
               </li>
             </ul>
           </li> 
@@ -49,7 +49,7 @@
                 <a href="{% url 'resultsByleague' "england" "league-1" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
               </li>
               <li>
-                <a href="{% url 'tablesByleague' "england" "league-1" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+                <a href="{% url 'tablesByleague' "england" "league-1" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
               </li>
             </ul>
           </li>
@@ -65,7 +65,87 @@
                 <a href="{% url 'resultsByleague' "england" "league-2" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
               </li>
               <li>
-                <a href="{% url 'tablesByleague' "england" "league-2" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+                <a href="{% url 'tablesByleague' "england" "league-2" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li> 
+
+          <!--National League-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">National League</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague' "england" "national-league" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "england" "national-league" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "england" "national-league" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li> 
+
+          <!--EFL cup-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">EFL Cup</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague' "england" "efl-cup" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "england" "efl-cup" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "england" "efl-cup" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li> 
+
+          <!--FA Cup-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">FA Cup</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague' "england" "fa-cup" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "england" "fa-cup" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "england" "fa-cup" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li> 
+
+          <!--National League North-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">National League North</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague' "england" "national-league-north" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "england" "national-league-north" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "england" "national-league-north" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li> 
+
+          <!--National League North-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">National League South</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague' "england" "national-league-south" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "england" "national-league-south" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "england" "national-league-south" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
               </li>
             </ul>
           </li> 
@@ -89,23 +169,103 @@
                 <a href="{% url 'resultsByleague' "spain" "laliga-santander" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
               </li>
               <li>
-                <a href="{% url 'tablesByleague' "spain" "laliga-santander" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+                <a href="{% url 'tablesByleague' "spain" "laliga-santander" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
               </li>
             </ul>
           </li>
 
-          <!--LaLiga Smartbank-->
+          <!--Copa del rey-->
           <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">LaLiga</a>
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Copa Del Rey Final</a>
             <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
               <li>
-                <a href="{% url 'fixturesByleague' "spain" "laliga-smartbank" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+                <a href="{% url 'fixturesByleague' "spain" "copa-del-rey-final" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
               </li>
               <li>
-                <a href="{% url 'resultsByleague' "spain" "laliga-smartbank" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+                <a href="{% url 'resultsByleague' "spain" "copa-del-rey-final" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
               </li>
               <li>
-                <a href="{% url 'tablesByleague' "spain" "laliga-smartbank" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+                <a href="{% url 'tablesByleague' "spain" "copa-del-rey-final" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <!--Copa del rey-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Copa Del Rey Semi-Final</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague' "spain" "copa-del-rey-semi-final" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "spain" "copa-del-rey-semi-final" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "spain" "copa-del-rey-semi-final" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <!--Copa del rey-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Copa Del Rey Quarter-Final</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague' "spain" "copa-del-rey-quarter-final" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "spain" "copa-del-rey-quarter-final" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "spain" "copa-del-rey-quarter-final" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <!--Super Cup-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Super Cup</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague' "spain" "super-cup" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "spain" "super-cup" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "spain" "super-cup" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <!--Primera Division RFEF Group 1-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Primera Division Group 1</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague' "spain" "primera-division-rfef-group-1" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "spain" "primera-division-rfef-group-1" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "spain" "primera-division-rfef-group-1" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <!--Primera Division RFEF Group 2-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Primera Division Group 2</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague' "spain" "primera-division-rfef-group-2" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "spain" "primera-division-rfef-group-2" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "spain" "primera-division-rfef-group-2" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
               </li>
             </ul>
           </li>
@@ -129,10 +289,107 @@
                 <a href="{% url 'resultsByleague' "italy" "serie-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
               </li>
               <li>
-                <a href="{% url 'tablesByleague' "italy" "serie-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+                <a href="{% url 'tablesByleague' "italy" "serie-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
               </li>
             </ul>
           </li>
+
+          <!--Serie B-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Serie B</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague' "italy" "serie-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "italy" "serie-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "italy" "serie-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <!--Serie C-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Serie C Group A</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague' "italy" "serie-c-group-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "italy" "serie-c-group-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "italy" "serie-c-group-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <!--Serie C B-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Serie C Group B</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague' "italy" "serie-c-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "italy" "serie-c-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "italy" "serie-c-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <!--Serie C C-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Serie C Group C</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague' "italy" "serie-c-c" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "italy" "serie-c-c" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "italy" "serie-c-c" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <!--Super Cup-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Super Cup</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague' "italy" "super-cup" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "italy" "super-cup" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "italy" "super-cup" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <!--Coppa italia-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Coppa Italia Final</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague' "italy" "coppa-italia-final" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "italy" "coppa-italia-final" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "italy" "coppa-italia-final" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
         </ul>
       </li>
 
@@ -141,98 +398,384 @@
         <a href="#" style="color: #fff; display: inline-block; padding: 0 20px; line-height: 50px;">Germany</a>
         <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; background-color: #333; z-index: 1; display: none;">
           
+          <!--Bundesliga-->
           <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Product 3</a>
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Bundesliga</a>
             <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
               <li>
-                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 1</a>
+                <a href="{% url 'fixturesByleague' "germany" "bundesliga" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
               </li>
               <li>
-                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 2</a>
+                <a href="{% url 'resultsByleague' "germany" "bundesliga" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
               </li>
               <li>
-                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 3</a>
+                <a href="{% url 'tablesByleague' "germany" "bundesliga" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
               </li>
             </ul>
           </li>
+
+          <!--2 Bundesliga-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">2 Bundesliga</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague' "germany" "2-bundesliga" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "germany" "2-bundesliga" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "germany" "2-bundesliga" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <!--3 Liga-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">3 Liga</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague' "germany" "3-liga" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "germany" "3-liga" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "germany" "3-liga" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <!--DFL Super Cup-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">DFL Super Cup</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague' "germany" "dfl-super-cup" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "germany" "dfl-super-cup" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "germany" "dfl-super-cup" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <!--DFB Cup-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">DFB Cup</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague' "germany" "dfb-cup" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "germany" "dfb-cup" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "germany" "dfb-cup" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+          
+          <!--Regionalliga Bayern-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Regionalliga Bayern</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague' "germany" "regionalliga-bayern" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "germany" "regionalliga-bayern" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "germany" "regionalliga-bayern" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <!--Regionalliga Nord-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Regionalliga Nord</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague' "germany" "regionalliga-nord" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "germany" "regionalliga-nord" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "germany" "regionalliga-nord" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+
         </ul>
       </li>
+
       <!--France-->
       <li class="dropdown">
-        <a href="#" style="color: #fff; display: inline-block; padding: 0 20px; line-height: 50px;">Products</a>
+        <a href="#" style="color: #fff; display: inline-block; padding: 0 20px; line-height: 50px;">France</a>
         <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; background-color: #333; z-index: 1; display: none;">
-          <li>
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Product 1</a>
-          </li>
-          <li>
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Product 2</a>
-          </li>
+          
+          <!--Ligue 1-->
           <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Product 3</a>
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Ligue 1</a>
             <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
               <li>
-                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 1</a>
+                <a href="{% url 'fixturesByleague' "france" "ligue-1" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
               </li>
               <li>
-                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 2</a>
+                <a href="{% url 'resultsByleague' "france" "ligue-1" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
               </li>
               <li>
-                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 3</a>
+                <a href="{% url 'tablesByleague' "france" "ligue-1" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
               </li>
             </ul>
           </li>
+
+          <!--Ligue 2-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Ligue 2</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague' "france" "ligue-2" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "france" "ligue-2" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "france" "ligue-2" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <!--Coupe de France-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Coupe De France</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague' "france" "cup" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "france" "cup" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "france" "cup" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <!--Championnat National-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Championnat National</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague' "france" "national" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "france" "national" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "france" "national" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <!--Women's division-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Women's Division 1</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague' "france" "division-1-women" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "france" "division-1-women" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "france" "division-1-women" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
         </ul>
       </li>
+
       <!--Netherlands-->
       <li class="dropdown">
-        <a href="#" style="color: #fff; display: inline-block; padding: 0 20px; line-height: 50px;">Products</a>
+        <a href="#" style="color: #fff; display: inline-block; padding: 0 20px; line-height: 50px;">Netherlands</a>
         <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; background-color: #333; z-index: 1; display: none;">
-          <li>
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Product 1</a>
-          </li>
-          <li>
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Product 2</a>
-          </li>
+          
+          <!--Eredivisie-->
           <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Product 3</a>
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Eredivisie</a>
             <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
               <li>
-                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 1</a>
+                <a href="{% url 'fixturesByleague' "holland" "eredivisie" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
               </li>
               <li>
-                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 2</a>
+                <a href="{% url 'resultsByleague' "holland" "eredivisie" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
               </li>
               <li>
-                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 3</a>
+                <a href="{% url 'tablesByleague'  "holland" "eredivisie" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
               </li>
             </ul>
           </li>
+
+          <!--Eerste Divisie-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Eerste Divisie</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague'  "holland" "eerste-divisie" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "holland" "eerste-divisie" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "holland" "eerste-divisie" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <!--Super Cup-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Super Cup</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague'  "holland" "super-cup" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "holland" "super-cup" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "holland" "super-cup" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <!--Tweede Divisie-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Tweede Divisie</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague'  "holland" "tweede-divisie" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "holland" "tweede-divisie" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "holland" "tweede-divisie" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
         </ul>
       </li>
+
       <!--Scotland-->
       <li class="dropdown">
         <a href="#" style="color: #fff; display: inline-block; padding: 0 20px; line-height: 50px;">Scotland</a>
         <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; background-color: #333; z-index: 1; display: none;">
-          <li>
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Product 1</a>
-          </li>
-          <li>
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Product 2</a>
-          </li>
+          
+          <!--Premiership-->
           <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Product 3</a>
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Premiership</a>
             <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
               <li>
-                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 1</a>
+                <a href="{% url 'fixturesByleague'  "scotland" "scotland-premiership" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
               </li>
               <li>
-                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 2</a>
+                <a href="{% url 'resultsByleague' "scotland" "scotland-premiership" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
               </li>
               <li>
-                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 3</a>
+                <a href="{% url 'tablesByleague' "scotland" "scotland-premiership" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
               </li>
             </ul>
           </li>
+
+          <!--Championship-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Championship</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague'  "scotland" "championship" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "scotland" "championship" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "scotland" "championship" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <!--League 1-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">League 1</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague'  "scotland" "league-1" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "scotland" "league-1" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "scotland" "league-1" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <!--League 2-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">League 2</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague'  "scotland" "league-2" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "scotland" "league-2" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "scotland" "league-2" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <!--Scottish Cup-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Scottish Cup</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague'  "scotland" "scottish-cup" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "scotland" "scottish-cup" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "scotland" "scottish-cup" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <!--Challenge Cup-->
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Challenge Cup</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesByleague'  "scotland" "challenge-cup" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsByleague' "scotland" "challenge-cup" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesByleague' "scotland" "challenge-cup" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+
         </ul>
       </li>
     </ul>
