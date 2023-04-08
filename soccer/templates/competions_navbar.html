@@ -372,106 +372,510 @@
         </ul>
       </li>
 
-      <!--Germany-->
+      <!--Copa America-->
       <li class="dropdown">
-        <a href="#" style="color: #fff; display: inline-block; padding: 0 20px; line-height: 50px;">Germany</a>
+        <a href="#" style="color: #fff; display: inline-block; padding: 0 20px; line-height: 50px;">Copa America</a>
         <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; background-color: #333; z-index: 1; display: none;">
           
           <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Product 3</a>
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group A</a>
             <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
               <li>
-                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 1</a>
+                <a href="{% url 'fixturesBycompetion' "copa-america" "group-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
               </li>
               <li>
-                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 2</a>
+                <a href="{% url 'resultsBycompetion' "copa-america" "group-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
               </li>
               <li>
-                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 3</a>
+                <a href="{% url 'tablesBycompetion' "copa-america" "group-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
               </li>
             </ul>
           </li>
+
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group B</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "copa-america" "group-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "copa-america" "group-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "copa-america" "group-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Quarter Finals</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "copa-america" "quarter-finals" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "copa-america" "quarter-finals" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "copa-america" "quarter-finals" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Semi Finals</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "copa-america" "semi-finals" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "copa-america" "semi-finals" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "copa-america" "semi-finals" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Third Place Play Off</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "copa-america" "third-place-play-off" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "copa-america" "third-place-play-off" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "copa-america" "third-place-play-off" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Finals</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "copa-america" "finals" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "copa-america" "finals" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "copa-america" "finals" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
         </ul>
       </li>
       
-      <!--France-->
+      <!--Africa Cup Of Nations-->
       <li class="dropdown">
-        <a href="#" style="color: #fff; display: inline-block; padding: 0 20px; line-height: 50px;">Products</a>
+        <a href="#" style="color: #fff; display: inline-block; padding: 0 20px; line-height: 50px;">Africa Cup Of Nations</a>
         <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; background-color: #333; z-index: 1; display: none;">
-          <li>
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Product 1</a>
-          </li>
-          <li>
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Product 2</a>
-          </li>
+         
           <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Product 3</a>
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group A</a>
             <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
               <li>
-                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 1</a>
+                <a href="{% url 'fixturesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
               </li>
               <li>
-                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 2</a>
+                <a href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
               </li>
               <li>
-                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 3</a>
+                <a href="{% url 'tablesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
               </li>
             </ul>
           </li>
-        </ul>
-      </li>
-      <!--Netherlands-->
-      <li class="dropdown">
-        <a href="#" style="color: #fff; display: inline-block; padding: 0 20px; line-height: 50px;">Products</a>
-        <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; background-color: #333; z-index: 1; display: none;">
-          <li>
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Product 1</a>
-          </li>
-          <li>
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Product 2</a>
-          </li>
+
           <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Product 3</a>
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group B</a>
             <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
               <li>
-                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 1</a>
+                <a href="{% url 'fixturesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
               </li>
               <li>
-                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 2</a>
+                <a href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
               </li>
               <li>
-                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 3</a>
+                <a href="{% url 'tablesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
               </li>
             </ul>
           </li>
-        </ul>
-      </li>
-      <!--Scotland-->
-      <li class="dropdown">
-        <a href="#" style="color: #fff; display: inline-block; padding: 0 20px; line-height: 50px;">Scotland</a>
-        <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; background-color: #333; z-index: 1; display: none;">
-          <li>
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Product 1</a>
-          </li>
-          <li>
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Product 2</a>
-          </li>
+
           <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Product 3</a>
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group C</a>
             <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
               <li>
-                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 1</a>
+                <a href="{% url 'fixturesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-c" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
               </li>
               <li>
-                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 2</a>
+                <a href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-c" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
               </li>
               <li>
-                <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Subproduct 3</a>
+                <a href="{% url 'tablesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-c" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
               </li>
             </ul>
           </li>
+
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group D</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group E</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-e" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-e" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-e" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group F</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-f" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-f" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-f" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group G</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-g" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-g" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-g" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group H</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-h" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-h" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-h" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group I</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-i" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-i" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-i" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group J</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-j" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-j" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-j" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group K</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-k" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-k" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-k" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group L</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-l" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-l" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-l" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
         </ul>
       </li>
+
+      <!--CONCACAF-->
+      <li class="dropdown">
+        <a href="#" style="color: #fff; display: inline-block; padding: 0 20px; line-height: 50px;">CONCACAF Nations</a>
+        <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; background-color: #333; z-index: 1; display: none;">
+          
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">League A Group 1</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "concacaf-nations-league" "league-a-group-1" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-a-group-1" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "concacaf-nations-league" "league-a-group-1" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">League A Group 2</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "concacaf-nations-league" "league-a-group-2" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-a-group-2" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "concacaf-nations-league" "league-a-group-2" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">League A Group 3</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "concacaf-nations-league" "league-a-group-3" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-a-group-3" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "concacaf-nations-league" "league-a-group-3" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">League A Group 4</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "concacaf-nations-league" "league-a-group-4" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-a-group-4" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "concacaf-nations-league" "league-a-group-4" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">League B Group 1</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "concacaf-nations-league" "league-b-group-1" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-b-group-1" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "concacaf-nations-league" "league-b-group-1" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">League B Group 2</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "concacaf-nations-league" "league-b-group-2" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-b-group-2" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "concacaf-nations-league" "league-b-group-2" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">League B Group 3</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "concacaf-nations-league" "league-b-group-3" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-b-group-3" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "concacaf-nations-league" "league-b-group-3" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">League B Group 4</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "concacaf-nations-league" "league-b-group-4" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-b-group-4" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "concacaf-nations-league" "league-b-group-4" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">League C Group 1</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "concacaf-nations-league" "league-c-group-1" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-c-group-1" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "concacaf-nations-league" "league-c-group-1" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">League C Group 2</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "concacaf-nations-league" "league-c-group-2" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-c-group-2" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "concacaf-nations-league" "league-c-group-2" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">League C Group 3</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "concacaf-nations-league" "league-c-group-3" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-c-group-3" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "concacaf-nations-league" "league-c-group-3" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">League C Group 4</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "concacaf-nations-league" "league-c-group-4" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-c-group-4" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "concacaf-nations-league" "league-c-group-4" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Semi-Finals</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "concacaf-nations-league" "semi-finals" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "concacaf-nations-league" "semi-finals" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "concacaf-nations-league" "semi-finals" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Finals</a>
+            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
+              <li>
+                <a href="{% url 'fixturesBycompetion' "concacaf-nations-league" "finals" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
+              </li>
+              <li>
+                <a href="{% url 'resultsBycompetion' "concacaf-nations-league" "finals" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
+              </li>
+              <li>
+                <a href="{% url 'tablesBycompetion' "concacaf-nations-league" "finals" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+      </li>
+
     </ul>
 </nav>
   
