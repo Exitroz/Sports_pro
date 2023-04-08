@@ -8,6 +8,7 @@ from django.http import JsonResponse
 
 def index(request):  
     dt = datetime.datetime.now()
+    datefmt = str(dt.year)+str(dt.month)+str(dt.day)
     Fixtures = []  
     
     url = "https://livescore6.p.rapidapi.com/matches/v2/list-by-league"    
