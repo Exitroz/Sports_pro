@@ -1,3 +1,4 @@
+
 from django.db import models
 # from fontawesome_5.fields import IconField
 
@@ -19,3 +20,4 @@ class Fixtures(models.Model):
 # class Category(models.Model):
 #     ...
 #     icon = IconField()
+

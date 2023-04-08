@@ -1,3 +1,4 @@
+
 from django.shortcuts import render
 import requests
 import datetime
@@ -289,3 +290,4 @@ def fixturesByDate(request, date: str):
     }
     
     return render(request, template_name, context)
+
