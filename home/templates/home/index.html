@@ -109,19 +109,47 @@
                                                             <th>Details</th>
                                                         </tr>
                                                     </thead>
-                                                    {% for game in fixtures %}
+                                                    {% for st in today_data %}
+
+                                                    
                                                     <tbody>
                                                         <tr>
                                                             <td>
-                                                                <img src="https://lsm-static-prod.livescore.com/medium/{{game.T1.0.Img}}" alt="icon">
-                                                                <strong>{{game.T1.0.Nm}}</strong><br>
-                                                                <small class="meta-text">{{Competion_name}}</small>
+                                                                <h4>{{st.Snm}}</h4>
+                                                            </td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                        {% for game in st.Events %}
+                                                        <tr>
+                                                            <td>
+                                                                <div class="row">
+                                                                    <div class="col-lg-6">
+                                                                        <img src="https://lsm-static-prod.livescore.com/medium/{{game.T1.0.Img}}" alt="icon">
+                                                                        <strong>{{game.T1.0.Nm}}</strong><br>
+                                                                        <small class="meta-text">{% if st.CompN %} {{st.CompN}} {% else %} {{st.Snm}} {% endif %}</small></small>
+                                                                    </div>
+                                                                    <div class="col-lg-6">
+                                                                       
+                                                                        <strong class="float-sm-right">{{game.Tr1}}</strong><br>
+                                                                        
+                                                                    </div>
+                                                                </div>
                                                             </td>
                                                             <td class="text-center">Vs</td>
                                                             <td>
-                                                                <img src="https://lsm-static-prod.livescore.com/medium/{{game.T2.0.Img}}" alt="icon1">
-                                                                <strong>{{game.T2.0.Nm}}</strong><br>
-                                                                <small class="meta-text">{{Competion_name}}</small> 
+                                                                <div class="row">
+                                                                    <div class="col-lg-3">
+                                                                       
+                                                                        <strong >{{game.Tr2}}</strong><br>
+                                                                        
+                                                                    </div>
+                                                                    <div class="col-lg-9 float-sm-right">
+                                                                        <img src="https://lsm-static-prod.livescore.com/medium/{{game.T2.0.Img}}" alt="icon1">
+                                                                        <strong>{{game.T2.0.Nm}}</strong><br>
+                                                                        <small class="meta-text">{% if st.CompN %} {{st.CompN}} {% else %} {{st.Snm}} {% endif %}</small> 
+                                                                    </div>
+                                                                </div>
                                                             </td>
                                                             <td>
                                                                 {{game.Esd}}<br>
@@ -129,6 +157,7 @@
                                                             </td>
                                                         </tr>
                                                     </tbody>
+                                                    {% endfor %}
                                                     {% endfor %}
                                                 </table>
                                             </div>

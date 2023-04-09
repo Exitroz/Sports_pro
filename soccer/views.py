@@ -52,7 +52,7 @@ def index(request):
                 elif event_year >= dt.year and event_month > dt.month:
                     Fixtures.append(row)
                 
-        print('Fixtures', Fixtures)
+        # print('Fixtures', Fixtures)
         context = {
             'stages':stages,
             'fixtures':Fixtures[0:25],
@@ -171,8 +171,13 @@ def league_events(request, country: str, league: str):
         
         for stage in stages:
             # print(stage.keys())
-            competion_name = stage['CompN']
+            try:
+                competion_name = stage['CompN']
+            except:
+                competion_name = stage['Snm']
+                
             events = stage['Events']
+            
             print('events', len(events))
             for row in events:
                 # print(row.keys())
