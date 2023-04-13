@@ -124,21 +124,19 @@ def competion_events(request, league: str, stage: str):
 
         context={
             'stages':stages,
-            'Fixtures':Fixtures,
-            'Results':Results,
+            'Fixtures':reversed(Fixtures),
+            'Results':reversed(Results),
             'Competion_name':competion_name,
             'stage_name':stage_name,
         }
     else:
         context={
-            'Fixtures':Fixtures,
-            'Results':Results,
+            'Fixtures':reversed(Fixtures),
+            'Results':reversed(Results),
             'Competion_name':"Null",
             'stage_name':"Null",
         }
     return render(request, template_name, context)
-
-
 
 
 def league_events(request, country: str, league: str):
@@ -201,17 +199,17 @@ def league_events(request, country: str, league: str):
                     
         print('Fixtures', len(Fixtures))
         print('Results', len(Results))
-
+        
         context={
             'stages':stages,
-            'Fixtures':Fixtures,
-            'Results':Results,
+            'Fixtures':reversed(Fixtures),
+            'Results':reversed(Results),
             'Competion_name':competion_name,
         }
     else:
         context={
-            'Fixtures':Fixtures,
-            'Results':Results,
+            'Fixtures':reversed(Fixtures),
+            'Results':reversed(Results),
             'Competion_name':"Null",
         }
     return render(request, template_name, context)
@@ -247,8 +245,7 @@ def live(request):
         # If the API call failed, return the error message as a JSON response
         error_message = {'error': response.reason}
         return JsonResponse(error_message, status=response.status_code)
-    
-   
+
 
 def fixturesByDate(request, date: str):
     template_name = 'fixtures.html'
@@ -289,3 +286,35 @@ def fixturesByDate(request, date: str):
     }
     
     return render(request, template_name, context)
+
+
+def single_result(request, Eid: int):
+    template_name = "single-result.html"
+    print("EID", Eid)
+    
+    url = "https://livescore6.p.rapidapi.com/matches/v2/get-statistics"
+    board_url = "https://livescore6.p.rapidapi.com/matches/v2/get-scoreboard"
+    
+    querystring = {"Category":"soccer","Eid":Eid}
+    
+    headers = {
+        "X-RapidAPI-Key": "6b988f2637msh4473b4fe6cd4359p151307jsn6639db590b7a",
+        "X-RapidAPI-Host": "livescore6.p.rapidapi.com"
+    }
+    
+    response = requests.get(url, headers=headers, params=querystring)
+    board_response = requests.get(board_url, headers=headers, params=querystring)
+    
+    data = response.json()
+    stat = data['Stat']
+    pstat = data['PStat']
+    
+    b_data = board_response.json()
+    print(b_data['Incs-s'])
+    context = {
+        'stat':stat,
+        'pstat':pstat,
+        'b_data':b_data,
+    }
+    return render(request, template_name, context)
+

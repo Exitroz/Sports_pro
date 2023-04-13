@@ -13,4 +13,6 @@ urlpatterns = [
     path('<str:league>/<str:stage>/fixtures/', views.competion_events, name='fixturesBycompetion'),
     path('<str:league>/<str:stage>/results/', views.competion_events, name='resultsBycompetion'),
     path('<str:league>/<str:stage>/table/', views.competion_events, name='tablesBycompetion'),
+    
+    path('single/<int:Eid>/', views.single_result, name='singleResult'),
 ]
