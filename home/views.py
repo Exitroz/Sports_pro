@@ -1,8 +1,8 @@
-
 from django.shortcuts import render
 import requests
 import datetime
 from django.http import JsonResponse
+from django.conf import settings
 # Create your views here.
 
 
@@ -18,7 +18,7 @@ def index(request):
     today_querystring = {"Category":"soccer","Date":datefmt,"Timezone":"-7"}
 
     headers = {
-        "X-RapidAPI-Key": "6b988f2637msh4473b4fe6cd4359p151307jsn6639db590b7a",
+        "X-RapidAPI-Key": settings.API_KEY,
         "X-RapidAPI-Host": "livescore6.p.rapidapi.com"
     }
 
