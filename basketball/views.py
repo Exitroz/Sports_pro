@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.conf import settings
 import datetime
 import requests
 
@@ -18,7 +19,7 @@ def index(request):  # On the homepage the current day fixtures and results, gro
     today_querystring = {"Category":"basketball","Date":datefmt,"Timezone":"-7"}
 
     headers = {
-        "X-RapidAPI-Key": "6b988f2637msh4473b4fe6cd4359p151307jsn6639db590b7a",
+        "X-RapidAPI-Key": settings.API_KEY,
         "X-RapidAPI-Host": "livescore6.p.rapidapi.com"
     }
 

@@ -2,14 +2,13 @@ from django.shortcuts import render
 import requests
 import datetime
 from django.http import JsonResponse
+from django.conf import settings
 # Create your views here.
 
 
-def index(request):  # On the homepage the current day fixtures and results, group by competions
+def index(request):  
     dt = datetime.datetime.now()
-    print(dt.strftime('%Y-%m-%d'))
     datefmt = str(dt.year)+str(dt.month)+str(dt.day)
-    
     Fixtures = []  
     
     url = "https://livescore6.p.rapidapi.com/matches/v2/list-by-league"    
@@ -19,7 +18,7 @@ def index(request):  # On the homepage the current day fixtures and results, gro
     today_querystring = {"Category":"soccer","Date":datefmt,"Timezone":"-7"}
 
     headers = {
-        "X-RapidAPI-Key": "6b988f2637msh4473b4fe6cd4359p151307jsn6639db590b7a",
+        "X-RapidAPI-Key": settings.API_KEY,
         "X-RapidAPI-Host": "livescore6.p.rapidapi.com"
     }
 
@@ -69,3 +68,4 @@ def index(request):  # On the homepage the current day fixtures and results, gro
         return JsonResponse(error_message, status=response.status_code)
     
     return render(request, 'home/index.html', {'jsonResponse': jsonResponse})
+

@@ -1,6 +1,9 @@
+
 from django.shortcuts import render
 import requests
 import datetime
+from django.conf import settings
+
 
 from django.http import JsonResponse
 # Create your views here.
@@ -15,7 +18,7 @@ def index(request):
     query_string_premier_league = {"Category":"soccer","Ccd":"england","Scd":"premier-league","Timezone":"-7"}
 
     headers = {
-        "X-RapidAPI-Key": "6b988f2637msh4473b4fe6cd4359p151307jsn6639db590b7a",
+        "X-RapidAPI-Key": settings.API_KEY,
         "X-RapidAPI-Host": "livescore6.p.rapidapi.com"
     }
 
@@ -79,7 +82,7 @@ def competion_events(request, league: str, stage: str):
     query_string = {"Category":"soccer","Ccd":league,"Scd":stage,"Timezone":"-7"}
 
     headers = {
-        "X-RapidAPI-Key": "6b988f2637msh4473b4fe6cd4359p151307jsn6639db590b7a",
+        "X-RapidAPI-Key": settings.API_KEY,
         "X-RapidAPI-Host": "livescore6.p.rapidapi.com"
     }
 
@@ -97,7 +100,7 @@ def competion_events(request, league: str, stage: str):
             competion_name = stage['CompN']
             stage_name = stage['Snm']
             events = stage['Events']
-            print('events', len(events))
+            # print('events', len(events))
             for row in events:
                 # print(row.keys())
                 # print(row['Esd'])
@@ -119,8 +122,8 @@ def competion_events(request, league: str, stage: str):
                 elif  event_year >= dt.year and event_month > dt.month:
                     Fixtures.append(row)
                     
-        print('Fixtures', len(Fixtures))
-        print('Results', len(Results))
+        # print('Fixtures', len(Fixtures))
+        # print('Results', len(Results))
 
         context={
             'stages':stages,
@@ -153,7 +156,7 @@ def league_events(request, country: str, league: str):
     query_string = {"Category":"soccer","Ccd":country,"Scd":league,"Timezone":"-7"}
 
     headers = {
-        "X-RapidAPI-Key": "6b988f2637msh4473b4fe6cd4359p151307jsn6639db590b7a",
+        "X-RapidAPI-Key": settings.API_KEY,
         "X-RapidAPI-Host": "livescore6.p.rapidapi.com"
     }
 
@@ -197,8 +200,8 @@ def league_events(request, country: str, league: str):
                 elif  event_year >= dt.year and event_month > dt.month:
                     Fixtures.append(row)
                     
-        print('Fixtures', len(Fixtures))
-        print('Results', len(Results))
+        # print('Fixtures', len(Fixtures))
+        # print('Results', len(Results))
         
         context={
             'stages':stages,
@@ -221,7 +224,7 @@ def live(request):
     querystring = {"Category":"soccer","Timezone":"-7"}
 
     headers = {
-        "X-RapidAPI-Key": "6b988f2637msh4473b4fe6cd4359p151307jsn6639db590b7a",
+        "X-RapidAPI-Key": settings.API_KEY,
         "X-RapidAPI-Host": "livescore6.p.rapidapi.com"
     }
 
@@ -245,47 +248,8 @@ def live(request):
         # If the API call failed, return the error message as a JSON response
         error_message = {'error': response.reason}
         return JsonResponse(error_message, status=response.status_code)
-
-
-def fixturesByDate(request, date: str):
-    template_name = 'fixtures.html'
-    dt = datetime.datetime.now()
-    print(dt.strftime('%Y-%m-%d'))
-    datefmt = str(dt.year)+str(dt.month)+str(dt.day)
     
-    if request.method == 'POST':
-        live_date = request.POST['date']
-        print(live_date, 'live_date')
-    
-    url = "https://livescore6.p.rapidapi.com/matches/v2/list-by-date"
-
-    querystring = {"Category":"soccer","Date":date,"Timezone":"-7"}
-
-    headers = {
-        "X-RapidAPI-Key": "6b988f2637msh4473b4fe6cd4359p151307jsn6639db590b7a",
-        "X-RapidAPI-Host": "livescore6.p.rapidapi.com"
-    }
-
-    response = requests.get(url, headers=headers, params=querystring)
-
-    data = response.json()
-    stages = data['Stages']            
-    
-    # for stage in stages:
-    #     # ids = stage.Sid
-    #     name = stage.CompN
-    #     desc = stage.CompD
-        
-        # print(ids, name, desc)
-        
-        
-    context = {
-        'stages':stages,
-        'today': dt.strftime('%Y-%m-%d'),
-       
-    }
-    
-    return render(request, template_name, context)
+    return render(request, 'soccer.html', {'jsonResponse': jsonResponse})
 
 
 def single_result(request, Eid: int):
@@ -298,7 +262,7 @@ def single_result(request, Eid: int):
     querystring = {"Category":"soccer","Eid":Eid}
     
     headers = {
-        "X-RapidAPI-Key": "6b988f2637msh4473b4fe6cd4359p151307jsn6639db590b7a",
+        "X-RapidAPI-Key": settings.API_KEY,
         "X-RapidAPI-Host": "livescore6.p.rapidapi.com"
     }
     
@@ -318,3 +282,31 @@ def single_result(request, Eid: int):
     }
     return render(request, template_name, context)
 
+
+# def get_livescore(request):
+#     # Replace with your LiveScore API endpoint URL and API key
+#     endpoint = 'https://livescore-api.com/api-client/scores/live.json'
+#     api_key = 'YOUR_API_KEY'
+
+#     # Set optional parameters for the API call
+#     params = {
+#         'key': api_key,
+#         'secret': 'YOUR_API_SECRET',
+#         'countries': 'england',
+#         'leagues': 'premier-league',
+#         'timezone': 'Europe/London'
+#     }
+
+#     # Make a GET request to the API endpoint using requests library
+#     response = requests.get(endpoint, params=params)
+    
+#     # Check if the API call was successful
+#     if response.status_code == 200:
+#         # Convert the response content to JSON
+#         data = response.json()
+#         # Return the data as a JSON response to the frontend
+#         return JsonResponse(data)
+#     else:
+#         # If the API call failed, return the error message as a JSON response
+#         error_message = {'error': response.reason}
+#         return JsonResponse(error_message, status=response.status_code)
