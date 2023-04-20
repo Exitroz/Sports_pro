@@ -1,902 +1,4 @@
 
-{% comment %} <nav style="background-color: #333; height: 50px;">
-    <ul style="list-style: none; margin: 0; padding: 0; display: flex; justify-content: space-between; align-items: center; height: 100%;">
-      <!--England-->
-      <li class="dropdown">
-        <a href="#" style="color: #fff; display: inline-block; padding: 0 20px; line-height: 50px;">Champions League</a>
-        <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; background-color: #333; z-index: 1; display: none;">
-          
-          <!--Premier Leagues -->
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group A</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "champions-league" "group-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "champions-league" "group-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "champions-league" "group-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li> 
-
-          <!--Championship -->
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group B</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "champions-league" "group-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "champions-league" "group-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "champions-league" "group-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li> 
-
-          <!--League 1-->
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group C</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "champions-league" "group-c" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "champions-league" "group-c" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "champions-league" "group-c" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <!--League 2-->
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group D</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "champions-league" "group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "champions-league" "group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "champions-league" "group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li> 
-
-          <!--League 2-->
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group E</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "champions-league" "group-e" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "champions-league" "group-e" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "champions-league" "group-e" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li> 
-
-          <!--League 2-->
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group F</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "champions-league" "group-f" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "champions-league" "group-f" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "champions-league" "group-f" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li> 
-
-          <!--League 2-->
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group G</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "champions-league" "group-g" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "champions-league" "group-g" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "champions-league" "group-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li> 
-
-          <!--League 2-->
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group D</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "champions-league" "group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "champions-league" "group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "champions-league" "group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li> 
-
-          <!--League 2-->
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group D</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "champions-league" "group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "champions-league" "group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "champions-league" "group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li> 
-
-          <!--League 2-->
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group D</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "champions-league" "group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "champions-league" "group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "champions-league" "group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li> 
-        </ul>
-      </li>
-
-      <!--Europa League-->
-      <li class="dropdown">
-        <a href="#" style="color: #fff; display: inline-block; padding: 0 20px; line-height: 50px;">Europa League</a>
-        <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; background-color: #333; z-index: 1; display: none;">
-          
-          <!--Group A-->
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group A</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "europa-league" "group-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "europa-league" "group-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "europa-league" "group-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <!--Group B-->
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group B</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "europa-league" "group-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "europa-league" "group-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "europa-league" "group-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group C</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "europa-league" "group-c" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "europa-league" "group-c" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "europa-league" "group-c" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group C</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "europa-league" "group-c" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "europa-league" "group-c" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "europa-league" "group-c" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group D</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "europa-league" "group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "europa-league" "group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "europa-league" "group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group E</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "europa-league" "group-e" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "europa-league" "group-e" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "europa-league" "group-e" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group F</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "europa-league" "group-f" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "europa-league" "group-f" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "europa-league" "group-f" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-        </ul>
-      </li>
-
-      <!--African Nations Championship-->
-      <li class="dropdown">
-        <a href="#" style="color: #fff; display: inline-block; padding: 0 20px; line-height: 50px;">African Nations Championship</a>
-        <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; background-color: #333; z-index: 1; display: none;">
-        
-          <!--Group A-->
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group A</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "african-nations-championship" "group-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "african-nations-championship" "group-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "african-nations-championship" "group-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <!--Group B-->
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group B</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "african-nations-championship" "group-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "african-nations-championship" "group-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "african-nations-championship" "group-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <!--Group C-->
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group C</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "african-nations-championship" "group-c" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "african-nations-championship" "group-c" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "african-nations-championship" "group-c" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <!--Group D-->
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group D</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "african-nations-championship" "group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "african-nations-championship" "group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "african-nations-championship" "group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-           <!--Group E-->
-           <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group E</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "african-nations-championship" "group-e" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "african-nations-championship" "group-e" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "african-nations-championship" "group-e" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-        </ul>
-      </li>
-
-      <!--Copa America-->
-      <li class="dropdown">
-        <a href="#" style="color: #fff; display: inline-block; padding: 0 20px; line-height: 50px;">Copa America</a>
-        <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; background-color: #333; z-index: 1; display: none;">
-          
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group A</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "copa-america" "group-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "copa-america" "group-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "copa-america" "group-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group B</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "copa-america" "group-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "copa-america" "group-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "copa-america" "group-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Quarter Finals</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "copa-america" "quarter-finals" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "copa-america" "quarter-finals" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "copa-america" "quarter-finals" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Semi Finals</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "copa-america" "semi-finals" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "copa-america" "semi-finals" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "copa-america" "semi-finals" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Third Place Play Off</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "copa-america" "third-place-play-off" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "copa-america" "third-place-play-off" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "copa-america" "third-place-play-off" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Finals</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "copa-america" "finals" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "copa-america" "finals" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "copa-america" "finals" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-        </ul>
-      </li>
-      
-      <!--Africa Cup Of Nations-->
-      <li class="dropdown">
-        <a href="#" style="color: #fff; display: inline-block; padding: 0 20px; line-height: 50px;">Africa Cup Of Nations</a>
-        <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; background-color: #333; z-index: 1; display: none;">
-         
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group A</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-a" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group B</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-b" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group C</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-c" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-c" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-c" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group D</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-d" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group E</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-e" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-e" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-e" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group F</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-f" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-f" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-f" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group G</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-g" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-g" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-g" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group H</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-h" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-h" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-h" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group I</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-i" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-i" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-i" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group J</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-j" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-j" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-j" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group K</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-k" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-k" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-k" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Group L</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-l" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-l" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "africa-cup-of-nations-qualification" "qualification-group-l" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-        </ul>
-      </li>
-
-      <!--CONCACAF-->
-      <li class="dropdown">
-        <a href="#" style="color: #fff; display: inline-block; padding: 0 20px; line-height: 50px;">CONCACAF Nations</a>
-        <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; background-color: #333; z-index: 1; display: none;">
-          
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">League A Group 1</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "concacaf-nations-league" "league-a-group-1" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-a-group-1" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "concacaf-nations-league" "league-a-group-1" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">League A Group 2</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "concacaf-nations-league" "league-a-group-2" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-a-group-2" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "concacaf-nations-league" "league-a-group-2" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">League A Group 3</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "concacaf-nations-league" "league-a-group-3" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-a-group-3" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "concacaf-nations-league" "league-a-group-3" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">League A Group 4</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "concacaf-nations-league" "league-a-group-4" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-a-group-4" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "concacaf-nations-league" "league-a-group-4" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">League B Group 1</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "concacaf-nations-league" "league-b-group-1" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-b-group-1" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "concacaf-nations-league" "league-b-group-1" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">League B Group 2</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "concacaf-nations-league" "league-b-group-2" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-b-group-2" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "concacaf-nations-league" "league-b-group-2" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">League B Group 3</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "concacaf-nations-league" "league-b-group-3" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-b-group-3" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "concacaf-nations-league" "league-b-group-3" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">League B Group 4</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "concacaf-nations-league" "league-b-group-4" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-b-group-4" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "concacaf-nations-league" "league-b-group-4" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">League C Group 1</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "concacaf-nations-league" "league-c-group-1" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-c-group-1" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "concacaf-nations-league" "league-c-group-1" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">League C Group 2</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "concacaf-nations-league" "league-c-group-2" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-c-group-2" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "concacaf-nations-league" "league-c-group-2" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">League C Group 3</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "concacaf-nations-league" "league-c-group-3" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-c-group-3" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "concacaf-nations-league" "league-c-group-3" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">League C Group 4</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "concacaf-nations-league" "league-c-group-4" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-c-group-4" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "concacaf-nations-league" "league-c-group-4" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Semi-Finals</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "concacaf-nations-league" "semi-finals" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "concacaf-nations-league" "semi-finals" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "concacaf-nations-league" "semi-finals" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="dropdown">
-            <a href="#" style="color: #fff; display: block; padding: 10px 20px;">Finals</a>
-            <ul class="dropdown-menu" style="list-style: none; margin: 0; padding: 0; position: absolute; left: 100%; top: 0; background-color: #333; z-index: 1; display: none;">
-              <li>
-                <a href="{% url 'fixturesBycompetion' "concacaf-nations-league" "finals" %}" style="color: #fff; display: block; padding: 10px 20px;">Fixtures</a>
-              </li>
-              <li>
-                <a href="{% url 'resultsBycompetion' "concacaf-nations-league" "finals" %}" style="color: #fff; display: block; padding: 10px 20px;">Results</a>
-              </li>
-              <li>
-                <a href="{% url 'tablesBycompetion' "concacaf-nations-league" "finals" %}" style="color: #fff; display: block; padding: 10px 20px;">Table</a>
-              </li>
-            </ul>
-          </li>
-
-        </ul>
-      </li>
-
-    </ul>
-</nav>
-  
-  <script>
-    // Add click event listeners to dropdown toggle links
-    var dropdownToggles = document.querySelectorAll('.dropdown > a');
-    for (var i = 0; i < dropdownToggles.length; i++) {
-      dropdownToggles[i].addEventListener('click', function(e) {
-        e.preventDefault();
-        var dropdownMenu = this.nextElementSibling;
-        if (dropdownMenu.style.display === 'none') {
-          dropdownMenu.style.display = 'block';
-        } else {
-          dropdownMenu.style.display = 'none';
-        }
-      });
-    }
-  </script>  {% endcomment %}
-  
-
-
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     {% comment %} <a class="navbar-brand" href="#">PythonGuides</a> {% endcomment %}
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -917,14 +19,14 @@
                     champions League
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="https://pythonguides.com/django/" style="font-size:14px;">Group A</a>
-                    <a class="dropdown-item" href="https://pythonguides.com/matplotlib/" style="font-size:14px;">Group B</a>
-                    <a class="dropdown-item" href="https://pythonguides.com/turtle/" style="font-size:14px;">Group C</a>
-                    <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">Group D</a>
-                    <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">Group E</a>
-                    <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">Group F</a>
-                    <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">Group G</a>
-                    <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">Group H</a>
+                    <a class="dropdown-item" href="{% url 'resultsBycompetion' "champions-league" "group-a" %}" style="font-size:14px;">Group A</a>
+                    <a class="dropdown-item" href="{% url 'resultsBycompetion' "champions-league" "group-b" %}" style="font-size:14px;">Group B</a>
+                    <a class="dropdown-item" href="{% url 'resultsBycompetion' "champions-league" "group-c" %}" style="font-size:14px;">Group C</a>
+                    <a class="dropdown-item" href="{% url 'resultsBycompetion' "champions-league" "group-d" %}" style="font-size:14px;">Group D</a>
+                    <a class="dropdown-item" href="{% url 'resultsBycompetion' "champions-league" "group-e" %}" style="font-size:14px;">Group E</a>
+                    <a class="dropdown-item" href="{% url 'resultsBycompetion' "champions-league" "group-f" %}" style="font-size:14px;">Group F</a>
+                    <a class="dropdown-item" href="{% url 'resultsBycompetion' "champions-league" "group-g" %}" style="font-size:14px;">Group G</a>
+                    <a class="dropdown-item" href="{% url 'resultsBycompetion' "champions-league" "group-h" %}" style="font-size:14px;">Group H</a>
                 </div>
             </li>
             
@@ -935,14 +37,14 @@
                   Europa League
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="https://pythonguides.com/django/" style="font-size:14px;">Group A</a>
-                <a class="dropdown-item" href="https://pythonguides.com/matplotlib/" style="font-size:14px;">Group B</a>
-                <a class="dropdown-item" href="https://pythonguides.com/turtle/" style="font-size:14px;">Group C</a>
-                <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">Group D</a>
-                <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">Group E</a>
-                <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">Group F</a>
-                <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">Group G</a>
-                <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">Group H</a>
+                <a class="dropdown-item" href="{% url 'resultsBycompetion' "europa-league" "group-a" %}" style="font-size:14px;">Group A</a>
+                <a class="dropdown-item" href="{% url 'resultsBycompetion' "europa-league" "group-b" %}" style="font-size:14px;">Group B</a>
+                <a class="dropdown-item" href="{% url 'resultsBycompetion' "europa-league" "group-c" %}" style="font-size:14px;">Group C</a>
+                <a class="dropdown-item" href="{% url 'resultsBycompetion' "europa-league" "group-d" %}" style="font-size:14px;">Group D</a>
+                <a class="dropdown-item" href="{% url 'resultsBycompetion' "europa-league" "group-e" %}" style="font-size:14px;">Group E</a>
+                <a class="dropdown-item" href="{% url 'resultsBycompetion' "europa-league" "group-f" %}" style="font-size:14px;">Group F</a>
+                <a class="dropdown-item" href="{% url 'resultsBycompetion' "europa-league" "group-g" %}" style="font-size:14px;">Group G</a>
+                <a class="dropdown-item" href="{% url 'resultsBycompetion' "europa-league" "group-h" %}" style="font-size:14px;">Group H</a>
               </div>
             </li>
   
@@ -953,14 +55,14 @@
                   African Nations Championship
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="https://pythonguides.com/django/" style="font-size:14px;">Group A</a>
-                <a class="dropdown-item" href="https://pythonguides.com/matplotlib/" style="font-size:14px;">Group B</a>
-                <a class="dropdown-item" href="https://pythonguides.com/turtle/" style="font-size:14px;">Group C</a>
-                <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">Group D</a>
-                <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">Group E</a>
-                <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">Group F</a>
-                <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">Group G</a>
-                <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">Group H</a>
+                <a class="dropdown-item" href="{% url 'resultsBycompetion' "african-nations-championship" "group-a" %}" style="font-size:14px;">Group A</a>
+                <a class="dropdown-item" href="{% url 'resultsBycompetion' "african-nations-championship" "group-b" %}" style="font-size:14px;">Group B</a>
+                <a class="dropdown-item" href="{% url 'resultsBycompetion' "african-nations-championship" "group-c" %}" style="font-size:14px;">Group C</a>
+                <a class="dropdown-item" href="{% url 'resultsBycompetion' "african-nations-championship" "group-d" %}" style="font-size:14px;">Group D</a>
+                <a class="dropdown-item" href="{% url 'resultsBycompetion' "african-nations-championship" "group-e" %}" style="font-size:14px;">Group E</a>
+                <a class="dropdown-item" href="{% url 'resultsBycompetion' "african-nations-championship" "group-f" %}" style="font-size:14px;">Group F</a>
+                <a class="dropdown-item" href="{% url 'resultsBycompetion' "african-nations-championship" "group-g" %}" style="font-size:14px;">Group G</a>
+                <a class="dropdown-item" href="{% url 'resultsBycompetion' "african-nations-championship" "group-h" %}" style="font-size:14px;">Group H</a>
               </div>
             </li>
   
@@ -971,11 +73,11 @@
                   Copa America
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="https://pythonguides.com/django/" style="font-size:14px;">Group A</a>
-                  <a class="dropdown-item" href="https://pythonguides.com/matplotlib/" style="font-size:14px;">Quarter Finals</a>
-                  <a class="dropdown-item" href="https://pythonguides.com/turtle/" style="font-size:14px;">Semi Finals</a>
-                  <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">Third Place Play off</a>
-                  <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">Final</a>
+                  <a class="dropdown-item" href="{% url 'resultsBycompetion' "copa-america" "group-a" %}" style="font-size:14px;">Group A</a>
+                  <a class="dropdown-item" href="{% url 'resultsBycompetion' "copa-america" "quarter-finals" %}" style="font-size:14px;">Quarter Finals</a>
+                  <a class="dropdown-item" href="{% url 'resultsBycompetion' "copa-america" "semi-finals" %}" style="font-size:14px;">Semi Finals</a>
+                  <a class="dropdown-item" href="{% url 'resultsBycompetion' "copa-america" "third-place-play-off" %}" style="font-size:14px;">Third Place Play off</a>
+                  <a class="dropdown-item" href="{% url 'resultsBycompetion' "copa-america" "final" %}" style="font-size:14px;">Final</a>
               </div>
             </li>
   
@@ -986,17 +88,17 @@
                   African Cup of Nations
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="https://pythonguides.com/django/" style="font-size:14px;">Group A</a>
-                <a class="dropdown-item" href="https://pythonguides.com/matplotlib/" style="font-size:14px;">Group B</a>
-                <a class="dropdown-item" href="https://pythonguides.com/turtle/" style="font-size:14px;">Group C</a>
-                <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">Group D</a>
-                <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">Group E</a>
-                <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">Group F</a>
-                <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">Group G</a>
-                <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">Group H</a>
-                <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">Group I</a>
-                <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">Group J</a>
-                <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">Group K</a>
+                <a class="dropdown-item" href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-a" %}" style="font-size:14px;">Group A</a>
+                <a class="dropdown-item" href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-b" %}" style="font-size:14px;">Group B</a>
+                <a class="dropdown-item" href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-c" %}" style="font-size:14px;">Group C</a>
+                <a class="dropdown-item" href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-d" %}" style="font-size:14px;">Group D</a>
+                <a class="dropdown-item" href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-e" %}" style="font-size:14px;">Group E</a>
+                <a class="dropdown-item" href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-f" %}" style="font-size:14px;">Group F</a>
+                <a class="dropdown-item" href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-g" %}" style="font-size:14px;">Group G</a>
+                <a class="dropdown-item" href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-h" %}" style="font-size:14px;">Group H</a>
+                <a class="dropdown-item" href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-i" %}" style="font-size:14px;">Group I</a>
+                <a class="dropdown-item" href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-j" %}" style="font-size:14px;">Group J</a>
+                <a class="dropdown-item" href="{% url 'resultsBycompetion' "africa-cup-of-nations-qualification" "qualification-group-k" %}" style="font-size:14px;">Group K</a>
               </div>
             </li>
   
@@ -1007,26 +109,26 @@
                   CONCACAF Nations
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="https://pythonguides.com/django/" style="font-size:14px;">League A Group 1</a>
-                  <a class="dropdown-item" href="https://pythonguides.com/matplotlib/" style="font-size:14px;">League A Group 2</a>
-                  <a class="dropdown-item" href="https://pythonguides.com/turtle/" style="font-size:14px;">League A Group 3</a>
-                  <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">League A Group 4</a>
-                  <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">League B Group 1</a>
-                  <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">League B Group 2</a>
-                  <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">League B Group 3</a>
-                  <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">League B Group 4</a>
-                  <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">League C Group 1</a>
-                  <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">League C Group 2</a>
-                  <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">League C Group 3</a>
-                  <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">League C Group 4</a>
-                  <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">Semi Finals</a>
-                  <a class="dropdown-item" href="https://pythonguides.com/tkinter/" style="font-size:14px;">Final</a>
+                  <a class="dropdown-item" href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-a-group-1" %}" style="font-size:14px;">League A Group 1</a>
+                  <a class="dropdown-item" href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-a-group-2" %}" style="font-size:14px;">League A Group 2</a>
+                  <a class="dropdown-item" href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-a-group-3" %}" style="font-size:14px;">League A Group 3</a>
+                  <a class="dropdown-item" href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-a-group-4" %}" style="font-size:14px;">League A Group 4</a>
+                  <a class="dropdown-item" href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-b-group-1" %}" style="font-size:14px;">League B Group 1</a>
+                  <a class="dropdown-item" href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-b-group-2" %}" style="font-size:14px;">League B Group 2</a>
+                  <a class="dropdown-item" href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-b-group-3" %}" style="font-size:14px;">League B Group 3</a>
+                  <a class="dropdown-item" href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-b-group-4" %}" style="font-size:14px;">League B Group 4</a>
+                  <a class="dropdown-item" href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-c-group-1" %}" style="font-size:14px;">League C Group 1</a>
+                  <a class="dropdown-item" href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-c-group-2" %}" style="font-size:14px;">League C Group 2</a>
+                  <a class="dropdown-item" href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-c-group-3" %}" style="font-size:14px;">League C Group 3</a>
+                  <a class="dropdown-item" href="{% url 'resultsBycompetion' "concacaf-nations-league" "league-c-group-4" %}" style="font-size:14px;">League C Group 4</a>
+                  <a class="dropdown-item" href="{% url 'resultsBycompetion' "concacaf-nations-league" "semi-finals" %}" style="font-size:14px;">Semi Finals</a>
+                  <a class="dropdown-item" href="{% url 'resultsBycompetion' "concacaf-nations-league" "finals" %}" style="font-size:14px;">Final</a>
               </div>
             </li>
         </ul>
     </div>
   </nav>
-  
+{% comment %}   
    <!-- Optional JavaScript -->
       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -1037,5 +139,5 @@
           crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
           integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-          crossorigin="anonymous"></script>
+          crossorigin="anonymous"></script> {% endcomment %}
   
