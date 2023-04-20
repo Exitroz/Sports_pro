@@ -17,7 +17,7 @@ def index(request):
 
     headers = {
         # "X-RapidAPI-Key": "6b988f2637msh4473b4fe6cd4359p151307jsn6639db590b7a",
-        'X-RapidAPI-Key': 'bb17079e36msh74bf5d47086ca7ep13fc06jsnc033492ad114',
+      'X-RapidAPI-Key': '837e2eebbfmshd942cf451380ac6p125767jsn33e9d4abc51a',
         "X-RapidAPI-Host": "livescore6.p.rapidapi.com"
     }
 
@@ -81,7 +81,7 @@ def competion_events(request, league: str, stage: str):
     query_string = {"Category":"soccer","Ccd":league,"Scd":stage,"Timezone":"-7"}
 
     headers = {
-        "X-RapidAPI-Key": "6b988f2637msh4473b4fe6cd4359p151307jsn6639db590b7a",
+      'X-RapidAPI-Key': '837e2eebbfmshd942cf451380ac6p125767jsn33e9d4abc51a',
         "X-RapidAPI-Host": "livescore6.p.rapidapi.com"
     }
 
@@ -157,7 +157,8 @@ def league_events(request, country: str, league: str):
     query_string = {"Category":"soccer","Ccd":country,"Scd":league,"Timezone":"-7"}
 
     headers = {
-        "X-RapidAPI-Key": "6b988f2637msh4473b4fe6cd4359p151307jsn6639db590b7a",
+     'X-RapidAPI-Key': '837e2eebbfmshd942cf451380ac6p125767jsn33e9d4abc51a',
+
         "X-RapidAPI-Host": "livescore6.p.rapidapi.com"
     }
 
@@ -225,7 +226,8 @@ def live(request):
     querystring = {"Category":"soccer","Timezone":"-7"}
 
     headers = {
-        "X-RapidAPI-Key": "6b988f2637msh4473b4fe6cd4359p151307jsn6639db590b7a",
+        'X-RapidAPI-Key': '837e2eebbfmshd942cf451380ac6p125767jsn33e9d4abc51a',
+
         "X-RapidAPI-Host": "livescore6.p.rapidapi.com"
     }
 
