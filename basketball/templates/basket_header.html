@@ -38,16 +38,16 @@
                </li>
 
                <li class="current">
-                   <a href="{% url 'live' %}">live</a>
+                   <a href="{% url 'basketball_live' %}">live</a>
                </li>
 
                <li>
-                   <a href="{% url 'fixturesByleague' 'england' 'premier-league' %}">Leagues</a>
+                   <a href="{% url 'basketball_resultsByleague' "nba" "regular-season" %}">Leagues</a>
                </li>
 
-               <li>
+               {% comment %} <li>
                    <a href="{% url 'resultsBycompetion' 'champions-league' 'group-b' %}">Competions</a>
-               </li>
+               </li> {% endcomment %}
 
                <li>
                    <a href="">Predictions</a>
