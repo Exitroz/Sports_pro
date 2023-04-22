@@ -5,346 +5,490 @@
 <a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "nba" "play-offs" %}">Fixtures</a>
 <a class="btn btn-info" href="{% url 'basketball_tablesByleague' "nba" "play-offs" %}">Tables</a>
 
-{% elif 'england' in request.path and "championship" in request.path %}
+{% elif 'nba' in request.path and "regular-season" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "england" "championship" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "england" "championship" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "england" "championship" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "nba" "regular-season" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "nba" "regular-season" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "nba" "regular-season" %}">Table</a>
 
-{% elif 'england' in request.path and "league-1" in request.path %}
+{% elif 'nba' in request.path and "pre-season" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "england" "league-1" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "england" "league-1" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "england" "league-1" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "nba" "pre-season" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "nba" "pre-season" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "nba" "pre-season" %}">Table</a>
 
-{% elif 'england' in request.path and "league-2" in request.path %}
+{% elif 'nba' in request.path and "all-star-game" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "england" "league-2" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "england" "league-2" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "england" "league-2" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "nba" "all-star-game" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "nba" "all-star-game" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "nba" "all-star-game" %}">Table</a>
 
-{% elif 'england' in request.path and "efl-cup" in request.path %}
+{% elif 'nba' in request.path and "california-classic-summer-league" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "england" "efl-cup" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "england" "efl-cup" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "england" "efl-cup" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "nba" "california-classic-summer-league" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "nba" "california-classic-summer-league" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "nba" "california-classic-summer-league" %}">Table</a>
 
-{% elif 'england' in request.path and "fa-cup" in request.path %}
+{% elif 'nba' in request.path and "salt-lake-city-summer-league" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "england" "fa-cup" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "england" "fa-cup" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "england" "fa-cup" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "nba" "salt-lake-city-summer-league" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "nba" "salt-lake-city-summer-league" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "nba" "salt-lake-city-summer-league" %}">Table</a>
 
-{% elif 'england' in request.path and "national-league" in request.path %}
+{% elif 'nba' in request.path and "las-vegas-summer-league-play-off" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "england" "national-league" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "england" "national-league" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "england" "national-league" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "nba" "las-vegas-summer-league-play-off" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "nba" "las-vegas-summer-league-play-off" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "nba" "las-vegas-summer-league-play-off" %}">Table</a>
 
-{% elif 'england' in request.path and "national-league-north" in request.path %}
+{% elif 'nba' in request.path and "las-vegas-summer-league" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "england" "national-league-north" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "england" "national-league-north" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "england" "national-league-north" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "nba" "las-vegas-summer-league" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "nba" "las-vegas-summer-league" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "nba" "las-vegas-summer-league" %}">Table</a>
 
-{% elif 'england' in request.path and "national-league-south" in request.path %}
+{% elif 'nba' in request.path and "las-vegas-summer-league-placement-matches" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "england" "national-league-south" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "england" "national-league-south" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "england" "national-league-south" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "nba" "las-vegas-summer-league-placement-matches" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "nba" "las-vegas-summer-league-placement-matches" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "nba" "las-vegas-summer-league-placement-matches" %}">Table</a>
 
-{% elif 'spain' in request.path and "laliga-santander" in request.path %}
+{% elif 'ncaa' in request.path and "march-madness" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "spain" "laliga-santander" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "spain" "laliga-santander" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "spain" "laliga-santander" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "ncaa" "march-madness" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "ncaa" "march-madness" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "ncaa" "march-madness" %}">Table</a>
 
-{% elif 'spain' in request.path and "copa-del-rey-final" in request.path %}
+{% elif 'ncaa' in request.path and "ncaa-men" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "spain" "copa-del-rey-final" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "spain" "copa-del-rey-final" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "spain" "copa-del-rey-final" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "ncaa" "ncaa-men" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "ncaa" "ncaa-men" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "ncaa" "ncaa-men" %}">Table</a>
 
-{% elif 'spain' in request.path and "copa-del-rey-semi-final" in request.path %}
+{% elif 'ncaa' in request.path and "national-invitation-tournament" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "spain" "copa-del-rey-semi-final" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "spain" "copa-del-rey-semi-final" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "spain" "copa-del-rey-semi-final" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "ncaa" "national-invitation-tournament" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "ncaa" "national-invitation-tournament" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "ncaa" "national-invitation-tournament" %}">Table</a>
 
-{% elif 'spain' in request.path and "copa-del-rey-quarter-final" in request.path %}
+{% elif 'euro-league' in request.path and "euroleague-play-off" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "spain" "copa-del-rey-quarter-final" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "spain" "copa-del-rey-quarter-final" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "spain" "copa-del-rey-quarter-final" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "euro-league" "euroleague-play-off" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "euro-league" "euroleague-play-off" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "euro-league" "euroleague-play-off" %}">Table</a>
 
-{% elif 'spain' in request.path and "super-cup" in request.path %}
+{% elif 'euro-league' in request.path and "euroleague-regular-season" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "spain" "super-cup" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "spain" "super-cup" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "spain" "super-cup" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "euro-league" "euroleague-regular-season" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "euro-league" "euroleague-regular-season" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "euro-league" "euroleague-regular-season" %}">Table</a>
 
-{% elif 'spain' in request.path and "primera-division-rfef-group-1" in request.path %}
+{% elif 'eurobasket' in request.path and "play-off" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "spain" "primera-division-rfef-group-1" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "spain" "primera-division-rfef-group-1" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "spain" "primera-division-rfef-group-1" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket" "play-off" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket" "play-off" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket" "play-off" %}">Table</a>
 
-{% elif 'spain' in request.path and "primera-division-rfef-group-2" in request.path %}
+{% elif 'eurobasket' in request.path and "group-a" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "spain" "primera-division-rfef-group-2" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "spain" "primera-division-rfef-group-2" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "spain" "primera-division-rfef-group-2" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket" "group-a" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket" "group-a" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket" "group-a" %}">Table</a>
 
-{% elif 'italy' in request.path and "seria-a" in request.path %}
+{% elif 'eurobasket' in request.path and "group-b" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "italy" "seria-a" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "italy" "seria-a" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "italy" "seria-a" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket" "group-b" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket" "group-b" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket" "group-b" %}">Table</a>
 
-{% elif 'italy' in request.path and "seria-b" in request.path %}
+{% elif 'eurobasket' in request.path and "group-c" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "italy" "seria-b" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "italy" "seria-b" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "italy" "seria-b" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket" "group-c" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket" "group-c" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket" "group-c" %}">Table</a>
 
-{% elif 'italy' in request.path and "seria-c-group-a" in request.path %}
+{% elif 'eurobasket' in request.path and "group-d" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "italy" "seria-c-group-a" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "italy" "seria-c-group-a" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "italy" "seria-c-group-a" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket" "group-d" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket" "group-d" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket" "group-d" %}">Table</a>
 
-{% elif 'italy' in request.path and "seria-c-group-b" in request.path %}
+{% elif 'eurobasket' in request.path and "qualification-group-a" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "italy" "seria-c-group-b" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "italy" "seria-c-group-b" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "italy" "seria-c-group-b" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket" "qualification-group-a" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket" "qualification-group-a" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket" "qualification-group-a" %}">Table</a>
 
-{% elif 'italy' in request.path and "seria-c-group-c" in request.path %}
+{% elif 'eurobasket' in request.path and "qualification-group-b" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "italy" "seria-c-group-c" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "italy" "seria-c-group-c" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "italy" "seria-c-group-c" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket" "qualification-group-b" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket" "qualification-group-b" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket" "qualification-group-b" %}">Table</a>
 
-{% elif 'italy' in request.path and "super-cup" in request.path %}
+{% elif 'eurobasket' in request.path and "qualification-group-c" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "italy" "super-cup" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "italy" "super-cup" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "italy" "super-cup" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket" "qualification-group-c" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket" "qualification-group-c" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket" "qualification-group-c" %}">Table</a>
 
-{% elif 'italy' in request.path and "coppa-italia-final" in request.path %}
+{% elif 'eurobasket' in request.path and "qualification-group-d" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "italy" "coppa-italia-final" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "italy" "coppa-italia-final" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "italy" "coppa-italia-final" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket" "qualification-group-d" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket" "qualification-group-d" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket" "qualification-group-d" %}">Table</a>
 
-{% elif 'germany' in request.path and "bundesliga" in request.path %}
+{% elif 'eurobasket' in request.path and "qualification-group-e" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "germany" "bundesliga" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "germany" "bundesliga" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "germany" "bundesliga" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket" "qualification-group-e" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket" "qualification-group-e" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket" "qualification-group-e" %}">Table</a>
 
-{% elif 'germany' in request.path and "2-bundesliga" in request.path %}
+{% elif 'eurobasket' in request.path and "qualification-group-f" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "germany" "2-bundesliga" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "germany" "2-bundesliga" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "germany" "2-bundesliga" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket" "qualification-group-f" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket" "qualification-group-f" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket" "qualification-group-f" %}">Table</a>
 
-{% elif 'germany' in request.path and "3-liga" in request.path %}
+{% elif 'eurobasket' in request.path and "qualification-group-g" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "germany" "3-liga" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "germany" "3-liga" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "germany" "3-liga" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket" "qualification-group-g" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket" "qualification-group-g" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket" "qualification-group-g" %}">Table</a>
 
-{% elif 'germany' in request.path and "dfl-super-cup" in request.path %}
+{% elif 'eurobasket' in request.path and "qualification-group-h" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "germany" "dfl-super-cup" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "germany" "dfl-super-cup" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "germany" "dfl-super-cup" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket" "qualification-group-h" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket" "qualification-group-h" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket" "qualification-group-h" %}">Table</a>
 
-{% elif 'germany' in request.path and "dfb-cup" in request.path %}
+{% elif 'eurobasket-women' in request.path and "group-a" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "germany" "dfb-cup" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "germany" "dfb-cup" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "germany" "dfb-cup" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-women" "group-a" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-women" "group-a" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-women" "group-a" %}">Table</a>
 
-{% elif 'germany' in request.path and "regionalliga-bayern" in request.path %}
+{% elif 'eurobasket-women' in request.path and "group-b" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "germany" "regionalliga-bayern" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "germany" "regionalliga-bayern" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "germany" "regionalliga-bayern" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-women" "group-b" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-women" "group-b" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-women" "group-b" %}">Table</a>
 
-{% elif 'germany' in request.path and "regionalliga-nord" in request.path %}
+{% elif 'eurobasket-women' in request.path and "group-c" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "germany" "regionalliga-nord" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "germany" "regionalliga-nord" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "germany" "regionalliga-nord" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-women" "group-c" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-women" "group-c" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-women" "group-c" %}">Table</a>
 
-{% elif 'france' in request.path and "ligue-1" in request.path %}
+{% elif 'eurobasket-women' in request.path and "group-d" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "france" "ligue-1" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "france" "ligue-1" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "france" "ligue-1" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-women" "group-d" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-women" "group-d" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-women" "group-d" %}">Table</a>
 
-{% elif 'france' in request.path and "ligue-2" in request.path %}
+{% elif 'eurobasket-women' in request.path and "qualification-group-a" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "france" "ligue-2" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "france" "ligue-2" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "france" "ligue-2" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-women" "qualification-group-a" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-women" "qualification-group-a" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-women" "qualification-group-a" %}">Table</a>
 
-{% elif 'france' in request.path and "coupe-de-france" in request.path %}
+{% elif 'eurobasket-women' in request.path and "qualification-group-b" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "france" "coupe-de-france" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "france" "coupe-de-france" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "france" "coupe-de-france" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-women" "qualification-group-b" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-women" "qualification-group-b" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-women" "qualification-group-b" %}">Table</a>
 
-{% elif 'france' in request.path and "championat-national" in request.path %}
+{% elif 'eurobasket-women' in request.path and "qualification-group-c" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "france" "championat-national" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "france" "championat-national" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "france" "championat-national" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-women" "qualification-group-c" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-women" "qualification-group-c" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-women" "qualification-group-c" %}">Table</a>
 
-{% elif 'france' in request.path and "womens-division-1" in request.path %}
+{% elif 'eurobasket-women' in request.path and "qualification-group-d" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "france" "womens-division-1" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "france" "womens-division-1" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "france" "womens-division-1" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-women" "qualification-group-d" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-women" "qualification-group-d" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-women" "qualification-group-d" %}">Table</a>
 
-{% elif 'holland' in request.path and "eredivisie" in request.path %}
+{% elif 'eurobasket-women' in request.path and "qualification-group-e" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "holland" "eredivisie" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "holland" "eredivisie" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "holland" "eredivisie" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-women" "qualification-group-e" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-women" "qualification-group-e" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-women" "qualification-group-e" %}">Table</a>
 
-{% elif 'holland' in request.path and "eerste-divisie" in request.path %}
+{% elif 'eurobasket-women' in request.path and "qualification-group-f" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "holland" "eerste-divisie" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "holland" "eerste-divisie" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "holland" "eerste-divisie" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-women" "qualification-group-f" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-women" "qualification-group-f" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-women" "qualification-group-f" %}">Table</a>
 
-{% elif 'holland' in request.path and "super-cup" in request.path %}
+{% elif 'eurobasket-women' in request.path and "qualification-group-g" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "holland" "super-cup" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "holland" "super-cup" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "holland" "super-cup" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-women" "qualification-group-g" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-women" "qualification-group-g" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-women" "qualification-group-g" %}">Table</a>
 
-{% elif 'holland' in request.path and "tweede-divisie" in request.path %}
+{% elif 'eurobasket-women' in request.path and "qualification-group-h" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "holland" "tweede-divisie" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "holland" "tweede-divisie" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "holland" "tweede-divisie" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-women" "qualification-group-h" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-women" "qualification-group-h" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-women" "qualification-group-h" %}">Table</a>
 
-{% elif 'scotland' in request.path and "premiership" in request.path %}
+{% elif 'eurobasket-women' in request.path and "qualification-group-i" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "scotland" "premiership" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "scotland" "premiership" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "scotland" "premiership" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-women" "qualification-group-i" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-women" "qualification-group-i" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-women" "qualification-group-i" %}">Table</a>
 
-{% elif 'scotland' in request.path and "championship" in request.path %}
+{% elif 'eurobasket-women' in request.path and "qualification-group-j" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "scotland" "championship" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "scotland" "championship" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "scotland" "championship" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-women" "qualification-group-j" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-women" "qualification-group-j" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-women" "qualification-group-j" %}">Table</a>
 
-{% elif 'scotland' in request.path and "league-1" in request.path %}
+{% elif 'eurobasket-u18' in request.path and "division-a-play-off" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "scotland" "league-1" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "scotland" "league-1" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "scotland" "league-1" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-a-play-off" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-a-play-off" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-a-play-off" %}">Table</a>
 
-{% elif 'scotland' in request.path and "league-2" in request.path %}
+{% elif 'eurobasket-u18' in request.path and "division-a-placement-matches" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "scotland" "league-2" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "scotland" "league-2" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "scotland" "league-2" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-a-placement-matches" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-a-placement-matches" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-a-placement-matches" %}">Table</a>
 
-{% elif 'scotland' in request.path and "scottish-cup" in request.path %}
+{% elif 'eurobasket-u18' in request.path and "division-a-group-a" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "scotland" "scottish-cup" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "scotland" "scottish-cup" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "scotland" "scottish-cup" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-a-group-a" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-a-group-a" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-a-group-a" %}">Table</a>
 
-{% elif 'scotland' in request.path and "challenge-cup" in request.path %}
+{% elif 'eurobasket-u18' in request.path and "division-a-group-b" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "scotland" "challenge-cup" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "scotland" "challenge-cup" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "scotland" "challenge-cup" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-a-group-b" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-a-group-b" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-a-group-b" %}">Table</a>
 
-{% elif 'denmark' in request.path and "superliga" in request.path %}
+{% elif 'eurobasket-u18' in request.path and "division-a-group-c" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "denmark" "superliga" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "denmark" "superliga" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "denmark" "superliga" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-a-group-c" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-a-group-c" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-a-group-c" %}">Table</a>
 
-{% elif 'denmark' in request.path and "1-division" in request.path %}
+{% elif 'eurobasket-u18' in request.path and "division-a-group-d" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "denmark" "1-division" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "denmark" "1-division" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "denmark" "1-division" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-a-group-d" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-a-group-d" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-a-group-d" %}">Table</a>
 
-{% elif 'austria' in request.path and "bundesliga" in request.path %}
+{% elif 'eurobasket-u18' in request.path and "division-b-play-off" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "austria" "bundesliga" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "austria" "bundesliga" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "austria" "bundesliga" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-b-play-off" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-b-play-off" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-b-play-off" %}">Table</a>
 
-{% elif 'austria' in request.path and "2-liga" in request.path %}
+{% elif 'eurobasket-u18' in request.path and "division-b-placement-matches" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "austria" "2-liga" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "austria" "2-liga" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "austria" "2-liga" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-b-placement-matches" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-b-placement-matches" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-b-placement-matches" %}">Table</a>
 
-{% elif 'czech-republic' in request.path and "1-league" in request.path %}
+{% elif 'eurobasket-u18' in request.path and "division-b-group-a" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "czech-republic" "1-league" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "czech-republic" "1-league" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "czech-republic" "1-league" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-b-group-a" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-b-group-a" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-b-group-a" %}">Table</a>
 
-{% elif 'czech-republic' in request.path and "2-league" in request.path %}
+{% elif 'eurobasket-u18' in request.path and "division-b-group-b" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "czech-republic" "2-league" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "czech-republic" "2-league" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "czech-republic" "2-league" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-b-group-b" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-b-group-b" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-b-group-b" %}">Table</a>
 
-{% elif 'croatia' in request.path and "hnl" in request.path %}
+{% elif 'eurobasket-u18' in request.path and "division-b-group-c" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "croatia" "hnl" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "croatia" "hnl" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "croatia" "hnl" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-b-group-c" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-b-group-c" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-b-group-c" %}">Table</a>
 
-{% elif 'croatia' in request.path and "prva-nl" in request.path %}
+{% elif 'eurobasket-u18' in request.path and "division-b-group-d" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "croatia" "prva-nl" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "croatia" "prva-nl" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "croatia" "prva-nl" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-b-group-d" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-b-group-d" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-b-group-d" %}">Table</a>
 
-{% elif 'cyprus' in request.path and "1-divisie" in request.path %}
+{% elif 'eurobasket-u18' in request.path and "division-b-group-f" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "cyprus" "1-divisie" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "cyprus" "1-divisie" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "cyprus" "1-divisie" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-b-group-f" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-b-group-f" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-b-group-f" %}">Table</a>
 
-{% elif 'cyprus' in request.path and "2-divisie" in request.path %}
+{% elif 'eurobasket-u18' in request.path and "division-c-play-off" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "cyprus" "2-divisie" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "cyprus" "2-divisie" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "cyprus" "2-divisie" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-c-play-off" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-c-play-off" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-c-play-off" %}">Table</a>
 
-{% elif 'egypt' in request.path and "premier-league" in request.path %}
+{% elif 'eurobasket-u18' in request.path and "division-c-placement-matches" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "egypt" "premier-league" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "egypt" "premier-league" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "egypt" "premier-league" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-c-placement-matches" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-c-placement-matches" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-c-placement-matches" %}">Table</a>
 
-{% elif 'nigeria' in request.path and "npfl-group-a" in request.path %}
+{% elif 'eurobasket-u18' in request.path and "division-c-group-a" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "nigeria" "npfl-group-a" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "nigeria" "npfl-group-a" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "nigeria" "npfl-group-a" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-c-group-a" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-c-group-a" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-c-group-a" %}">Table</a>
 
-{% elif 'nigeria' in request.path and "npfl-group-b" in request.path %}
+{% elif 'eurobasket-u18' in request.path and "division-c-group-b" in request.path %}
 
-<a class="btn btn-info" href="{% url 'resultsByleague' "nigeria" "npfl-group-b" %}">Results</a>
-<a class="btn btn-info" href="{% url 'fixturesByleague' "nigeria" "npfl-group-b" %}">Fixtures</a>
-<a class="btn btn-info" href="{% url 'tablesByleague' "nigeria" "npfl-group-b" %}">Table</a>
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-c-group-b" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-c-group-b" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-c-group-b" %}">Table</a>
+
+{% elif 'bnxt-league' in request.path and "bnxt-league-elite-gold" in request.path %}
+
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "bnxt-league" "bnxt-league-elite-gold" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "bnxt-league" "bnxt-league-elite-gold" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "bnxt-league" "bnxt-league-elite-gold" %}">Table</a>
+
+{% elif 'bnxt-league' in request.path and "bnxt-league-elite-silver" in request.path %}
+
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "bnxt-league" "bnxt-league-elite-silver" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "bnxt-league" "bnxt-league-elite-silver" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "bnxt-league" "bnxt-league-elite-silver" %}">Table</a>
+
+{% elif 'bnxt-league' in request.path and "domestic-belgium" in request.path %}
+
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "bnxt-league" "domestic-belgium" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "bnxt-league" "domestic-belgium" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "bnxt-league" "domestic-belgium" %}">Table</a>
+
+{% elif 'bnxt-league' in request.path and "domestic-netherlands" in request.path %}
+
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "bnxt-league" "domestic-netherlands" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "bnxt-league" "domestic-netherlands" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "bnxt-league" "domestic-netherlands" %}">Table</a>
+
+{% elif 'wnba' in request.path and "wnba-play-off" in request.path %}
+
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "wnba" "wnba-play-off" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "wnba" "wnba-play-off" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "wnba" "wnba-play-off" %}">Table</a>
+
+{% elif 'wnba' in request.path and "wnba-regular-season" in request.path %}
+
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "wnba" "wnba-regular-season" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "wnba" "wnba-regular-season" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "wnba" "wnba-regular-season" %}">Table</a>
+
+{% elif 'wnba' in request.path and "all-star-game" in request.path %}
+
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "wnba" "all-star-game" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "wnba" "all-star-game" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "wnba" "all-star-game" %}">Table</a>
+
+{% elif 'argentina' in request.path and "lnb" in request.path %}
+
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "argentina" "lnb" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "argentina" "lnb" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "argentina" "lnb" %}">Table</a>
+
+{% elif 'eurobasket-u18' in request.path and "division-c-group-a" in request.path %}
+
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-c-group-a" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-c-group-a" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-c-group-a" %}">Table</a>
+
+{% elif 'eurobasket-u18' in request.path and "division-c-group-b" in request.path %}
+
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-c-group-b" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-c-group-b" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-c-group-b" %}">Table</a>
+
+{% elif 'eurobasket-u18' in request.path and "division-c-group-a" in request.path %}
+
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-c-group-a" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-c-group-a" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-c-group-a" %}">Table</a>
+
+{% elif 'eurobasket-u18' in request.path and "division-c-group-b" in request.path %}
+
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-c-group-b" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-c-group-b" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-c-group-b" %}">Table</a>
+
+{% elif 'eurobasket-u18' in request.path and "division-c-group-a" in request.path %}
+
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-c-group-a" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-c-group-a" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-c-group-a" %}">Table</a>
+
+{% elif 'eurobasket-u18' in request.path and "division-c-group-b" in request.path %}
+
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-c-group-b" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-c-group-b" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-c-group-b" %}">Table</a>
+
+{% elif 'eurobasket-u18' in request.path and "division-c-group-a" in request.path %}
+
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-c-group-a" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-c-group-a" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-c-group-a" %}">Table</a>
+
+{% elif 'eurobasket-u18' in request.path and "division-c-group-b" in request.path %}
+
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-c-group-b" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-c-group-b" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-c-group-b" %}">Table</a>
+
+{% elif 'eurobasket-u18' in request.path and "division-c-group-a" in request.path %}
+
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-c-group-a" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-c-group-a" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-c-group-a" %}">Table</a>
+
+{% elif 'eurobasket-u18' in request.path and "division-c-group-b" in request.path %}
+
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-c-group-b" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-c-group-b" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-c-group-b" %}">Table</a>
+
+{% elif 'eurobasket-u18' in request.path and "division-c-group-a" in request.path %}
+
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-c-group-a" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-c-group-a" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-c-group-a" %}">Table</a>
+
+{% elif 'eurobasket-u18' in request.path and "division-c-group-b" in request.path %}
+
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-c-group-b" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-c-group-b" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-c-group-b" %}">Table</a>
+
+{% elif 'eurobasket-u18' in request.path and "division-c-group-a" in request.path %}
+
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-c-group-a" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-c-group-a" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-c-group-a" %}">Table</a>
+
+{% elif 'eurobasket-u18' in request.path and "division-c-group-b" in request.path %}
+
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-c-group-b" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-c-group-b" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-c-group-b" %}">Table</a>
+
+{% elif 'eurobasket-u18' in request.path and "division-c-group-a" in request.path %}
+
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-c-group-a" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-c-group-a" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-c-group-a" %}">Table</a>
+
+{% elif 'eurobasket-u18' in request.path and "division-c-group-b" in request.path %}
+
+<a class="btn btn-info" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-c-group-b" %}">Results</a>
+<a class="btn btn-info" href="{% url 'basketball_fixturesByleague' "eurobasket-u18" "division-c-group-b" %}">Fixtures</a>
+<a class="btn btn-info" href="{% url 'basketball_tablesByleague' "eurobasket-u18" "division-c-group-b" %}">Table</a>
 
 {% endif %}
