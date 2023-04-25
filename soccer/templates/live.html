@@ -53,7 +53,7 @@
                                             <div class="row">
                                                 <div class="col-lg-6">
                                                     <img src="https://lsm-static-prod.livescore.com/medium/{{game.T1.0.Img}}" alt="icon">
-                                                    <strong>{{game.T1.0.Nm}}</strong><br>
+                                                    <strong><a href="{% url 'singleResult' game.Eid %}">{{game.T1.0.Nm}}</a></strong><br>
                                                     <small class="meta-text">{% if st.CompN %} {{st.CompN}} {% else %} {{st.Snm}} {% endif %}</small></small>
                                                 </div>
                                                 <div class="col-lg-6">
@@ -73,7 +73,7 @@
                                                 </div>
                                                 <div class="col-lg-9 float-sm-right">
                                                     <img src="https://lsm-static-prod.livescore.com/medium/{{game.T2.0.Img}}" alt="icon1">
-                                                    <strong>{{game.T2.0.Nm}}</strong><br>
+                                                    <strong><a href="{% url 'singleResult' game.Eid %}">{{game.T2.0.Nm}}</a></strong><br>
                                                     <small class="meta-text">{% if st.CompN %} {{st.CompN}} {% else %} {{st.Snm}} {% endif %}</small> 
                                                 </div>
                                             </div>
