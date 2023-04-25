@@ -9,11 +9,11 @@
         <div id="layout">
 
 
-            {% include 'header.html'%}
+            {% include 'basket_header.html'%}
 
 
             <!-- Section Title -->
-            <div class="section-title" style="{% static 'background:url(img/slide/1.jpg)' %}">
+            <div class="section-title" style="background:url({% static 'img/slide/1.jpg' %})">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8">
@@ -52,10 +52,10 @@
                                 {{Competion_name}}
                             </h3>
                            
-                            {% include "leagues_navbar.html" %}
+                            {% include "basketball_leagues_navbar.html" %}
                         </div>
                         <div class="col">
-                            {% include "button_leagues.html" %}
+                            {% include "basketball_leagues_button.html" %}
                         </div>
                         <div class="col-lg-12">
                             <table class="table-striped table-responsive table-hover"> 
@@ -97,19 +97,19 @@
                                     
                                     <tr>
                                         <td>
-                                            <a href="{% url 'singleResult' game.Eid %}" style="color: #000;">
+                                            <a href="{% url 'basketball_singleResult' game.Eid %}" style="color: #000;">
                                                 <img src="https://lsm-static-prod.livescore.com/medium/{{game.T1.0.Img}}" alt="icon">
                                             </a>
-                                            <strong><a href="{% url 'singleResult' game.Eid %}">{{game.T1.0.Nm}}</a></strong><br>
+                                            <strong><a href="{% url 'basketball_singleResult' game.Eid %}">{{game.T1.0.Nm}}</a></strong><br>
                                             <strong>{{game.Tr1}}</strong><br>
                                             <small class="meta-text">{{Competion_name}}</small>
                                         </td>
                                         <td class="text-center">Vs</td>
                                         <td>
-                                            <a href="{% url 'singleResult' game.Eid %}" style="color: #000;">
+                                            <a href="{% url 'basketball_singleResult' game.Eid %}" style="color: #000;">
                                                 <img src="https://lsm-static-prod.livescore.com/medium/{{game.T2.0.Img}}" alt="icon1">
                                             </a>
-                                            <strong><a href="{% url 'singleResult' game.Eid %}">{{game.T2.0.Nm}}</a></strong><br>
+                                            <strong><a href="{% url 'basketball_singleResult' game.Eid %}">{{game.T2.0.Nm}}</a></strong><br>
                                             <strong>{{game.Tr2}}</strong><br>
                                             <small class="meta-text">{{Competion_name}}</small> 
                                         </td>
