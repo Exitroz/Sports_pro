@@ -182,10 +182,10 @@ def live(request):
 
 
 def single_result(request, Eid: int):
-    template_name = "single-result.html"
+    template_name = "basketball_single-result.html"
     print("EID", Eid)
     
-    url = "https://livescore6.p.rapidapi.com/matches/v2/get-statistics"
+    url = "https://livescore6.p.rapidapi.com/matches/v2/get-info"
     board_url = "https://livescore6.p.rapidapi.com/matches/v2/get-scoreboard"
     
     querystring = {"Category":"basketball","Eid":Eid}
@@ -199,15 +199,12 @@ def single_result(request, Eid: int):
     board_response = requests.get(board_url, headers=headers, params=querystring)
     
     data = response.json()
-    # stat = data['Stat']
-    # pstat = data['PStat']
-    
     b_data = board_response.json()
-    print(b_data['Incs-s'])
+    # print(b_data['Incs-s'])
     context = {
-        # 'stat':stat,
-        # 'pstat':pstat,
+        'data':data,
         'b_data':b_data,
+        
     }
     return render(request, template_name, context)
 

@@ -1,5 +1,4 @@
 
-
 from django.shortcuts import render
 import requests
 import datetime
@@ -259,6 +258,7 @@ def single_result(request, Eid: int):
     
     url = "https://livescore6.p.rapidapi.com/matches/v2/get-statistics"
     board_url = "https://livescore6.p.rapidapi.com/matches/v2/get-scoreboard"
+    info_url = "https://livescore6.p.rapidapi.com/matches/v2/get-info"
     
     querystring = {"Category":"soccer","Eid":Eid}
     
@@ -269,17 +269,33 @@ def single_result(request, Eid: int):
     
     response = requests.get(url, headers=headers, params=querystring)
     board_response = requests.get(board_url, headers=headers, params=querystring)
+    info_response = requests.get(info_url, headers=headers, params=querystring)
     
     data = response.json()
     stat = data['Stat']
-    pstat = data['PStat']
+    try:
+        pstat = data['PStat']
+    except:
+        pstat = []
     
     b_data = board_response.json()
     print(b_data['Incs-s'])
+
+    
+    info_data = info_response.json()
+    
+    context = {
+        'info_data':info_data,
+        'stat':stat,
+        'pstat':pstat,
+        'b_data':b_data,
+        'incs_s':b_data['Incs-s'],
+
     context = {
         'stat':stat,
         'pstat':pstat,
         'b_data':b_data,
+
     }
     return render(request, template_name, context)
 
@@ -311,5 +327,4 @@ def single_result(request, Eid: int):
 #         # If the API call failed, return the error message as a JSON response
 #         error_message = {'error': response.reason}
 #         return JsonResponse(error_message, status=response.status_code)
-
 
