@@ -280,6 +280,7 @@ def single_result(request, Eid: int):
     
     b_data = board_response.json()
     print(b_data['Incs-s'])
+
     
     info_data = info_response.json()
     
@@ -289,6 +290,12 @@ def single_result(request, Eid: int):
         'pstat':pstat,
         'b_data':b_data,
         'incs_s':b_data['Incs-s'],
+
+    context = {
+        'stat':stat,
+        'pstat':pstat,
+        'b_data':b_data,
+
     }
     return render(request, template_name, context)
 
@@ -320,3 +327,4 @@ def single_result(request, Eid: int):
 #         # If the API call failed, return the error message as a JSON response
 #         error_message = {'error': response.reason}
 #         return JsonResponse(error_message, status=response.status_code)
+
