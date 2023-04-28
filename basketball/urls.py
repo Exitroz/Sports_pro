@@ -9,4 +9,5 @@ urlpatterns = [
     path('<str:country>/<str:league>/league/results/', views.league_events, name='basketball_resultsByleague'),
     path('<str:country>/<str:league>/league/table/', views.league_events, name='basketball_tablesByleague'),
     
+    path('single/<int:Eid>/', views.single_result, name='basketball_singleResult'),
 ]

@@ -65,7 +65,7 @@
                                         <th>Team A</th>
                                         <th class="text-center">VS</th>
                                         <th>Team B</th>
-                                        <th>Details</th>
+                                        {% comment %} <th>Details</th> {% endcomment %}
                                     </tr>
                                 </thead>
                                 {% endif %}
@@ -84,10 +84,10 @@
                                             <strong>{{game.T2.0.Nm}}</strong><br>
                                             <small class="meta-text">{{Competion_name}}</small> 
                                         </td>
-                                        <td>
+                                        {% comment %} <td>
                                             {{game.Esd}}<br>
                                             <small class="meta-text">{{game.Eps}}</small>
-                                        </td>
+                                        </td> {% endcomment %}
                                     </tr>
                                 </tbody>
                                 {% endfor %}
@@ -113,10 +113,10 @@
                                             <strong>{{game.Tr2}}</strong><br>
                                             <small class="meta-text">{{Competion_name}}</small> 
                                         </td>
-                                        <td>
+                                        {% comment %} <td>
                                             {{game.Esd}}<br>
                                             <small class="meta-text">{{game.Eps}}</small>
-                                        </td>
+                                        </td> {% endcomment %}
                                     </tr>
                                 </tbody>
                                 {% endfor %}

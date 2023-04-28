@@ -16,7 +16,7 @@ def index(request):
         
     querystring = {"Category":"soccer","Ccd":"england","Scd":"premier-league","Timezone":"-7"}
     today_querystring = {"Category":"soccer","Date":datefmt,"Timezone":"-7"}
-
+    
     headers = {
         "X-RapidAPI-Key": settings.API_KEY,
         "X-RapidAPI-Host": "livescore6.p.rapidapi.com"
