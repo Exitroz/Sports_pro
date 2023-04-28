@@ -40,7 +40,7 @@
                                         <th>Team A</th>
                                         <th class="text-center">VS</th>
                                         <th>Team B</th>
-                                        <th>Details</th>
+                                        {% comment %} <th>Details</th> {% endcomment %}
                                     </tr>
                                 </thead>
                             
@@ -78,10 +78,10 @@
                                                 </div>
                                             </div>
                                         </td>
-                                        <td>
+                                        {% comment %} <td>
                                             {{game.Esd}}<br>
                                             <small class="meta-text">{{game.Eps}}</small>
-                                        </td>
+                                        </td> {% endcomment %}
                                     </tr>
                                 </tbody>
                                 {% endfor %}

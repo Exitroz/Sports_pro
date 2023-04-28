@@ -290,7 +290,7 @@ def single_result(request, Eid: int):
         'pstat':pstat,
         'b_data':b_data,
         'incs_s':b_data['Incs-s'],
-
+    }
     context = {
         'stat':stat,
         'pstat':pstat,
