@@ -1,1281 +1,459 @@
-<!DOCTYPE html>
-<html lang="en">
-    
-<!-- Mirrored from html.iwthemes.com/sportscup/run/index-4.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Mar 2023 00:02:16 GMT -->
-<head>
-        <!-- Basic -->
-        <meta charset="utf-8">
-        <title>SportsCup - Bootstrap 4 Theme for Sports</title>
-        <meta name="keywords" content="HTML5 Template" />
-        <meta name="description" content="SportsCup - Bootstrap 4 Theme for Soccer And Sports">
-        <meta name="author" content="iwthemes.com">
-
-        <!-- Mobile Metas -->
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!-- Theme CSS -->
-        <link href="assets/css/main.css" rel="stylesheet" media="screen">
-
-        <!-- Favicons -->
-        <link rel="shortcut icon" href="img/icons/favicon.ico">
-        <link rel="apple-touch-icon" href="img/icons/apple-touch-icon.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="img/icons/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="img/icons/apple-touch-icon-114x114.png">
-    </head>
-
-    <body>
-
-        <!-- layout-->
-        <div id="layout">
-            <!-- Header-->
-            <header class="header-3">
-                <!-- End headerbox-->
-                <div class="headerbox">
-                    <div class="container">
-                        <div class="row justify-content-between align-items-center">
-                            <!-- Logo-->
-                            <div class="col col-xl-12 text-center">
-                               <div class="logo">
-                                   <a href="index.html" title="Return Home">
-                                        <img src="img/logo.png" alt="Logo" class="logo_img">
-                                    </a>
-                               </div>
-                            </div>
-                            <!-- End Logo-->
-
-                            <!-- Adds Header-->
-                            <div class="col col-xl-12">
-                                <!-- Call Nav Menu-->
-                                <a class="mobile-nav" href="#mobile-nav"><i class="fa fa-bars"></i></a>
-                                <!-- End Call Nav Menu-->
-                            </div>
-                            <!-- End Adds Header-->
-                        </div>
-                    </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    {% comment %} <a class="navbar-brand" href="#">PythonGuides</a> {% endcomment %}
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto my">
+          
+            {% comment %} <li class="nav-item active">
+                <a class="nav-link" href="\">Home <span class="sr-only">(current)</span></a>
+            </li> {% endcomment %}
+  
+            <!--NBA-->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                    NBA
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "nba" "play-offs" %}" style="font-size:14px;">Play offs</a>
+                    <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "nba" "regular-season" %}" style="font-size:14px;">Regular Season</a>
+                    <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "nba" "pre-season" %}" style="font-size:14px;">Pre-Season</a>
+                    <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "nba" "all-star-game" %}" style="font-size:14px;">All-Star Game</a>
+                    <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "nba" "california-classic-summer-league" %}" style="font-size:14px;">California Classic Summer</a>
+                    <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "nba" "salt-lake-city-summer-league" %}" style="font-size:14px;">Salt Lake City Summer</a>
+                    <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "nba" "las-vegas-summer-league-play-off" %}" style="font-size:14px;">Las Vegas Summer Play-offs</a>
+                    <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "nba" "las-vegas-summer-league" %}" style="font-size:14px;">Las Vegas Summer League</a>
+                    <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "nba" "las-vegas-summer-league-placement-matches" %}" style="font-size:14px;">Las Vegas Summer League Placement Matches</a>
                 </div>
-                <!-- End headerbox-->
-
-                <!-- mainmenu-->
-                <nav class="mainmenu">
-                    <div class="container">
-                        <!-- Menu-->
-                        <ul class="sf-menu" id="menu">
-                            <li class="current">
-                                <a href="index.html">Home</a>
-                                <ul class="sub-current">
-                                    <li>
-                                        <a href="index.html">Home 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-2.html">Home 2</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-3.html">Home 3</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-4.html">Home 4</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-5.html">Home 5</a>
-                                    </li>
-                                    <li>
-                                        <a href="index-6.html">Home 6</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a href="#">World Cup</a>
-                                <div class="sf-mega">
-                                    <div class="row">
-                                         <div class="col-md-3">
-                                            <h5><i class="fa fa-trophy" aria-hidden="true"></i>World Cup</h5>
-                                            <ul>
-                                                <li><a href="table-point.html">Point Table</a></li>
-                                                <li><a href="fixtures.html">Fixtures</a></li>
-                                                <li><a href="groups.html">Groups</a></li>
-                                                <li><a href="news-left-sidebar.html">News</a></li>
-                                                <li><a href="contact.html">Contact Us</a></li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="col-md-3">
-                                          <h5><i class="fa fa-users" aria-hidden="true"></i> Teams List</h5>
-                                          <div class="img-hover">
-                                             <img src="img/blog/1.jpg" alt="" class="img-responsive">
-                                             <div class="overlay"><a href="teams.html">+</a></div>
-                                          </div>
-                                        </div>
-
-                                        <div class="col-md-3">
-                                          <h5><i class="fa fa-futbol-o" aria-hidden="true"></i> Players List</h5>
-                                          <div class="img-hover">
-                                             <img src="img/blog/2.jpg" alt="" class="img-responsive">
-                                             <div class="overlay"><a href="players.html">+</a></div>
-                                          </div>
-                                        </div>
-
-                                        <div class="col-md-3">
-                                          <h5><i class="fa fa-gamepad" aria-hidden="true"></i> Results Info</h5>
-                                          <div class="img-hover">
-                                             <img src="img/blog/3.jpg" alt="" class="img-responsive">
-                                             <div class="overlay"><a href="results.html">+</a></div>
-                                          </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="current">
-                                <a href="teams.html">Teams</a>
-                                <ul class="sub-current">
-                                    <li>
-                                        <a href="teams.html">Teams List</a>
-                                    </li>
-                                    <li>
-                                        <a href="single-team.html">Single Team</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="current">
-                                <a href="players.html">Players</a>
-                                <ul class="sub-current">
-                                    <li>
-                                        <a href="players.html">Players List</a>
-                                    </li>
-                                    <li>
-                                        <a href="single-player.html">Single Player</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a href="fixtures.html">Fixtures</a>
-                            </li>
-
-                            <li class="current">
-                                <a href="results.html">Results</a>
-                                <ul class="sub-current">
-                                    <li>
-                                        <a href="results.html">Results List</a>
-                                    </li>
-                                    <li>
-                                        <a href="single-result.html">Single Result</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a href="table-point.html">Point Table</a>
-                            </li>
-
-                            <li>
-                                <a href="groups.html">Groups</a>
-                            </li>
-
-                            <li>
-                                <a href="#">Features</a>
-                                <div class="sf-mega">
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <h5>Features</h5>
-                                            <ul>
-                                                <li><a href="page-full-width.html">Full Width</a></li>
-                                                <li><a href="page-left-sidebar.html">Left Sidebar</a></li>
-                                                <li><a href="page-right-sidebar.html">Right Sidebar</a></li>
-                                                <li><a href="page-404.html">404 Page</a></li>
-                                                <li><a href="page-faq.html">FAQ</a></li>
-                                                <li><a href="sitemap.html">Sitemap</a></li>
-                                                <li><a href="page-pricing.html">Pricing</a></li>
-                                                <li><a href="page-register.html">Register Form</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <h5>Headers & Footers</h5>
-                                            <ul>
-                                                <li><a href="feature-header-footer-1.html">Header Version 1</a></li>
-                                                <li><a href="feature-header-footer-2.html">Header Version 2</a></li>
-                                                <li><a href="feature-header-footer-3.html">Header Version 3</a></li>
-                                                <li><a href="index-5.html">Header Version 4</a></li>
-                                                <li><a href="feature-header-footer-1.html#footer">Footer Version 1</a></li>
-                                                <li><a href="feature-header-footer-2.html#footer">Footer Version 2</a></li>
-                                                <li><a href="feature-header-footer-3.html#footer">Footer Version 3</a></li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="col-md-3">
-                                            <h5>Pages</h5>
-                                            <ul>
-                                                <li><a href="page-about.html">About Us</a></li>
-                                                <li><a href="single-player.html">About Me</a></li>
-                                                <li><a href="services.html">Services</a></li>
-                                                <li><a href="single-team.html">Club Info</a></li>
-                                                <li><a href="single-result.html">Match Result</a></li>
-                                                <li><a href="table-point.html">Positions</a></li>
-                                            </ul>
-                                        </div>
-
-                                        <div class="col-md-3">
-                                            <h5>News</h5>
-                                            <ul>
-                                                <li>
-                                                    <a href="news-left-sidebar.html">News Lef Sidebar</a>
-                                                </li>
-                                                <li>
-                                                    <a href="news-right-sidebar.html">News Right Sidebar</a>
-                                                </li>
-                                                <li>
-                                                    <a href="news-no-sidebar.html">News No Sidebar</a>
-                                                </li>
-                                                <li>
-                                                    <a href="single-news.html">Single News</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <i class="fa fa-trophy big-icon" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li>
-                                <a href="contact.html">Contact</a>
-                            </li>
-                        </ul>
-                        <!-- End Menu-->
-                    </div>
-                </nav>
-                <!-- End mainmenu-->
-            </header>
-            <!-- End Header-->
-
-            <!-- Mobile Nav-->
-            <div id="mobile-nav">
-                <!-- Menu-->
-                <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                        <ul>
-                           <li>
-                                <a href="index-1.html">Home 1</a>
-                            </li>
-                            <li>
-                                <a href="index-2.html">Home 2</a>
-                            </li>
-                            <li>
-                                <a href="index-3.html">Home 3</a>
-                            </li>
-                            <li>
-                                <a href="index-4.html">Home 4</a>
-                            </li>
-                            <li>
-                                <a href="index-5.html">Home 5</a>
-                            </li>
-                            <li>
-                                <a href="index-6.html">Home 6</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="#">World Cup</a>
-                        <ul>
-                            <li>
-                               <a href="#">World Cup</a>
-                                <ul>
-                                    <li><a href="table-point.html">Point Table</a></li>
-                                    <li><a href="fixtures.html">Fixtures</a></li>
-                                    <li><a href="groups.html">Groups</a></li>
-                                    <li><a href="news-left-sidebar.html">News</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
-                                </ul>
-                            </li>
-
-                            <li><a href="teams.html">Teams List</a></li>
-                            <li><a href="players.html">Players List</a></li>
-                            <li><a href="results.html">Results List</a></li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="teams.html">Teams</a>
-                        <ul>
-                            <li>
-                                <a href="teams.html">Teams List</a>
-                            </li>
-                            <li>
-                                <a href="single-team.html">Single Team</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="players.html">Players</a>
-                        <ul>
-                            <li>
-                                <a href="players.html">Players List</a>
-                            </li>
-                            <li>
-                                <a href="single-player.html">Single Player</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="fixtures.html">Fixtures</a>
-                    </li>
-
-                    <li>
-                        <a href="results.html">Results</a>
-                        <ul>
-                            <li>
-                                <a href="results.html">Results List</a>
-                            </li>
-                            <li>
-                                <a href="single-result.html">Single Result</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="table-point.html">Point Table</a>
-                    </li>
-
-                    <li>
-                        <a href="groups.html">Groups</a>
-                    </li>
-
-                    <li>
-                        <a href="#">Features</a>
-                        <ul>
-                            <li>
-                                <a href="#">Features</a>
-                                <ul>
-                                    <li><a href="page-full-width.html">Full Width</a></li>
-                                    <li><a href="page-left-sidebar.html">Left Sidebar</a></li>
-                                    <li><a href="page-right-sidebar.html">Right Sidebar</a></li>
-                                    <li><a href="page-404.html">404 Page</a></li>
-                                    <li><a href="page-faq.html">FAQ</a></li>
-                                    <li><a href="sitemap.html">Sitemap</a></li>
-                                    <li><a href="page-pricing.html">Pricing</a></li>
-                                    <li><a href="page-register.html">Register Form</a></li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a href="#">Headers & Footers</a>
-                                <ul>
-                                    <li><a href="feature-header-footer-1.html">Header Version 1</a></li>
-                                    <li><a href="feature-header-footer-2.html">Header Version 2</a></li>
-                                    <li><a href="feature-header-footer-3.html">Header Version 3</a></li>
-                                    <li><a href="index-5.html">Header Version 4</a></li>
-                                    <li><a href="feature-header-footer-1.html#footer">Footer Version 1</a></li>
-                                    <li><a href="feature-header-footer-2.html#footer">Footer Version 2</a></li>
-                                    <li><a href="feature-header-footer-3.html#footer">Footer Version 3</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Pages</a>
-                                <ul>
-                                    <li><a href="page-about.html">About Us</a></li>
-                                    <li><a href="single-player.html">About Me</a></li>
-                                    <li><a href="feature-header-footer-2.html#footer">Services</a></li>
-                                    <li><a href="single-team.html">Club Info</a></li>
-                                    <li><a href="single-result.html">Match Result</a></li>
-                                    <li><a href="table-point.html">Positions</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">News</a>
-                                <ul>
-                                    <li>
-                                        <a href="news-left-sidebar.html">News Lef Sidebar</a>
-                                    </li>
-                                    <li>
-                                        <a href="news-right-sidebar.html">News Right Sidebar</a>
-                                    </li>
-                                    <li>
-                                        <a href="news-no-sidebar.html">News No Sidebar</a>
-                                    </li>
-                                    <li>
-                                        <a href="single-news.html">Single News</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                </ul>
-                <!-- End Menu-->
-            </div>
-            <!-- End Mobile Nav-->
-
-            <!-- section-hero-posts-->
-            <div class="hero-header">
-                <!-- Hero Slider-->
-                <div id="hero-slider" class="hero-slider">
-
-                    <!-- Item Slide-->
-                    <div class="item-slider" style="background:url(img/slide/3.jpg);">
-                        <div class="container">
-                            <div class="row align-items-center justify-content-center text-center">
-                                <div class="col-lg-7">
-                                    <div class="info-slider">
-                                        <h1>Group Stage Breakdown</h1>
-                                        <p>While familiar with fellow European nation France, Hareide admits that South American side Peru.</p>
-                                        <a href="#" class="btn-iw outline">Read More <i class="fa fa-long-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Item Slide-->
-
-                    <!-- Item Slide-->
-                    <div class="item-slider" style="background:url(img/slide/2.jpg);">
-                        <div class="container">
-                            <div class="row align-items-center justify-content-center text-center">
-                                <div class="col-lg-7">
-                                    <div class="info-slider">
-                                        <h1>World Cup rivalries reprised</h1>
-                                        <p>The outdoor exhibition on Manezhnaya Square comprises 11 figures that symbolise the main sites of interest.</p>
-                                        <a href="#" class="btn-iw outline">Read More <i class="fa fa-long-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Item Slide-->
-
-                    <!-- Item Slide-->
-                    <div class="item-slider" style="background:url(img/slide/1.jpg);">
-                        <div class="container">
-                            <div class="row align-items-center justify-content-center text-center">
-                                <div class="col-lg-7">
-                                    <div class="info-slider">
-                                        <h1>Group Stage Breakdown</h1>
-                                        <p>While familiar with fellow European nation France, Hareide admits that South American side Peru.</p>
-                                        <a href="#" class="btn-iw outline">Read More <i class="fa fa-long-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Item Slide-->
-
-                </div>
-                <!-- End Hero Slider-->
-            </div>
-            <!-- End section-hero-posts-->
-
-            <!-- Section Area - Content Central -->
-            <section class="content-info">
-
-                <!-- White Section -->
-                <div class="white-section paddings">
-
-                    <i class="fa fa-soccer-ball-o right icon-big"></i>
-
-                    <div class="container">
-                        <div class="row next-match">
-
-                            <div class="col-lg-12">
-                                <p class="title-counter">
-                                    <i class="fa fa-clock-o"></i>
-                                    Countdown Till Start
-                                </p>
-                                <div id="event-one" class="counter"></div>
-                            </div>
-
-                            <div class="col-lg-5">
-                                <div class="team">
-                                   <a href="single-team.html">
-                                        Colombia
-                                        <img src="img/clubs-logos/colombia.png" alt="club-logo">
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-2">
-                                <div class="vs-match">
-                                    VS
-                                </div>
-                            </div>
-
-                            <div class="col-lg-5">
-                                <div class="team right">
-                                    <a href="single-team.html">
-                                        <img src="img/clubs-logos/arg.png" alt="club-logo">
-                                        Argentina
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-12">
-                                <ul class="date-match">
-                                    <li><i class="fa fa-calendar"></i>14 June, 2018</li>
-                                    <li><i class="fa fa-clock-o"></i>Kick-of, 12:00 PM</li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <!-- End White Section -->
-
-                <!-- Parallax Section - Players -->
-                <div class="parallax-section parallax-total" style="background:url(img/slide/1.jpg);">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-md-12">
-                                <div class="text-center padding-bottom">
-                                    <h2>We have earned the trust of <span class="text-resalt">25,869</span> Club Members.</h2>
-                                    <p>Duis non lorem porta,  eros sit amet, tempor sem. semper a tempus et.</p>
-                                </div>
-                            </div>
-
-                            <!-- Item Player -->
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="item-player">
-                                    <div class="head-player">
-                                        <img src="img/players/1.jpg" alt="location-team">
-                                        <div class="overlay"><a href="single-player.html">+</a></div>
-                                    </div>
-                                    <div class="info-player">
-                                        <span class="number-player">
-                                            13
-                                        </span>
-                                        <h4>
-                                            Cristiano Ronaldo
-                                            <span>Forward</span>
-                                        </h4>
-                                        <ul class="no-margin">
-                                            <li>
-                                                <strong>NATIONALITY</strong> <span><img src="img/clubs-logos/por.png" alt=""> Portugal </span
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <a href="single-player.html" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                            <!-- End Item Player -->
-
-                            <!-- Item Player -->
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="item-player">
-                                    <div class="head-player">
-                                        <img src="img/players/2.jpg" alt="location-team">
-                                        <div class="overlay"><a href="single-player.html">+</a></div>
-                                    </div>
-                                    <div class="info-player">
-                                        <span class="number-player">
-                                            10
-                                        </span>
-                                        <h4>
-                                            Lionel Messi
-                                            <span>Defender</span>
-                                        </h4>
-                                        <ul class="no-margin">
-                                            <li>
-                                                <strong>NATIONALITY</strong> <span><img src="img/clubs-logos/arg.png" alt=""> Argentina </span
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <a href="single-player.html" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                            <!-- End Item Player -->
-
-                            <!-- Item Player -->
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="item-player">
-                                    <div class="head-player">
-                                        <img src="img/players/3.jpg" alt="location-team">
-                                        <div class="overlay"><a href="single-player.html">+</a></div>
-                                    </div>
-                                    <div class="info-player">
-                                        <span class="number-player">
-                                            5
-                                        </span>
-                                        <h4>
-                                            Neymar
-                                            <span>Midfielder</span>
-                                        </h4>
-                                        <ul class="no-margin">
-                                            <li>
-                                                <strong>NATIONALITY</strong> <span><img src="img/clubs-logos/bra.png" alt=""> Brazil </span
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <a href="single-player.html" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                            <!-- End Item Player -->
-
-                            <!-- Item Player -->
-                            <div class="col-xl-3 col-lg-4 col-md-6">
-                                <div class="item-player">
-                                    <div class="head-player">
-                                        <img src="img/players/4.jpg" alt="location-team">
-                                        <div class="overlay"><a href="single-player.html">+</a></div>
-                                    </div>
-                                    <div class="info-player">
-                                        <span class="number-player">
-                                            2
-                                        </span>
-                                        <h4>
-                                            Luis Suárez
-                                            <span>Goalkeeper</span>
-                                        </h4>
-                                        <ul class="no-margin">
-                                            <li>
-                                                <strong>NATIONALITY</strong> <span><img src="img/clubs-logos/uru.png" alt=""> Uruguay </span
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <a href="single-player.html" class="btn">View Player <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                            <!-- End Item Player -->
-                            </div>
-                    </div>
-                </div>
-                <!-- End Gray Section - Players -->
-
-                <!-- White Section -->
-                <div class="paddings">
-                    <div class="container">
-                        <div class="row">
-
-                            <div class="col-lg-4">
-                                <!-- Point Table -->
-                                <div class="panel-box">
-
-                                    <div class="titles no-margin border-0">
-                                        <h4>Points Table</h4>
-                                    </div>
-
-                                    <table class="table-striped table-responsive table-hover result-point small">
-                                        <thead class="point-table-head">
-                                            <tr>
-                                                <th class="text-left">No</th>
-                                                <th class="text-left">TEAM</th>
-                                                <th class="text-center">P</th>
-                                                <th class="text-center">W</th>
-                                                <th class="text-center">D</th>
-                                                <th class="text-center">PTS</th>
-                                            </tr>
-                                        </thead>
-
-                                        <tbody class="text-center">
-                                            <tr>
-                                                <td class="text-left number">1 <i class="fa fa-caret-up" aria-hidden="true"></i></td>
-                                                <td class="text-left">
-                                                   <a href="single-team.html">
-                                                        <img src="img/clubs-logos/colombia.png" alt="Colombia"><span>Colombia</span>
-                                                    </a>
-                                                </td>
-                                                <td>38</td>
-                                                <td>26</td>
-                                                <td>9</td>
-                                                <td>3</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="text-left number">2 <i class="fa fa-caret-up" aria-hidden="true"></i></td>
-                                                <td class="text-left">
-                                                   <a href="single-team.html">
-                                                        <img src="img/clubs-logos/bra.png" alt="Brazil"><span>Brazil</span>
-                                                    </a>
-                                                </td>
-                                                <td>38</td>
-                                                <td>24</td>
-                                                <td>7</td>
-                                                <td>7</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="text-left number">3 <i class="fa fa-caret-up" aria-hidden="true"></i></td>
-                                                <td class="text-left">
-                                                   <a href="single-team.html">
-                                                        <img src="img/clubs-logos/arg.png" alt="Argentina"><span>Argentina</span>
-                                                    </a>
-                                                </td>
-                                                <td>38</td>
-                                                <td>22</td>
-                                                <td>9</td>
-                                                <td>7</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="text-left number">4<i class="fa fa-caret-down" aria-hidden="true"></i></td>
-                                                <td class="text-left">
-                                                   <a href="single-team.html">
-                                                        <img src="img/clubs-logos/japan.png" alt="Japan"><span>Japan</span>
-                                                    </a>
-                                                </td>
-                                                <td>38</td>
-                                                <td>20</td>
-                                                <td>10</td>
-                                                <td>8</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="text-left number">5  <i class="fa fa-caret-up" aria-hidden="true"></td>
-                                                <td class="text-left">
-                                                   <a href="single-team.html">
-                                                        <img src="img/clubs-logos/sen.png" alt="Senegal"><span>Senegal</span>
-                                                    </a>
-                                                </td>
-                                                <td>38</td>
-                                                <td>19</td>
-                                                <td>7</td>
-                                                <td>12</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="text-left number">6<i class="fa fa-caret-down" aria-hidden="true"></i></td>
-                                                <td class="text-left">
-                                                   <a href="single-team.html">
-                                                        <img src="img/clubs-logos/pol.png" alt="Poland"><span>Poland</span>
-                                                    </a>
-                                                </td>
-                                                <td>38</td>
-                                                <td>18</td>
-                                                <td>8</td>
-                                                <td>12</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="text-left number">7<i class="fa fa-caret-down" aria-hidden="true"></i></td>
-                                                <td class="text-left">
-                                                   <a href="single-team.html">
-                                                        <img  src="img/clubs-logos/rusia.png" alt="Russia"><span>Russia</span>
-                                                    </a>
-                                                </td>
-                                                <td>38</td>
-                                                <td>18</td>
-                                                <td>6</td>
-                                                <td>14</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="text-left number">8<i class="fa fa-caret-up" aria-hidden="true"></i></td>
-                                                <td class="text-left">
-                                                   <a href="single-team.html">
-                                                        <img src="img/clubs-logos/irn.png" alt="Iran"><span>Iran</span>
-                                                    </a>
-                                                </td>
-                                                <td>38</td>
-                                                <td>12</td>
-                                                <td>11</td>
-                                                <td>15</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="text-left number">9 <i class="fa fa-circle" aria-hidden="true"></i></td>
-                                                <td class="text-left">
-                                                    <a href="single-team.html">
-                                                        <img src="img/clubs-logos/esp.png" alt="Spain"><span>Spain</span>
-                                                    </a>
-                                                </td>
-                                                <td>38</td>
-                                                <td>26</td>
-                                                <td>9</td>
-                                                <td>3</td>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="text-left number">10<i class="fa fa-circle" aria-hidden="true"></i></td>
-                                                <td class="text-left">
-                                                    <a href="single-team.html">
-                                                        <img src="img/clubs-logos/fra.png" alt="France">
-                                                        <span>France</span>
-                                                    </a>
-                                                </td>
-                                                <td>38</td>
-                                                <td>24</td>
-                                                <td>7</td>
-                                                <td>7</td>
-                                            </tr>
-                                          </tbody>
-                                    </table>
-                                     <a href="table-point.html" class="btn-iw full no-margin">View Full Table</a>
-                                </div>
-                                <!-- End Point Table -->
-
-                                <!-- Video presentation -->
-                                <div class="panel-box">
-                                    <div class="titles no-margin">
-                                        <h4>Presentation</h4>
-                                    </div>
-                                    <!-- Locations Video -->
-                                    <div class="row">
-                                        <iframe src="https://www.youtube.com/embed/AfOlAUd7u4o" class="video"></iframe>
-                                        <div class="info-panel">
-                                            <h4>Rio de Janeiro</h4>
-                                            <p>Lorem ipsum dolor sit amet, sit amet, consectetur adipisicing elit, elit, incididunt ut labore et dolore magna aliqua sit amet, consectetur adipisicing elit,</p>
-                                        </div>
-                                    </div>
-                                    <!-- End Locations Video -->
-                                </div>
-                                <!-- End Video presentation-->
-                            </div>
-
-                            <div class="col lg-8">
-                                <!-- Recent Post -->
-                                <div class="panel-box">
-
-                                    <div class="titles">
-                                        <h4>Recent News</h4>
-                                    </div>
-
-                                    <!-- Post Item -->
-                                    <div class="post-item">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="img-hover">
-                                                   <img src="img/blog/1.jpg" alt="" class="img-responsive">
-                                                   <div class="overlay"><a href="single-news.html">+</a></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <h5><a href="single-news.html">Group Stage Breakdown</a></h5>
-                                                <span class="data-info">January 3, 2014  / <i class="fa fa-comments"></i><a href="#">0</a></span>
-                                                <p>While familiar with fellow European nation France, Hareide admits that South American side Peru.<a href="single-news.html">Read More [+]</a></p>
-                                            </div>
-                                       </div>
-                                    </div>
-                                     <!-- End Post Item -->
-
-                                     <!-- Post Item -->
-                                    <div class="post-item">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="img-hover">
-                                                   <img src="img/blog/2.jpg" alt="" class="img-responsive">
-                                                   <div class="overlay"><a href="single-news.html">+</a></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <h5><a href="single-news.html">Russia 2018’s potential classic match-ups</a></h5>
-                                                <span class="data-info">January 9, 2014  / <i class="fa fa-comments"></i><a href="#">5</a></span>
-                                                <p>Our goal is very clear, it didn’t change after the draw. We should qualify for the knockout stage.<a href="single-news.html">Read More [+]</a></p>
-                                            </div>
-                                       </div>
-                                    </div>
-                                     <!-- End Post Item -->
-
-                                     <!-- Post Item -->
-                                    <div class="post-item">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="img-hover">
-                                                   <img src="img/blog/3.jpg" alt="" class="img-responsive">
-                                                   <div class="overlay"><a href="single-news.html">+</a></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <h5><a href="single-news.html">World Cup rivalries reprised</a></h5>
-                                                <span class="data-info">January  4, 2014  / <i class="fa fa-comments"></i><a href="#">3</a></span>
-                                                <p>The outdoor exhibition on Manezhnaya Square comprises 11 figures that symbolise the main sites of interest.<a href="single-news.html">Read More [+]</a></p>
-                                            </div>
-                                       </div>
-                                    </div>
-                                     <!-- End Post Item -->
-
-                                     <!-- Post Item -->
-                                    <div class="post-item">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                <div class="img-hover">
-                                                   <img src="img/blog/4.jpg" alt="" class="img-responsive">
-                                                   <div class="overlay"><a href="single-news.html">+</a></div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-8">
-                                                <h5><a href="single-news.html">All set for your trip to Russia?</a></h5>
-                                                <span class="data-info">January 8, 2014  / <i class="fa fa-comments"></i><a href="#">2</a></span>
-                                                <p>Colombia play Japan on 19 June at the Mordovia Arena, where the piling and casting operations.<a href="single-news.html">Read More [+]</a></p>
-                                            </div>
-                                       </div>
-                                    </div>
-                                     <!-- End Post Item -->
-                                </div>
-                                <!-- End Recent Post -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End White Section -->
-
-                <!-- End gray Section -->
-                <div class="dark-section paddings">
-                    <div class="container">
-                        <div class="row">
-                            <!-- Top player -->
-                            <div class="col-lg-4">
-                               <div class="player-ranking">
-                                    <h5><a href="group-list.html">Top players</a></h5>
-                                    <div class="info-player">
-                                        <ul>
-                                            <li>
-                                              <span class="position">
-                                                  1
-                                              </span>
-                                               <a href="single-team.html">
-                                                    <img src="img/players/1.jpg" alt="">
-                                                    Cristiano R.
-                                                </a>
-                                                <span class="points">
-                                                    90
-                                                </span>
-                                            </li>
-
-                                            <li>
-                                              <span class="position">
-                                                  2
-                                              </span>
-                                               <a href="single-team.html">
-                                                    <img src="img/players/2.jpg" alt="">
-                                                    Lionel Messi
-                                                </a>
-                                                <span class="points">
-                                                    88
-                                                </span>
-                                            </li>
-
-                                            <li>
-                                              <span class="position">
-                                                  3
-                                              </span>
-                                               <a href="single-team.html">
-                                                    <img src="img/players/3.jpg" alt="">
-                                                    Neymar
-                                                </a>
-                                                <span class="points">
-                                                    86
-                                                </span>
-                                            </li>
-
-                                            <li>
-                                              <span class="position">
-                                                  4
-                                              </span>
-                                               <a href="single-team.html">
-                                                    <img src="img/players/4.jpg" alt="">
-                                                    Luis Suárez
-                                                </a>
-                                                <span class="points">
-                                                  80
-                                               </span>
-                                            </li>
-
-                                            <li>
-                                              <span class="position">
-                                                  5
-                                              </span>
-                                               <a href="single-team.html">
-                                                    <img src="img/players/5.jpg" alt="">
-                                                    Gareth Bale
-                                                </a>
-                                                <span class="points">
-                                                    76
-                                                </span>
-                                            </li>
-
-                                            <li>
-                                              <span class="position">
-                                                  6
-                                              </span>
-                                               <a href="single-team.html">
-                                                    <img src="img/players/6.jpg" alt="">
-                                                    Sergio Agüero
-                                                </a>
-                                                <span class="points">
-                                                    74
-                                                </span>
-                                            </li>
-
-                                            <li>
-                                              <span class="position">
-                                                  7
-                                              </span>
-                                               <a href="single-team.html">
-                                                    <img src="img/players/2.jpg" alt="">
-                                                    Jamez R.
-                                                </a>
-                                                <span class="points">
-                                                    70
-                                                </span>
-                                            </li>
-
-                                            <li>
-                                              <span class="position">
-                                                  8
-                                              </span>
-                                               <a href="single-team.html">
-                                                    <img src="img/players/1.jpg" alt="">
-                                                     Falcao Garcia
-                                                </a>
-                                                <span class="points">
-                                                    65
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                               </div>
-                            </div>
-                            <!-- End Top player -->
-
-                            <div class="offset-lg-1 col-lg-7">
-                                <iframe class="big-video" src="https://www.youtube.com/embed/hW3hnUoUS0k?rel=0&amp;start=7" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Gray Section -->
-
-                <div class="paddings-mini">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <!--Sponsors CLub -->
-                               <div class="row no-line-height">
-                                      <div class="col-md-12">
-                                          <h3 class="clear-title">Match Sponsors</h3>
-                                      </div>
-                                </div>
-                                <!--End Sponsors CLub -->
-
-                                <ul class="sponsors-carousel">
-                                    <li><a href="#"><img src="img/sponsors/1.png" alt=""></a></li>
-                                    <li><a href="#"><img src="img/sponsors/2.png" alt=""></a></li>
-                                    <li><a href="#"><img src="img/sponsors/3.png" alt=""></a></li>
-                                    <li><a href="#"><img src="img/sponsors/4.png" alt=""></a></li>
-                                    <li><a href="#"><img src="img/sponsors/5.png" alt=""></a></li>
-                                    <li><a href="#"><img src="img/sponsors/3.png" alt=""></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Newsletter -->
-                <div class="section-newsletter dark">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="text-center">
-                                    <h2>Enter your e-mail and <span class="text-resalt">subscribe</span> to our newsletter.</h2>
-                                    <p>Duis non lorem porta,  eros sit amet, tempor sem. Donec nunc arcu, semper a tempus et, consequat.</p>
-                                </div>
-                                <form id="newsletterForm" action="http://html.iwthemes.com/sportscup/run/php/mailchip/newsletter-subscribe.php">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="input-group">
-                                                <span class="input-group-addon">
-                                                    <i class="fa fa-envelope"></i>
-                                                </span>
-                                                <input class="form-control" placeholder="Your Name" name="name"  type="text" required="required">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="input-group">
-                                                <span class="input-group-addon">
-                                                    <i class="fa fa-envelope"></i>
-                                                </span>
-                                                <input class="form-control" placeholder="Your  Email" name="email"  type="email" required="required">
-                                                <span class="input-group-btn">
-                                                    <button class="btn btn-primary" type="submit" name="subscribe" >SIGN UP</button>
-                                                 </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                                <div id="result-newsletter"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Newsletter -->
-            </section>
-            <!-- End Section Area -  Content Central -->
-
-            <div class="instagram-btn light">
-                <div class="btn-instagram">
-                    <i class="fa fa-instagram"></i>
-                    FOLLOW
-                    <a href="https://www.instagram.com/fifaworldcup/" target="_blank">&#64;fifaworldcup</a>
-                </div>
-            </div>
-
-            <div class="content-instagram">
-                <div id="instafeed"></div>
-            </div>
-
-            <!-- footer-->
-            <footer id="footer" class="footer-3">
-                <!-- Footer Top-->
-                <div class="top-footer">
-
-                    <!-- Logo Footer-->
-                   <div class="col-lg-12">
-                        <div class="logo-footer">
-                            <h2>Sports Cup</h2>
-                        </div>
-                   </div>
-                    <!-- End Logo Footer-->
-
-                    <!-- Social Icons-->
-                    <ul class="social">
-                        <li>
-                            <div>
-                                <a href="#" class="facebook">
-                                    <i class="fa fa-facebook"></i>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <a href="#" class="twitter-icon">
-                                    <i class="fa fa-twitter"></i>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <a href="#" class="vimeo">
-                                    <i class="fa fa-vimeo-square"></i>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <a href="#" class="google-plus">
-                                    <i class="fa fa-google-plus"></i>
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                <a href="#" class="youtube">
-                                    <i class="fa fa-youtube"></i>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                    <!-- End Social Icons-->
-                </div>
-                <!-- End Footer Top-->
-
-                <!-- Links Footer-->
-                <div class="links-footer">
-                    <div class="container">
-                        <div class="row">
-
-                           <!-- Column Links -->
-                            <div class="col-lg-2 col-md-5 col-sm-5">
-                                <div class="info-links">
-                                   <h5>Organisation</h5>
-                                    <ul>
-                                        <li><a href="#">Volunteers</a></li>
-                                        <li><a href="#">Committees</a></li>
-                                        <li><a href="#">Official Documents</a></li>
-                                        <li><a href="#">Terms of Service</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- End Column Links -->
-
-                            <!-- Column Links -->
-                            <div class="col-lg-4 col-md-7 col-sm-7">
-                                <div class="info-links">
-                                   <h5>Groups</h5>
-                                    <ul class="columns">
-                                        <li><a href="#">GROUP A</a></li>
-                                        <li><a href="#">GROUP B</a></li>
-                                        <li><a href="#">GROUP C</a></li>
-                                        <li><a href="#">GROUP D</a></li>
-                                        <li><a href="#">GROUP E</a></li>
-                                        <li><a href="#">GROUP F</a></li>
-                                        <li><a href="#">GROUP G</a></li>
-                                        <li><a href="#">GROUP H</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- End Column Links -->
-
-                            <!-- Column Links -->
-                            <div class="col-lg-2 col-md-5 col-sm-5">
-                                <div class="info-links">
-                                   <h5>Interest Links</h5>
-                                    <ul>
-                                        <li><a href="#">Statistics</a></li>
-                                        <li><a href="#">Teams</a></li>
-                                        <li><a href="#">Qualifiers</a></li>
-                                        <li><a href="#">Ticketing</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- End Column Links -->
-
-                            <!-- Column Links -->
-                            <div class="col-lg-4 col-md-7 col-sm-7">
-                                <div class="info-links">
-                                   <h5>Organisation</h5>
-                                    <ul class="columns">
-                                        <li><a href="#">NIZHNY NOVGOROD</a></li>
-                                        <li><a href="#">SAINT PETERSBURG</a></li>
-                                        <li><a href="#">EKATERINBURG</a></li>
-                                        <li><a href="#">MOSCOW</a></li>
-                                        <li><a href="#">KAZAN</a></li>
-                                        <li><a href="#">KALININGRAD</a></li>
-                                        <li><a href="#">VOLGOGRAD</a></li>
-                                        <li><a href="#">ROSTOV-ON-DON</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- End Column Links -->
-
-                        </div>
-                    </div>
-                </div>
-                <!-- End Links Footer-->
-
-                <!-- footer Down-->
-                <div class="footer-down">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <p>&copy; 2018 SportsCup . All Rights Reserved</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- footer Down-->
-
-            </footer>
-            <!-- End footer-->
-        </div>
-        <!-- End layout-->
-
-        <!-- ======================= JQuery libs =========================== -->
-        <!-- jQuery local-->
-        <script type="text/javascript" src="assets/js/jquery.js"></script>
-        <!-- popper.js-->
-        <script type="text/javascript" src="assets/js/popper.min.js"></script>
-        <!-- bootstrap.min.js-->
-        <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-        <!-- required-scripts.js-->
-        <script type="text/javascript" src="assets/js/theme-scripts.js"></script>
-        <!-- theme-main.js-->
-        <script type="text/javascript" src="assets/js/theme-main.js"></script>
-        <!-- ======================= End JQuery libs =========================== -->
-
-    </body>
-
-<!-- Mirrored from html.iwthemes.com/sportscup/run/index-4.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 04 Mar 2023 00:02:20 GMT -->
-</html>
+            </li>
+            
+             <!--NCAA-->
+             <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  NCAA
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "ncaa" "march-madness" %}" style="font-size:14px;">March Madness</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "ncaa" "ncaa-men" %}" style="font-size:14px;">Regular Season</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "ncaa" "national-invitation-tournament" %}" style="font-size:14px;">National Invitation Tournament</a>
+            </li>
+  
+            <!--Euro League-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  EuroLeague
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "euro-league" "euroleague-play-off" %}" style="font-size:14px;">Play-off</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "euro-league" "euroleague-regular-season" %}" style="font-size:14px;">Regular Season</a>
+              </div>
+            </li>
+  
+            <!--EuroBasket-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  EuroBasket
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket" "play-off" %}" style="font-size:14px;">Play-off</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket" "group-a" %}" style="font-size:14px;">Group A</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket" "group-b" %}" style="font-size:14px;">Group B</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket" "group-c" %}" style="font-size:14px;">Group C</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket" "group-d" %}" style="font-size:14px;">Group D</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket" "qualification-group-a" %}" style="font-size:14px;">Qualification Group A</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket" "qualification-group-b" %}" style="font-size:14px;">Qualification Group B</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket" "qualification-group-c" %}" style="font-size:14px;">Qualification Group C</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket" "qualification-group-d" %}" style="font-size:14px;">Qualification Group D</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket" "qualification-group-e" %}" style="font-size:14px;">Qualification Group E</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket" "qualification-group-f" %}" style="font-size:14px;">Qualification Group F</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket" "qualification-group-g" %}" style="font-size:14px;">Qualification Group G</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket" "qualification-group-h" %}" style="font-size:14px;">Qualification Group H</a>
+              </div>
+            </li>
+  
+            <!--EuroBasket Women-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  EuroBasket Women
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-women" "group-a" %}" style="font-size:14px;">Group A</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-women" "group-b" %}" style="font-size:14px;">Group B</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-women" "group-c" %}" style="font-size:14px;">Group C</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-women" "group-d" %}" style="font-size:14px;">Group D</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-women" "qualification-group-a" %}" style="font-size:14px;">Qualification Group A</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-women" "qualification-group-b" %}" style="font-size:14px;">Qualification Group B</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-women" "qualification-group-c" %}" style="font-size:14px;">Qualification Group C</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-women" "qualification-group-d" %}" style="font-size:14px;">Qualification Group D</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-women" "qualification-group-e" %}" style="font-size:14px;">Qualification Group E</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-women" "qualification-group-f" %}" style="font-size:14px;">Qualification Group F</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-women" "qualification-group-g" %}" style="font-size:14px;">Qualification Group G</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-women" "qualification-group-h" %}" style="font-size:14px;">Qualification Group H</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-women" "qualification-group-i" %}" style="font-size:14px;">Qualification Group I</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-women" "qualification-group-j" %}" style="font-size:14px;">Qualification Group J</a>
+              </div>
+            </li>
+  
+            <!--EuroBasket U18-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  EuroBasket U18
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-a-play-off" %}" style="font-size:14px;">Division A Play-off</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-a-placement-matches" %}" style="font-size:14px;">Division A Placement Matches</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-a-group-a" %}" style="font-size:14px;">Division A Group A</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-a-group-b" %}" style="font-size:14px;">Division A Group B</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-a-group-c" %}" style="font-size:14px;">Division A Group C</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-a-group-d" %}" style="font-size:14px;">Division A Group D</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-b-play-off" %}" style="font-size:14px;">Division B Play-off</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-b-placement-matches" %}" style="font-size:14px;">Division B Placement Matches</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-b-group-a" %}" style="font-size:14px;">Division B Group A</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-b-group-b" %}" style="font-size:14px;">Division B Group B</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-b-group-c" %}" style="font-size:14px;">Division B Group C</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-b-group-d" %}" style="font-size:14px;">Division B Group D</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-b-group-e" %}" style="font-size:14px;">Division B Group E</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-b-group-f" %}" style="font-size:14px;">Division B Group F</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-c-play-off" %}" style="font-size:14px;">Division C Play-off</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-c-placement-matches" %}" style="font-size:14px;">Division C Placement Matches</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-c-group-a" %}" style="font-size:14px;">Division C Group A</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "eurobasket-u18" "division-c-group-b" %}" style="font-size:14px;">Division C Group B</a>
+              </div>
+            </li>
+  
+            <!--BNXT League-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  BNXT League
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "bnxt-league" "bnxt-league-elite-gold" %}" style="font-size:14px;">Elite Gold</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "bnxt-league" "bnxt-league-elite-silver" %}" style="font-size:14px;">Elite Silver</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "bnxt-league" "domestic-belgium" %}" style="font-size:14px;">Domestic Belgium</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "bnxt-league" "domestic-netherlands" %}" style="font-size:14px;">Domestic Netherlands</a>
+              </div>
+            </li>
+  
+            <!--WNBA-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  WNBA
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "wnba" "wnba-play-off" %}" style="font-size:14px;">Play-off</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "wnba" "wnba-regular-season" %}" style="font-size:14px;">wnba-regular-season</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "wnba" "all-star-game" %}" style="font-size:14px;">All-Star Game</a>
+              </div>
+            </li>
+  
+            <!--Argentina-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  Argentina
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "argentina" "lnb" %}" style="font-size:14px;">LNB</a>
+              </div>
+            </li>
+  
+            <!--Australia-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  Australia
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "australia" "nbl-play-off" %}" style="font-size:14px;">NBL Play-off</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "australia" "nbl" %}" style="font-size:14px;">NBL</a>
+              </div>
+            </li>
+  
+            <!--Austria-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  Austria
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "austria" "superliga-winners-stage" %}" style="font-size:14px;">Superliga Winners Stage</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "austria" "superliga" %}" style="font-size:14px;">Superliga</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "austria" "superliga-play-off" %}" style="font-size:14px;">Superliga Play-off</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "austria" "superliga-losers-stage" %}" style="font-size:14px;">Superliga Losers Stage</a>
+              </div>
+            </li>
+  
+            <!--Belarus-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  Belarus
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "belarus" "premier-league-play-off" %}" style="font-size:14px;">Premier League Play-off</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "belarus" "premier-league-group-a" %}" style="font-size:14px;">Premier League Group A</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "belarus" "premier-league-group-b" %}" style="font-size:14px;">Premier League Group B</a>
+              </div>
+            </li>
+  
+            <!--Belgium-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  Belgium
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "belgium" "pro-basketball-league-play-off" %}" style="font-size:14px;">Pro Basketball League Play-off</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "belgium" "pro-basketball-league-2020-2021" %}" style="font-size:14px;">Pro Basketball League</a>
+              </div>
+            </li>
+  
+            <!--Canada-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  Canada
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "canada" "nbl" %}" style="font-size:14px;">NBL</a>
+              </div>
+            </li>
+  
+            <!--China-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  China
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "china" "cba-play-off" %}" style="font-size:14px;">CBA Play-off</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "china" "cba" %}" style="font-size:14px;">CBA</a>
+              </div>
+            </li>
+  
+            <!--Croatia-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  Croatia
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "croatia" "premijer-liga-championship-group" %}" style="font-size:14px;">Premijer liga Championship Group</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "croatia" "premijer-liga" %}" style="font-size:14px;">Premijer liga</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "croatia" "premijer-liga-relegation-group" %}" style="font-size:14px;">Premijer liga Relegation Group</a>
+              </div>
+            </li>
+            
+            <!--Czech Republic -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  Czech Republic
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "czech-republic" "nbl" %}" style="font-size:14px;">NBL</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "czech-republic" "nbl-play-off" %}" style="font-size:14px;">NBL Play-off</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "czech-republic" "nbl-group-a1" %}" style="font-size:14px;">NBL Group A1</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "czech-republic" "nbl-group-a2" %}" style="font-size:14px;">NBL Group A2</a>
+              </div>
+            </li>
+            
+            <!--Denmark-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  Denmark
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "denmark" "basket-ligaen-winners-stage" %}" style="font-size:14px;">Basket Ligaen Winners Stage</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "denmark" "basket-ligaen" %}" style="font-size:14px;">Basket Ligaen</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "denmark" "dameligaen" %}" style="font-size:14px;">Dameligaen</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "denmark" "dameligaen-play-off" %}" style="font-size:14px;">Dameligaen Playoff</a>
+              </div>
+            </li>
+  
+            <!--Finland-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  Finland
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "finland" "korisliiga" %}" style="font-size:14px;">Korisliiga</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "finland" "korisliiga-relegation-group" %}" style="font-size:14px;">Korisliiga Relegation Group</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "finland" "korisliiga-championship-group" %}" style="font-size:14px;">Korisliiga Championship Group</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "finland" "naisten-korisliiga" %}" style="font-size:14px;">Korisliiga Women</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "finland" "naisten-korisliiga-playoff-group" %}" style="font-size:14px;">Korisliiga Women Playoff Group</a>
+              </div>
+            </li>
+            
+            <!--France-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  France
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "france" "lnb-pro-a" %}" style="font-size:14px;">LNB Pro A</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "france" "lnb-pro-a-play-off" %}" style="font-size:14px;">LNB Pro A Play-off</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "france" "french-cup" %}" style="font-size:14px;">French Cup</a>
+              </div>
+            </li>
+  
+            <!--Germany-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  Germany
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "germany" "bbl" %}" style="font-size:14px;">BBL</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "germany" "bbl-cup" %}" style="font-size:14px;">BBL Cup</a>
+              </div>
+            </li>
+  
+            <!--Indonesia-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  Indonesia
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "indonesia" "ibl" %}" style="font-size:14px;">IBL</a>
+              </div>
+            </li>
+  
+            <!--Italy-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  Italy
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "italy" "lega-basket-serie-a" %}" style="font-size:14px;">Lega Basket Serie A</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "italy" "serie-a1-women" %}" style="font-size:14px;">Women's Serie A1</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "italy" "super-cup-play-off" %}" style="font-size:14px;">Super Cup Play-off</a>
+              </div>
+            </li>
+            
+            <!--Japan-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  Japan
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "japan" "b-league" %}" style="font-size:14px;">B.League</a>
+                  
+              </div>
+            </li>
+  
+            <!--Netherlands-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  Netherlands
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "holland" "dbl-winners-stage" %}" style="font-size:14px;">DBL Winners Stage</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "holland" "dbl-losers-stage" %}" style="font-size:14px;">DBL Losers Stage</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "holland" "dbl-play-off" %}" style="font-size:14px;">DBL Play-off</a>
+              </div>
+            </li>
+            
+            <!--Norway-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  Norway
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "norway" "blno" %}" style="font-size:14px;">BLNO</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "norway" "kvinneligaen" %}" style="font-size:14px;">Kvinneligaen</a>
+              </div>
+            </li>
+  
+            <!--Poland-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  Poland
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "poland" "energa-basket-liga" %}" style="font-size:14px;">Energa Basket Liga</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "poland" "energa-basket-liga-women" %}" style="font-size:14px;">Women's Energa Basket Liga</a>
+              </div>
+            </li>
+  
+            <!--Slovenia-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  Slovenia
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "slovenia" "liga-nova-kbm" %}" style="font-size:14px;">NPFL Group A</a>
+              </div>
+            </li>
+            
+            <!--Spain-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  Spain
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "spain" "liga-acb" %}" style="font-size:14px;">Liga ACB</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "spain" "leb-oro" %}" style="font-size:14px;">LEB Oro</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "spain" "super-cup" %}" style="font-size:14px;">Super Cup</a>
+              </div>
+            </li>
+  
+            <!--Taiwan-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  Taiwan
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "taiwan" "sbl-1st-stage" %}" style="font-size:14px;">SBL 1st Stage</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "taiwan" "wsbl" %}" style="font-size:14px;">WSBL</a>
+              </div>
+            </li>
+            
+            <!--Ukraine-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  Ukraine
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "ukraine" "superliga-favorit-sport" %}" style="font-size:14px;">FBU Superleague</a>
+              </div>
+            </li>
+  
+            <!--USA-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                  USA
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "usa" "big3-play-off" %}" style="font-size:14px;">BIB3 Play-off</a>
+                  <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "usa" "big3" %}" style="font-size:14px;">BIB3</a>
+              </div>
+            </li>
+        </ul>
+    </div>
+  </nav>
