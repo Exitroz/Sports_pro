@@ -97,19 +97,19 @@
                                     
                                     <tr>
                                         <td>
-                                            <a href="{% url 'basketball_singleResult' game.Eid %}" style="color: #000;">
+                                            <a href="{% url 'singleResult' game.Eid %}" style="color: #000;">
                                                 <img src="https://lsm-static-prod.livescore.com/medium/{{game.T1.0.Img}}" alt="icon">
                                             </a>
-                                            <strong><a href="{% url 'basketball_singleResult' game.Eid %}">{{game.T1.0.Nm}}</a></strong><br>
+                                            <strong><a href="{% url 'singleResult' game.Eid %}">{{game.T1.0.Nm}}</a></strong><br>
                                             <strong>{{game.Tr1}}</strong><br>
                                             <small class="meta-text">{{Competion_name}}</small>
                                         </td>
                                         <td class="text-center">Vs</td>
                                         <td>
-                                            <a href="{% url 'basketball_singleResult' game.Eid %}" style="color: #000;">
+                                            <a href="{% url 'singleResult' game.Eid %}" style="color: #000;">
                                                 <img src="https://lsm-static-prod.livescore.com/medium/{{game.T2.0.Img}}" alt="icon1">
                                             </a>
-                                            <strong><a href="{% url 'basketball_singleResult' game.Eid %}">{{game.T2.0.Nm}}</a></strong><br>
+                                            <strong><a href="{% url 'singleResult' game.Eid %}">{{game.T2.0.Nm}}</a></strong><br>
                                             <strong>{{game.Tr2}}</strong><br>
                                             <small class="meta-text">{{Competion_name}}</small> 
                                         </td>

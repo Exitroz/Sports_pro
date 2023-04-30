@@ -124,9 +124,13 @@ def competion_events(request, league: str, stage: str):
                     
         # print('Fixtures', len(Fixtures))
         # print('Results', len(Results))
+        # print('Fixtures', len(Fixtures))
+        # print('Results', len(Results))
 
         context={
             'stages':stages,
+            'Fixtures':reversed(Fixtures),
+            'Results':reversed(Results),
             'Fixtures':reversed(Fixtures),
             'Results':reversed(Results),
             'Competion_name':competion_name,
