@@ -124,9 +124,13 @@ def competion_events(request, league: str, stage: str):
                     
         # print('Fixtures', len(Fixtures))
         # print('Results', len(Results))
+        # print('Fixtures', len(Fixtures))
+        # print('Results', len(Results))
 
         context={
             'stages':stages,
+            'Fixtures':reversed(Fixtures),
+            'Results':reversed(Results),
             'Fixtures':reversed(Fixtures),
             'Results':reversed(Results),
             'Competion_name':competion_name,
@@ -290,7 +294,7 @@ def single_result(request, Eid: int):
         'pstat':pstat,
         'b_data':b_data,
         'incs_s':b_data['Incs-s'],
-
+    }
     context = {
         'stat':stat,
         'pstat':pstat,
