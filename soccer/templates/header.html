@@ -38,23 +38,33 @@
                 </li>
 
                 <li class="current">
-                    <a href="{% url 'live' %}">live</a>
+                    <a href="{% url 'live' %}">Live</a>
+                </li>
+                
+                <li class="current">
+                    <a href={% url 'soccer' %}>Soccer</a>
+                </li>
+
+                <li class="current">
+                    <a href="">Favorites</a>
                 </li>
 
                 <li>
-                    <a href="{% url 'fixturesByleague' 'england' 'premier-league' %}">Leagues</a>
+                    <a href="{% url 'fixturesByleague' 'england' 'premier-league' %}">Soccer Leagues</a>
                 </li>
 
                 <li>
-                    <a href="{% url 'resultsBycompetion' 'champions-league' 'group-b' %}">Competions</a>
-                </li>
-
-                <li>
-                    <a href="">Predictions</a>
+                    <a href="{% url 'resultsBycompetion' 'champions-league' 'group-b' %}">Soccer Competions</a>
                 </li>
 
                 <li>
                     <a href="{% url 'basketball' %}">Basketball</a>
+                </li>
+                <li>
+                    <a href="">Predictions</a>
+                </li>
+                <li>
+                    <a href="{% url 'blog' %}">News</a>
                 </li>
             </ul>
             <!-- End Menu-->
@@ -68,34 +78,38 @@
  <div id="mobile-nav">
     <!-- Menu-->
     <ul>
-        <li>
-            <a href="index.html">Home</a>
+        <li class="current">
+            <a href={% url 'home' %}>Home</a>
         </li>
 
-
-        <li>
-            <a href="players.html">Players</a>
+        <li class="current">
+            <a href="{% url 'live' %}">Live</a>
+        </li>
+        
+        <li class="current">
+            <a href={% url 'soccer' %}>Soccer</a>
         </li>
 
-        <li>
-            <a href="fixtures.html">Fixtures</a>
-        </li>
-
-        <li>
-            <a href="results.html">Results</a>
-        </li>
-
-        <li>
-            <a href="table-point.html">Point Table</a>
+        <li class="current">
+            <a href="">Favorites</a>
         </li>
 
         <li>
-            <a href="groups.html">Groups</a>
+            <a href="{% url 'fixturesByleague' 'england' 'premier-league' %}">Soccer Leagues</a>
         </li>
 
+        <li>
+            <a href="{% url 'resultsBycompetion' 'champions-league' 'group-b' %}">Soccer Competions</a>
+        </li>
 
         <li>
-            <a href="contact.html">Contact</a>
+            <a href="{% url 'basketball' %}">Basketball</a>
+        </li>
+        <li>
+            <a href="">Predictions</a>
+        </li>
+        <li>
+            <a href="{% url 'blog' %}">News</a>
         </li>
     </ul>
     <!-- End Menu-->
