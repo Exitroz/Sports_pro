@@ -23,4 +23,5 @@ urlpatterns = [
     path('basketball/', include('basketball.urls')),
     path('news/', include('blog.urls')),
     path('predictions/', include('predictions.urls')),
+    path('summernote/', include('django_summernote.urls')),
 ]

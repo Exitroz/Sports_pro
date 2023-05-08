@@ -1,12 +1,12 @@
+
 {% extends 'base.html' %}
 {% load static %}
 
 {% block content%}
-    <body>
-        
 
         <!-- layout-->
         <div id="layout">
+
 
 
             {% include 'header.html'%}
@@ -14,19 +14,16 @@
 
             <!-- Section Title -->
             <div class="section-title" style="{% static 'background:url(img/slide/1.jpg)' %}">
+
+        
+
+            <!-- Section Title -->
+            <div class="section-title" style="{% static 'background:url(img/slide/1.jpg)' %}">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8">
-                            {% if 'fixtures' in request.path %}
                             <h1>Fixtures</h1>
-                            {% elif 'results' in request.path %}
-                            <h1>Results</h1>
-                            {% else %}
-                            <h1>Tables</h1>
-                            {% endif %}
-                            
                         </div>
-
                         <div class="col-md-4">
                             <div class="breadcrumbs">
                                 <ul>
@@ -43,87 +40,48 @@
             <!-- Section Area - Content Central -->
             <section class="content-info">
 
-                <div class="container paddings-mini" style="background:url({% static 'img/slide/1.jpg' %}); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100vh; ">
+                <div class="container paddings-mini">
                     <div class="row">
+
                         <div class="col-lg-12">
                             <h3 class="clear-title">Matches</h3>
-                            
-                            <h3>
-                                {{Competion_name}}
-                            </h3>
-                           
-                            {% include "leagues_navbar.html" %}
                         </div>
-                        <div class="col">
-                            {% include "button_leagues.html" %}
-                        </div>
+
                         <div class="col-lg-12">
-                            <table class="table-striped table-responsive table-hover"> 
-                                {% if 'table' not in request.path %}
+                            <table class="table-striped table-responsive table-hover">
                                 <thead>
                                     <tr>
                                         <th>Team A</th>
                                         <th class="text-center">VS</th>
                                         <th>Team B</th>
-                                        {% comment %} <th>Details</th> {% endcomment %}
+                                        <th>Details</th>
                                     </tr>
                                 </thead>
-                                {% endif %}
-                                {% if 'fixtures' in request.path %}
-                                {% for game in Fixtures %}
                                 <tbody>
-                                    <tr>
-                                        <td>
-                                            <img src="https://lsm-static-prod.livescore.com/medium/{{game.T1.0.Img}}" alt="icon">
-                                            <strong>{{game.T1.0.Nm}}</strong><br>
-                                            <small class="meta-text">{{Competion_name}}</small>
-                                        </td>
-                                        <td class="text-center">Vs</td>
-                                        <td>
-                                            <img src="https://lsm-static-prod.livescore.com/medium/{{game.T2.0.Img}}" alt="icon1">
-                                            <strong>{{game.T2.0.Nm}}</strong><br>
-                                            <small class="meta-text">{{Competion_name}}</small> 
-                                        </td>
-                                        {% comment %} <td>
-                                            {{game.Esd}}<br>
-                                            <small class="meta-text">{{game.Eps}}</small>
-                                        </td> {% endcomment %}
-                                    </tr>
-                                </tbody>
-                                {% endfor %}
-                                {% elif 'results' in request.path %}
-                                {% for game in Results %}
-                                <tbody>
-                                    
-                                    <tr>
-                                        <td>
-                                            <a href="{% url 'singleResult' game.Eid %}" style="color: #000;">
-                                                <img src="https://lsm-static-prod.livescore.com/medium/{{game.T1.0.Img}}" alt="icon">
-                                            </a>
-                                            <strong><a href="{% url 'singleResult' game.Eid %}">{{game.T1.0.Nm}}</a></strong><br>
-                                            <strong>{{game.Tr1}}</strong><br>
-                                            <small class="meta-text">{{Competion_name}}</small>
-                                        </td>
-                                        <td class="text-center">Vs</td>
-                                        <td>
-                                            <a href="{% url 'singleResult' game.Eid %}" style="color: #000;">
-                                                <img src="https://lsm-static-prod.livescore.com/medium/{{game.T2.0.Img}}" alt="icon1">
-                                            </a>
-                                            <strong><a href="{% url 'singleResult' game.Eid %}">{{game.T2.0.Nm}}</a></strong><br>
-                                            <strong>{{game.Tr2}}</strong><br>
-                                            <small class="meta-text">{{Competion_name}}</small> 
-                                        </td>
-                                        {% comment %} <td>
-                                            {{game.Esd}}<br>
-                                            <small class="meta-text">{{game.Eps}}</small>
-                                        </td> {% endcomment %}
-                                    </tr>
-                                </tbody>
-                                {% endfor %}
-                                {% else %}
-                                {% include 'table-point.html' %}
-                                {% endif %}
 
+                                    {% for l in stages %}
+                                    {% for event in  l.Events %}
+                                    <tr>
+                                        <td>
+                                            <img src="https://lsm-static-prod.livescore.com/medium/{{event.T1.0.Img}}" alt="icon">
+                                            <strong>{{event.T1.0.Nm}}</strong><br>
+                                            <small class="meta-text">{{l.Snm}}</small>
+                                        </td>
+                                        <td class="text-center">Vs</td>
+                                        <td>
+                                            <img src="https://lsm-static-prod.livescore.com/medium/{{event.T2.0.Img}}" alt="icon1">
+                                            <strong>{{event.T2.0.Nm}}</strong><br>
+                                            <small class="meta-text">{{l.Snm}}</small>
+                                        </td>
+                                        <td>
+                                            {{event.Esd}}<br>
+                                            <small class="meta-text">{{event.Eps}}</small>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                    {% endfor %}
+
+                                </tbody>
                             </table>
                         </div>
                     </div>
@@ -182,8 +140,15 @@
                 <div id="instafeed"></div>
             </div>
 
+            {% include 'footer.html'%}
+
+         
+
         </div>
         <!-- End layout-->
 
-    </body>
+    
+
 {% endblock %}
+
+
