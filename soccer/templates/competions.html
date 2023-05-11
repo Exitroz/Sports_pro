@@ -13,16 +13,16 @@
 
 
             <!-- Section Title -->
-            <div class="section-title" style="{% static 'background:url(img/slide/1.jpg)' %}">
+            <div class="section-title" style="background:url({% static 'img/slide/1.jpg' %})">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8">
                             {% if 'fixtures' in request.path %}
-                            <h1>Fixtures</h1>
+                            <h1><strong style="color: #01d099;">Fixtures</strong></h1>
                             {% elif 'results' in request.path %}
-                            <h1>Results</h1>
+                            <h1><strong style="color: #01d099;">Results</strong></h1>
                             {% else %}
-                            <h1>Tables</h1>
+                            <h1><strong style="color: #01d099;">Tables</strong></h1>
                             {% endif %}
                             
                         </div>
@@ -41,12 +41,12 @@
             <!-- End Section Title -->
 
             <!-- Section Area - Content Central -->
-            <section class="content-info">
+            <section class="content-info" style="background:url({% static 'img/slide/1.jpg' %}); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100vh; ">
 
                 <div class="container paddings-mini">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h3 class="clear-title">Matches</h3>
+                            <h3 class="clear-title" style="color: #01d099;">Matches</h3>
                             
                             <h3>
                                 {{Competion_name}} ({{stage_name}})
@@ -61,18 +61,48 @@
 
                         <div class="col-lg-12">
                             <table class="table-striped table-responsive table-hover"> 
-                                {% if 'table' not in request.path %}
+                                {% comment %} {% if 'table' not in request.path %}
                                 <thead>
                                     <tr>
                                         <th>Team A</th>
                                         <th class="text-center">VS</th>
                                         <th>Team B</th>
-                                        {% comment %} <th>Details</th> {% endcomment %}
                                     </tr>
                                 </thead>
-                                {% endif %}
+                                {% endif %} {% endcomment %}
                                 {% if 'fixtures' in request.path %}
-                                {% for game in Fixtures %}
+
+                                <div class="recent-results " >   
+                                    <div class="info-results"> 
+                                        <ul>    
+                                            <li>
+                                                <span class="head" style="color: #01d099;">
+                                                    Fixtures<span class="date">27 Jun 2017</span>
+                                                </span>
+                                                {% for game in Fixtures %}
+                                                <div class="goals-result">
+                                                    <a href="" style="width: 150px;">
+                                                        <img src="https://lsm-static-prod.livescore.com/medium/{{game.T1.0.Img}}" alt="">
+                                                        {{game.T1.0.Nm}}
+                                                    </a>
+                                                
+                                                    <span class="goals" >
+                                                        <b>vs</b> 
+                                                        {% comment %} <a href="single-result.html" class="btn theme">View More</a> {% endcomment %}
+                                                    </span>
+
+                                                    <a href=""  style="width: 150px;">
+                                                        <img src="https://lsm-static-prod.livescore.com/medium/{{game.T2.0.Img}}" alt="">
+                                                        {{game.T2.0.Nm}}
+                                                    </a>
+                                                </div>
+                                                {% endfor %}
+                                            </li>  
+                                        </ul>
+                                    </div>
+                                </div>  
+
+                                {% comment %} {% for game in Fixtures %}
                                 
                                 <tbody>
                                     <tr>
@@ -93,9 +123,41 @@
                                         </td>
                                     </tr>
                                 </tbody>
-                                {% endfor %}
+                                {% endfor %} {% endcomment %}
+
                                 {% elif 'results' in request.path %}
-                                {% for game in Results %}
+
+                                <div class="recent-results " >   
+                                    <div class="info-results"> 
+                                        <ul>    
+                                            <li>
+                                                <span class="head" style="color: #01d099;">
+                                                    Results<span class="date">27 Jun 2017</span>
+                                                </span>
+                                                {% for game in Results %}
+                                                <div class="goals-result">
+                                                    <a href="{% url 'singleResult' game.Eid %}" style="width: 150px;">
+                                                        <img src="https://lsm-static-prod.livescore.com/medium/{{game.T1.0.Img}}" alt="">
+                                                        {{game.T1.0.Nm}}
+                                                    </a>
+                                                
+                                                    <span class="goals" >
+                                                        <b>{{game.Tr1}}</b> <b>{{game.Tr2}}</b>
+                                                       
+                                                    </span>
+
+                                                    <a href="{% url 'singleResult' game.Eid %}"  style="width: 150px;">
+                                                        <img src="https://lsm-static-prod.livescore.com/medium/{{game.T2.0.Img}}" alt="">
+                                                        {{game.T2.0.Nm}}
+                                                    </a>
+                                                </div>
+                                                {% endfor %}
+                                            </li>  
+                                        </ul>
+                                    </div>
+                                </div> 
+
+                                {% comment %} {% for game in Results %}
                                 <tbody>
                                     <tr>
                                         <td>
@@ -111,13 +173,10 @@
                                             <strong>{{game.Tr2}}</strong><br>
                                             <small class="meta-text">{{Competion_name}}</small> 
                                         </td>
-                                        {% comment %} <td>
-                                            {{game.Esd}}<br>
-                                            <small class="meta-text">{{game.Eps}}</small>
-                                        </td> {% endcomment %}
                                     </tr>
                                 </tbody>
-                                {% endfor %}
+                                {% endfor %} {% endcomment %}
+                                
                                 {% else %}
                                 {% include 'table-point.html' %}
                                 {% endif %}

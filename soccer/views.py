@@ -1,5 +1,5 @@
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 import requests
 import datetime
 from django.conf import settings
@@ -400,15 +400,18 @@ def single_result(request, Eid: int):
 
 
 def favourite(request, eid):
-    favoured = FavouriteModel.objects.filter(Eid=eid).exists()
-    if favoured:
-        obj = FavouriteModel.objects.get(Eid=eid)
-        if obj.enabled:
-            obj.enabled = False
-        else:
-            obj.enabled = True
-    else:
-        FavouriteModel.objects.create(Eid=eid)
+    print(eid)
+    # favoured = FavouriteModel.objects.filter(Eid=eid).exists()
+    # if favoured:
+    #     obj = FavouriteModel.objects.get(Eid=eid)
+    #     if obj.enabled:
+    #         obj.enabled = False
+    #     else:
+    #         obj.enabled = True
+    # else:
+    #     FavouriteModel.objects.create(Eid=eid)
+        
+    return redirect('.')
         
         
         
