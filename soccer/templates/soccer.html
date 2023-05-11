@@ -29,10 +29,11 @@
                                                         <div class="info-results"> 
                                                             <ul>    
                                                                 <li>
-                                                                    <span class="head">
-                                                                        Fixtures<span class="date">27 Jun 2017</span>
-                                                                    </span>
                                                                     {% for game in fixtures %}
+                                                                    <span class="head">
+                                                                        Fixtures<span class="date">{{game.Esd}}</span>
+                                                                    </span>
+                                                                    
                                                                     <div class="goals-result">
                                                                         <a href="" style="width: 150px;">
                                                                             <img src="https://lsm-static-prod.livescore.com/medium/{{game.T1.0.Img}}" alt="">

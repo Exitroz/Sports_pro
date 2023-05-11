@@ -1,4 +1,4 @@
-
+{% load fontawesome_5 %}
 
 <nav class="new-nav" style="background-color: #222;">
     <style>
@@ -11,6 +11,9 @@
             display: flex;
             gap: 15px;
             overflow-x: scroll;
+        }
+        .ul::-webkit-scrollbar {
+            display: none;
         }
         
         .ul li {
@@ -29,11 +32,18 @@
         }
         
         .ul-down li {
+            color: white;
             cursor: pointer;
             width: 200px;
             border: 1px grey;
         }
-        
+        .ul-down li a {
+            color: white;
+        }
+        .ul-down li:hover {
+            background-color: #01d099;
+            color: white;
+        }        
         .overlay {
             position: fixed;
             top: 0;
@@ -41,8 +51,24 @@
             left: 0;
             right: 0;
         }
+        .fa-bars{
+            display: none;
+        }
+        @media screen and (max-width: 825px) {
+            .fa-bars{
+                display: inline;
+            }
+            .ul{
+                display: none;
+            }
+        }
     </style>
+    <div id="bars">
+        <i id="bars-icon">{% fa5_icon 'bars' %}</i>
+        <nav id="bar-nav">
 
+        </nav>
+    </div>
     <ul class="ul">
         <li>
             <p>England</p>
@@ -290,6 +316,8 @@
         const overlay = document.querySelector(".overlay")
         const drop = document.querySelectorAll(".ul-down")
         const items = document.querySelectorAll(".ul-down li")
+        const icon = document.querySelector('#bars-icon');
+        const barNav = document.querySelector("#bar-nav")
 
         for (let i = 0; i < li.length; i++) {
             drop.forEach(x => x.style.display = 'none');
@@ -306,16 +334,18 @@
                 }
             })
         }
-        overlay.addEventListener('click', () => {
-            drop.forEach(x => x.style.display = 'none');
-            //drop[i].style.display = 'none';
-            ul.style.height = '50px'
-        })
+
         for (let i = 0; i < items.length; i++) {
             items[i].addEventListener("click", function() {
                 this.parentElement.style.display = 'none';
             })
         }
+        icon.addEventListener('click', () => {
+            console.log('clicked');
+            console.log(document.getElementsByClassName('ul')[0])
+            barNav.innerHTML = document.getElementsByClassName('ul')[0]
+            {% comment %} barNav.appendChild(document.querySelector('.ul')) {% endcomment %}
+        })
     </script>
 </nav>
 
