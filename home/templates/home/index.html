@@ -76,7 +76,7 @@
                     <div class="container">
                         <div class="row">   
                              <!-- Section Area - Content Central -->
-                             <div class="col-lg-7">
+                             <div class="col-lg-8">
                                 <section class="content-info">
                                     <div class="container"> 
                                         <div class="row">
@@ -84,9 +84,7 @@
                                                 {% for st in today_data %} 
                                                 <div class="recent-results " >   
                                                     <div class="info-results">
-                                                        
                                                         <ul>
-                                                            
                                                             <li>
                                                                 <span class="head">
                                                                     {{st.Snm}}<span class="date">27 Jun 2017</span>
@@ -94,17 +92,17 @@
                                                             
                                                                 {% for game in st.Events %}
                                                                 <div class="goals-result">
-                                                                    <a href="single-team.html" style="width: 150px;">
+                                                                    <a href="{% url 'singleResult' game.Eid %}" style="width: 150px;">
                                                                         <img src="https://lsm-static-prod.livescore.com/medium/{{game.T1.0.Img}}" alt="">
                                                                         {{game.T1.0.Nm}}
                                                                     </a>
                                                                 
                                                                     <span class="goals" >
                                                                         <b>{{game.Tr1}}</b> <b>{{game.Tr2}}</b>
-                                                                        {% comment %} <a href="single-result.html" class="btn theme">View More</a> {% endcomment %}
+                                                                     
                                                                     </span>
                     
-                                                                    <a href="single-team.html"  style="width: 150px;">
+                                                                    <a href="{% url 'singleResult' game.Eid %}"  style="width: 150px;">
                                                                         <img src="https://lsm-static-prod.livescore.com/medium/{{game.T2.0.Img}}" alt="">
                                                                         {{game.T2.0.Nm}}
                                                                     </a>
@@ -117,7 +115,9 @@
                                                     </div>
                                                </div>  
                                                {% endfor %}
-                                                <table class="table-striped table-responsive table-hover">
+
+
+                                                {% comment %} <table class="table-striped table-responsive table-hover">
                                                     <thead>
                                                         <tr>
                                                             <th>Team A</th>
@@ -168,22 +168,19 @@
                                                                     </div>
                                                                 </div>
                                                             </td>
-                                                            {% comment %} <td>
-                                                                {{game.Esd}}<br>
-                                                                <small class="meta-text">{{game.Eps}}</small>
-                                                            </td> {% endcomment %}
+                                                           
                                                         </tr>
                                                     </tbody>
                                                     {% endfor %}
                                                     {% endfor %}
-                                                </table>
+                                                </table> {% endcomment %}
                                             </div>
                                         </div>
                                     </div>
                                 </section>
                             </div>
                             <!-- End Section Area -  Content Central -->
-                            <div class="col-lg-5">
+                            <div class="col-lg-4">
                                 <!-- Point Table -->
                                 <div class="panel-box" style="background-color: #222;">
 
