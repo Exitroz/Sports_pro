@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load fontawesome_5 %}
 
 {% block content%}
     <body>
@@ -46,7 +47,9 @@
                                             </span>
                                         
                                             {% for game in st.Events %}
+                                    
                                             <div class="goals-result">
+                                                
                                                 <a href="{% url 'singleResult' game.Eid %}" style="width: 150px;">
                                                     <img src="https://lsm-static-prod.livescore.com/medium/{{game.T1.0.Img}}" alt="">
                                                     {{game.T1.0.Nm}}
@@ -61,7 +64,18 @@
                                                     <img src="https://lsm-static-prod.livescore.com/medium/{{game.T2.0.Img}}" alt="">
                                                     {{game.T2.0.Nm}}
                                                 </a>
+                                                
+                                                {% comment %} <form action="" method="post">
+                                                    {% csrf_token %}
+                                                    <input type="hidden" value="{{game.Eid}}" name="fname" />
+                                                     <a type="submit" >{% fa5_icon 'star' %}</a>
+                                                 </form>
+                                                 href="{% url 'favourite' game.Eid %}" 
+                                                  {% endcomment %}
+
+                                                <a >{% fa5_icon 'star' %}</a>
                                             </div>
+                                                
                                             {% endfor %}
                                         </li>
                                         

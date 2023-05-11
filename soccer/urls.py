@@ -14,4 +14,6 @@ urlpatterns = [
     path('<str:league>/<str:stage>/table/', views.competion_events, name='tablesBycompetion'),
     
     path('single/<int:Eid>/', views.single_result, name='singleResult'),
+    
+    path('<str:eid>/', views.favourite, name='favourite'),
 ]
