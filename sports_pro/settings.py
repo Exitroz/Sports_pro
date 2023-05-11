@@ -137,4 +137,4 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-API_KEY = 'bb17079e36msh74bf5d47086ca7ep13fc06jsnc033492ad114'
+API_KEY = "29339de81fmsh3e2695bddd2824ap16329djsna94d618ca237"
