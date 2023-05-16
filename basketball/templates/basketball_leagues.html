@@ -77,14 +77,39 @@
                                                     </a>
                                                 
                                                     <span class="goals" >
+                                                        <b style="font-size: 10px;">
+                                                        
+                                                    </span>
+
+                                                   
+                                                </div>
+                                                <div class="goals-result">
+                                                    <a href=""  style="width: 150px;">
+                                                        <img src="https://lsm-static-prod.livescore.com/medium/{{game.T2.0.Img}}" alt="">
+                                                        {{game.T2.0.Nm}}
+                                                    </a>
+                                                    <span class="goals" >
+                                                        <b style="font-size: 10px;">
+                                                        
+                                                    </span>
+
+                                                    
+                                                </div>
+                                                <div class="goals-result">
+                                                    {% comment %} <a href="" style="width: 150px;">
+                                                        <img src="https://lsm-static-prod.livescore.com/medium/{{game.T1.0.Img}}" alt="">
+                                                        {{game.T1.0.Nm}}
+                                                    </a>
+                                                
+                                                    <span class="goals" >
                                                         <b>vs</b> 
-                                                        {% comment %} <a href="single-result.html" class="btn theme">View More</a> {% endcomment %}
+                                                        
                                                     </span>
 
                                                     <a href=""  style="width: 150px;">
                                                         <img src="https://lsm-static-prod.livescore.com/medium/{{game.T2.0.Img}}" alt="">
                                                         {{game.T2.0.Nm}}
-                                                    </a>
+                                                    </a> {% endcomment %}
                                                 </div>
                                                 {% endfor %}
                                             </li>  
@@ -128,14 +153,38 @@
                                                     </a>
                                                 
                                                     <span class="goals" >
-                                                        <b>{{game.Tr1}}</b> <b>{{game.Tr2}}</b>
+                                                        <b style="font-size: 10px;">{{game.Tr1}}</b> 
+                                                       
+                                                    </span>
+                                                </div>
+                                                <div class="goals-result">
+                                                    <a href="{% url 'basketball_singleResult' game.Eid %}"  style="width: 150px;">
+                                                        <img src="https://lsm-static-prod.livescore.com/medium/{{game.T2.0.Img}}" alt="">
+                                                        {{game.T2.0.Nm}}
+                                                    </a>
+                                                
+                                                    <span class="goals" >
+                                                        <b style="font-size: 10px;">{{game.Tr2}}</b> 
+                                                       
+                                                    </span>
+
+                                                   
+                                                </div>
+                                                <div class="goals-result">
+                                                    {% comment %} <a href="{% url 'basketball_singleResult' game.Eid %}" style="width: 150px;">
+                                                        <img src="https://lsm-static-prod.livescore.com/medium/{{game.T1.0.Img}}" alt="">
+                                                        {{game.T1.0.Nm}}
+                                                    </a>
+                                                
+                                                    <span class="goals" >
+                                                        <b style="font-size: 10px;">{{game.Tr1}}</b> 
                                                        
                                                     </span>
 
                                                     <a href="{% url 'basketball_singleResult' game.Eid %}"  style="width: 150px;">
                                                         <img src="https://lsm-static-prod.livescore.com/medium/{{game.T2.0.Img}}" alt="">
                                                         {{game.T2.0.Nm}}
-                                                    </a>
+                                                    </a> {% endcomment %}
                                                 </div>
                                                 {% endfor %}
                                             </li>  

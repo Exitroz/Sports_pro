@@ -92,21 +92,40 @@
                                                             
                                                                 {% for game in st.Events %}
                                                                 <div class="goals-result">
-                                                                    <a href="{% url 'singleResult' game.Eid %}" style="width: 150px;">
+                                                                    <a href="{% url 'singleResult' game.Eid %}">
                                                                         <img src="https://lsm-static-prod.livescore.com/medium/{{game.T1.0.Img}}" alt="">
                                                                         {{game.T1.0.Nm}}
                                                                     </a>
-                                                                
+                                                                    
                                                                     <span class="goals" >
-                                                                        <b>{{game.Tr1}}</b> <b>{{game.Tr2}}</b>
+                                                                        <b style="font-size: 10px;">{{game.Tr1}}</b>
                                                                      
                                                                     </span>
                     
-                                                                    <a href="{% url 'singleResult' game.Eid %}"  style="width: 150px;">
+                                                                    
+                                                                    {% comment %} <a >{% fa5_icon 'star' %}</a> {% endcomment %}
+                                                                </div>
+                                                                <div class="goals-result">
+                                                                    <a href="{% url 'singleResult' game.Eid %}" >
                                                                         <img src="https://lsm-static-prod.livescore.com/medium/{{game.T2.0.Img}}" alt="">
                                                                         {{game.T2.0.Nm}}
                                                                     </a>
-                                                                    <a >{% fa5_icon 'star' %}</a>
+                                                                    <span class="goals" >
+                                                                        <b style="font-size: 10px;">{{game.Tr2}}</b>
+                                                                     
+                                                                    </span>                              
+                                                                    
+                                                                </div>
+                                                                <div class="goals-result">
+                                                                    {% comment %} <a href="{% url 'singleResult' game.Eid %}"  style="width: 150px;">
+                                                                        <img src="https://lsm-static-prod.livescore.com/medium/{{game.T2.0.Img}}" alt="">
+                                                                        {{game.T2.0.Nm}}
+                                                                    </a>
+                                                                    <span class="goals" >
+                                                                        <b style="font-size: 10px;">{{game.Tr2}}</b>
+                                                                     
+                                                                    </span>                               {% endcomment %}
+                                                                    
                                                                 </div>
                                                                 {% endfor %}
                                                             </li>

@@ -42,8 +42,16 @@
                </li>
 
                <li>
-                   <a href="{% url 'basketball_resultsByleague' "nba" "regular-season" %}">Leagues</a>
+                    <a href="{% url "soccer" %}">Soccer</a>
                </li>
+
+               <li class="current">
+                    <a href="">Favorites</a>
+               </li>
+
+               {% comment %} <li>
+                   <a href="{% url 'basketball_resultsByleague' "nba" "regular-season" %}">Leagues</a>
+               </li> {% endcomment %}
 
                {% comment %} <li>
                    <a href="{% url 'resultsBycompetion' 'champions-league' 'group-b' %}">Competions</a>
@@ -54,7 +62,7 @@
                </li>
 
                <li>
-                   <a href="{% url "soccer" %}">Soccer</a>
+                    <a href="{% url 'news_post' %}">News</a>
                </li>
            </ul>
            <!-- End Menu-->
@@ -68,35 +76,29 @@
 <div id="mobile-nav">
    <!-- Menu-->
    <ul>
-       <li>
-           <a href="index.html">Home</a>
-       </li>
+        <li >
+            <a href={% url 'home' %}>Home</a>
+        </li>
 
+        <li>
+            <a href="{% url 'basketball_live' %}">live</a>
+        </li>
 
-       <li>
-           <a href="players.html">Players</a>
-       </li>
+        <li>
+            <a href="{% url "soccer" %}">Soccer</a>
+        </li>
 
-       <li>
-           <a href="fixtures.html">Fixtures</a>
-       </li>
+        <li>
+            <a href="">Favorites</a>
+        </li>
 
-       <li>
-           <a href="results.html">Results</a>
-       </li>
+        <li>
+            <a href="">Predictions</a>
+        </li>
 
-       <li>
-           <a href="table-point.html">Point Table</a>
-       </li>
-
-       <li>
-           <a href="groups.html">Groups</a>
-       </li>
-
-
-       <li>
-           <a href="contact.html">Contact</a>
-       </li>
+        <li>
+             <a href="{% url 'news_post' %}">News</a>
+        </li>
    </ul>
    <!-- End Menu-->
 </div>

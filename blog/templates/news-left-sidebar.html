@@ -2,11 +2,11 @@
 {% load static %}
 
 {% block content %}
-<html lang="en">  
-    <body>
-        {% include 'header.html'%}
+
+        
         <!-- layout-->
         <div id="layout">
+            {% include 'header.html'%}
             <!-- Section Title -->
             <div class="section-title" style="background:url({% static 'img/slide/1.jpg' %})">
                 <div class="container">
@@ -324,8 +324,6 @@
         </div>
         <!-- End layout-->
 
-    </body>
-
-</html>
+  
 {% endblock content %}
 
