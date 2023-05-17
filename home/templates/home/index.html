@@ -14,7 +14,7 @@
             <!-- Header end-->
            
             <!-- section-hero-posts-->
-            <div class="hero-header">
+            {% comment %} <div class="hero-header">
                 <!-- Hero Slider-->
                 <div id="hero-slider" class="hero-slider">
 
@@ -67,16 +67,348 @@
                     <!-- End Item Slide-->
                 </div>
                 <!-- End Hero Slider-->
-            </div>
+            </div> {% endcomment %}
             <!-- End section-hero-posts-->
             <!-- Section Area - Content Central -->
-            <section class="content-info">
+            <section class="content-info" style="background-color: #222;">
                 <!-- White Section -->
-                <div class="paddings " style="background:url({% static 'img/slide/1.jpg' %}); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100vh; ">
+                <div class="paddings ">
                     <div class="container">
-                        <div class="row">   
+                        <div class="row">  
+                            <style>
+                                .side{
+                                    display: block;
+                                }
+                                @media screen and (max-width: 991px) {
+                                    .side{
+                                        display: none;
+                                    }
+                                }
+                                @media screen and (min-width: 991px) {
+                                    .side1{
+                                        display: none;
+                                    }
+                                }
+                            </style> 
+                            <div class="col-lg-12 side1">
+                               
+                                {% include "leagues_navbar.html" %}
+                            </div>
+                            
+                            <div class="col-lg-3 side" style="background-color: #222;">
+                                <!-- Point Table -->
+                                {% comment %} <div class="panel-box">
+
+                                    <div class="titles no-margin border-0">
+                                        <h4>Premier League Table</h4>
+                                    </div>
+
+                                    <table class="table-striped table-responsive table-hover result-point small">
+                                        <thead class="point-table-head">
+                                            <tr>
+                                                <th class="text-left">No</th>
+                                                <th class="text-left">TEAM</th>
+                                                <th class="text-center">P</th>
+                                                <th class="text-center">W</th>
+                                                <th class="text-center">D</th>
+                                                <th class="text-center">PTS</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody class="text-center">
+                                            {% for stage in stages %}
+                                                {% for row in stage.LeagueTable.L.0.Tables %}
+                                                    {% if row.LTT == 1 %}
+                                                        {% for team in row.team %}
+                                                            <tr>
+                                                                <td class="text-left number">
+                                                                    {{team.rnk}}
+                                                                    {% if team.rnk <= 4 %}
+                                                                    <i class="fa fa-caret-up" aria-hidden="true"></i>
+                                                                    {% endif %}  
+                                                                </td>
+                                                                <td class="text-left">
+                                                                <a href="single-team.html">
+                                                                        <img src="https://lsm-static-prod.livescore.com/medium/{{team.Img}}" alt="Colombia"><span>{{team.Tnm}}</span>
+                                                                    </a>
+                                                                </td>
+                                                                <td>{{team.pld}}</td>
+                                                                <td>{{team.win}}</td>
+                                                                <td>{{team.drw}}</td>
+                                                                <td>{{team.pts}}</td>
+                                                            </tr>
+                                                        {% endfor %}
+                                                    {% endif %}
+                                                {% endfor %}
+                                            {% endfor %}
+
+                                          </tbody>
+                                    </table>
+                                     <a href="table-point.html" class="btn-iw full no-margin">View Full Table</a>
+                                </div> {% endcomment %}
+                                <!-- End Point Table -->
+                                <div style="background-color: #222;">
+                                    <ul class="navbar-nav mr-auto" >
+                              
+                                        
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px; color: white;">
+                                                England
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "england" "premier-league" %}" style="font-size:14px;">Premier League</a>
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "england" "championship" %}" style="font-size:14px;">Championship</a>
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "england" "league-1" %}" style="font-size:14px;">League 1</a>
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "england" "league-2" %}" style="font-size:14px;">League 2</a>
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "england" "efl-cup" %}" style="font-size:14px;">EFL cup</a>
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "england" "fa-cup" %}" style="font-size:14px;">FA cup</a>
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "england" "national-league" %}" style="font-size:14px;">National League</a>
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "england" "national-league-north" %}" style="font-size:14px;">National League North</a>
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "england" "national-league-south" %}" style="font-size:14px;">National League South</a>
+                                            </div>
+                                        </li>
+                                        
+                                         
+                                         <li class="nav-item dropdown">
+                                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px; color: white;">
+                                              Spain
+                                          </a>
+                                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "spain" "laliga-santander" %}" style="font-size:14px;">La liga</a>
+                                            
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "spain" "copa-del-rey-final" %}" style="font-size:14px;">Copa Del Rey Final</a>
+                                            
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "spain" "copa-del-rey-semi-final" %}" style="font-size:14px;">Copa Del Rey Semi-Final</a>
+                                            
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "spain" "copa-del-rey-quarter-final" %}" style="font-size:14px;">Copa Del Rey Quarter-Final</a>
+                                            
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "spain" "super-cup" %}" style="font-size:14px;">Super cup</a>
+                                           
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "spain" "primera-division-rfef-group-1" %}" style="font-size:14px;">Primera Division Group 1</a>
+                                           
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "spain" "primera-division-rfef-group-2" %}" style="font-size:14px;">Primera Division Group 2</a>
+                                            
+                                          </div>
+                                        </li>
+                              
+                                        
+                                        <li class="nav-item dropdown">
+                                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px; color: white;">
+                                              Italy
+                                          </a>
+                                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "italy" "seria-a" %}" style="font-size:14px;">Seria A</a>
+                                            
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "italy" "seria-b" %}" style="font-size:14px;">Seria B</a>
+                                           
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "italy" "seria-c-group-a" %}" style="font-size:14px;">Seria C Group A</a>
+                                           
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "italy" "seria-c-group-b" %}" style="font-size:14px;">Seria C Group B</a>
+                                            
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "italy" "seria-c-group-c" %}" style="font-size:14px;">Seria C Group C</a>
+                                           
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "italy" "super-cup" %}" style="font-size:14px;">Super Cup</a>
+                                            
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "italy" "coppa-italia-final" %}" style="font-size:14px;">Coppa Italia</a>
+                                            
+                                          </div>
+                                        </li>
+                              
+                                        
+                                        <li class="nav-item dropdown">
+                                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px; color: white;">
+                                              Germany
+                                          </a>
+                                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "germany" "bundesliga" %}" style="font-size:14px;">Bundesliga</a>
+                                           
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "germany" "2-bundesliga" %}" style="font-size:14px;">2 Bundesliga</a>
+                                            
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "germany" "3-liga" %}" style="font-size:14px;">3 Liga</a>
+                                            
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "germany" "dfl-super-cup" %}" style="font-size:14px;">DFL Super cup</a>
+                                            
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "germany" "dfb-cup" %}" style="font-size:14px;">DFB cup</a>
+                                            
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "germany" "regionalliga-bayern" %}" style="font-size:14px;">Regionalliga Bayern</a>
+                                           
+                                              <a class="dropdown-item" href="{% url 'resultsByleague' "germany" "regionalliga-nord" %}" style="font-size:14px;">Regionalliga Nord</a>
+                                            
+                                          </div>
+                                        </li>
+                              
+                                        
+                                        <li class="nav-item dropdown">
+                                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px; color: white;">
+                                              France
+                                          </a>
+                                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                           
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "france" "ligue-1" %}" style="font-size:14px;">Ligue 1</a>
+                                            
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "france" "ligue-2" %}" style="font-size:14px;">Ligue 2</a>
+                                            
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "france" "coupe-de-france" %}" style="font-size:14px;">Coupe De France</a>
+                                            
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "france" "championat-national" %}" style="font-size:14px;">Championat National</a>
+                                            
+                                              <a class="dropdown-item" href="{% url 'resultsByleague' "france" "womens-division-1" %}" style="font-size:14px;">Women's Division 1</a>
+                                            
+                                          </div>
+                                        </li>
+                              
+                                        
+                                        <li class="nav-item dropdown">
+                                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                                              Netherlands
+                                          </a>
+                                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "holland" "eredivisie" %}" style="font-size:14px;">Eredivisie</a>
+                                            
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "holland" "eerste-divisie" %}" style="font-size:14px;">Eerste Divisie</a>
+                                            
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "holland" "super-cup" %}" style="font-size:14px;">Super cup</a>
+                                            
+                                              <a class="dropdown-item" href="{% url 'resultsByleague' "holland" "tweede-divisie" %}" style="font-size:14px;">Tweede Divisie</a>
+                                           
+                                          </div>
+                                        </li>
+                            
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                                                Scotland
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                              
+                                                    <a class="dropdown-item" href="{% url 'basketball_resultsByleague' "bnxt-league" "bnxt-league-elite-gold" %}" style="font-size:14px;">Elite Gold</a>
+                                                
+                                                    <a class="dropdown-item" href="{% url 'resultsByleague' "scotland" "premiership" %}" style="font-size:14px;">Premiership</a>
+                                                
+                                                    <a class="dropdown-item" href="{% url 'resultsByleague' "scotland" "championship" %}" style="font-size:14px;">Championship</a>
+                                                
+                                                    <a class="dropdown-item" href="{% url 'resultsByleague' "scotland" "league-1" %}" style="font-size:14px;">League 1</a>
+                                               
+                                                    <a class="dropdown-item" href="{% url 'resultsByleague' "scotland" "league-2" %}" style="font-size:14px;">League 2</a>    
+                                                
+                                                    <a class="dropdown-item" href="{% url 'resultsByleague' "scotland" "scottish-cup" %}" style="font-size:14px;">Scottish cup</a>
+                                                
+                                                    <a class="dropdown-item" href="{% url 'resultsByleague' "scotland" "challenge-cup" %}" style="font-size:14px;">Challenge cup</a>
+                                                
+                                            </div>
+                                        </li>
+                            
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                                                Denmark
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                              
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "denmark" "superliga" %}" style="font-size:14px;">Superliga</a>
+                                                
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "denmark" "1-division" %}" style="font-size:14px;">1st Division</a>
+                                                
+                                            </div>
+                                        </li>
+                            
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                                                Austria
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "austria" "bundesliga" %}" style="font-size:14px;">Bundesliga</a>
+                                                
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "austria" "2-liga" %}" style="font-size:14px;">2 Liga</a>
+                                                
+                                            </div>
+                                        </li>
+                            
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                                                czech-republic
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "czech-republic" "1-league" %}" style="font-size:14px;">1st League</a>   
+                                                
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "czech-republic" "2-league" %}" style="font-size:14px;">2nd League</a>
+                                               
+                                            </div>
+                                        </li>
+                            
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                                                Croatia
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "croatia" "hnl" %}" style="font-size:14px;">HNL</a>               
+                                                
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "croatia" "prva-nl" %}" style="font-size:14px;">Prva NL</a>
+                                                
+                                            </div>
+                                        </li>
+                            
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                                                Cyprus
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "cyprus" "1-divisie" %}" style="font-size:14px;">1st Divisie</a>              
+                                                
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "cyprus" "2-divisie" %}" style="font-size:14px;">2nd Division</a>
+                                                
+                                            </div>
+                                        </li>
+                            
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                                                Egypt
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "egypt" "premier-league" %}" style="font-size:14px;">Premier League</a>
+                                                
+                                            </div>
+                                        </li>
+                            
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                                                Nigeria
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "nigeria" "npfl-group-a" %}" style="font-size:14px;">NPFL Group A</a>            
+                                                
+                                                <a class="dropdown-item" href="{% url 'resultsByleague' "nigeria" "npfl-group-b" %}" style="font-size:14px;">NPFL Group B</a>
+                                               
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
                              <!-- Section Area - Content Central -->
-                             <div class="col-lg-8">
+                             <div class="col-lg-6">
                                 <section class="content-info">
                                     <div class="container"> 
                                         <div class="row">
@@ -203,60 +535,38 @@
                                 </section>
                             </div>
                             <!-- End Section Area -  Content Central -->
-                            <div class="col-lg-4">
-                                <!-- Point Table -->
-                                <div class="panel-box" style="background-color: #222;">
+                            <aside class="col-lg-3" >
 
-                                    <div class="titles no-margin border-0">
-                                        <h4>Premier League Table</h4>
-                                    </div>
-
-                                    <table class="table-striped table-responsive table-hover result-point small" style="background-color: #222;">
-                                        <thead class="point-table-head">
-                                            <tr>
-                                                <th class="text-left">No</th>
-                                                <th class="text-left">TEAM</th>
-                                                <th class="text-center">P</th>
-                                                <th class="text-center">W</th>
-                                                <th class="text-center">D</th>
-                                                <th class="text-center">PTS</th>
-                                            </tr>
-                                        </thead>
-
-                                        <tbody class="text-center" style="background-color: #222;">
-                                            {% for stage in stages %}
-                                                {% for row in stage.LeagueTable.L.0.Tables %}
-                                                    {% if row.LTT == 1 %}
-                                                        {% for team in row.team %}
-                                                            <tr>
-                                                                <td class="text-left number">
-                                                                    {{team.rnk}}
-                                                                    {% if team.rnk <= 4 %}
-                                                                    <i class="fa fa-caret-up" aria-hidden="true"></i>
-                                                                    {% endif %}  
-                                                                </td>
-                                                                <td class="text-left">
-                                                                <a href="single-team.html">
-                                                                        <img src="https://lsm-static-prod.livescore.com/medium/{{team.Img}}" alt="Colombia"><span>{{team.Tnm}}</span>
-                                                                    </a>
-                                                                </td>
-                                                                <td>{{team.pld}}</td>
-                                                                <td>{{team.win}}</td>
-                                                                <td>{{team.drw}}</td>
-                                                                <td>{{team.pts}}</td>
-                                                            </tr>
-                                                        {% endfor %}
-                                                    {% endif %}
-                                                {% endfor %}
-                                            {% endfor %}
-
-                                          </tbody>
-                                    </table>
-                                     <a href="table-point.html" class="btn-iw full no-margin">View Full Table</a>
+                                <div>
+                                    <h4>Searh </h4>
+                                    <form class="search" action="#" method="Post" style="background-color: #222;">
+                                        <div class="input-group">
+                                            <input class="form-control" placeholder="Search..." name="email"  type="email" required="required">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-primary" type="submit" name="subscribe" >Go!</button>
+                                            </span>
+                                        </div>
+                                    </form>
                                 </div>
-                                <!-- End Point Table -->
-
-                            </div>
+    
+                                <!-- Widget Categories-->
+                                <div class="panel-box">
+                                    <div class="" style="background-color: #222;">
+                                        <h4 style="color: white;">Latest News</h4>
+                                    </div>
+                                    <div class="info-panel" style="background-color: #222;">
+                                        <ul class="list">
+                                            <li><i class="fa fa-check"></i><a href="{% url 'category_post' 2021020913320920836 %}" style="color: white;">Soccer</a></li>
+                                            <li><i class="fa fa-check"></i><a href="{% url 'category_post' 2021020913321516170 %}" style="color: white;">Basketball</a></li>
+                                            <li><i class="fa fa-check"></i><a href="{% url 'category_post' 2022010516022274132 %}" style="color: white;">Transfers News</a></li>
+                                            <li><i class="fa fa-check"></i><a href="{% url 'category_post' 2021082315501532387 %}" style="color: white;">Champion League</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- End Widget Categories-->
+    
+                               
+                            </aside>
                         </div>
                     </div>
                 </div>
