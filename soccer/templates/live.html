@@ -69,11 +69,16 @@
                                                     {% csrf_token %}
                                                     <input type="hidden" value="{{game.Eid}}" name="fname" />
                                                      <a type="submit" >{% fa5_icon 'star' %}</a>
-                                                 </form>
-                                                 href="{% url 'favourite' game.Eid %}" 
-                                                  {% endcomment %}
-
-                                                <a >{% fa5_icon 'star' %}</a>
+                                                 </form> {% endcomment %}
+                                              
+                                                {% for i in favourite %}
+                                                    {% if i.Eid == game.Eid and i.enabled %}
+                                                    <a href="{% url 'favourite' game.Eid %}" >{% fa5_icon 'star' color='red' %}</a>
+                                                    {% else %}
+                                                    <a href="{% url 'favourite' game.Eid %}" >{% fa5_icon 'star' color='green' %}</a>
+                                                    {% endif %}
+                                                {% endfor %}
+                                                
                                             </div>
                                                 
                                             {% endfor %}

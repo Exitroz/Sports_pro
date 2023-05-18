@@ -70,7 +70,10 @@ def index(request):
         error_message = {'error': response.reason}
         return JsonResponse(error_message, status=response.status_code)
     
-    return render(request, 'soccer.html', {'jsonResponse': jsonResponse})
+    favoured = FavouriteModel.objects.all()
+    
+    
+    return render(request, 'soccer.html', {'jsonResponse': jsonResponse, 'favourite':favoured})
 
 
 
@@ -192,7 +195,7 @@ def competion_events(request, league: str, stage: str):
         # print('Results', len(Results))
         # print('Fixtures', len(Fixtures))
         # print('Results', len(Results))
-
+        favoured = FavouriteModel.objects.all()
         context={
             'stages':stages,
             'Fixtures':reversed(Fixtures),
@@ -201,14 +204,18 @@ def competion_events(request, league: str, stage: str):
             'Results':reversed(Results),
             'Competion_name':competion_name,
             'stage_name':stage_name,
+            'favourite':favoured
         }
     else:
+        favourite = FavouriteModel.objects.all()
         context={
             'Fixtures':reversed(Fixtures),
             'Results':reversed(Results),
             'Competion_name':"Null",
             'stage_name':"Null",
+            'favourite':favourite
         }
+    
     return render(request, template_name, context)
 
 
@@ -289,6 +296,9 @@ def league_events(request, country: str, league: str):
 
 
 def live(request):
+    favoured = FavouriteModel.objects.all()
+    print(favoured, 'favourite')
+    
     url = "https://livescore6.p.rapidapi.com/matches/v2/list-live"
 
     querystring = {"Category":"soccer","Timezone":"-7"}
@@ -303,6 +313,7 @@ def live(request):
     
     template_name = 'live.html'
     print(response.status_code)
+    
     # Check if the API call was successful
     if response.status_code == 200:
         # Convert the response content to JSON
@@ -312,6 +323,7 @@ def live(request):
         
         context = {
             'stages':stages,
+            'favourite':favoured
         }
         return render(request, template_name, context)
     else:
@@ -319,7 +331,7 @@ def live(request):
         error_message = {'error': response.reason}
         return JsonResponse(error_message, status=response.status_code)
     
-    return render(request, 'soccer.html', {'jsonResponse': jsonResponse})
+    return render(request, 'soccer.html', {'jsonResponse': jsonResponse, 'favourite':favoured})
 
 
 def single_result(request, Eid: int):
@@ -401,18 +413,24 @@ def single_result(request, Eid: int):
 
 def favourite(request, eid):
     print(eid)
-    # favoured = FavouriteModel.objects.filter(Eid=eid).exists()
-    # if favoured:
-    #     obj = FavouriteModel.objects.get(Eid=eid)
-    #     if obj.enabled:
-    #         obj.enabled = False
-    #     else:
-    #         obj.enabled = True
-    # else:
-    #     FavouriteModel.objects.create(Eid=eid)
+    favoured = FavouriteModel.objects.filter(Eid=eid).exists()
+    if favoured:
+        obj = FavouriteModel.objects.get(Eid=eid)
+        print(obj, 'obj')
+        if obj.enabled:
+            obj.enabled = False
+            obj.save()
+        else:
+            obj.enabled = True
+            obj.save()
+    else:
+        FavouriteModel.objects.create(Eid=eid)
+    
+    favour = FavouriteModel.objects.all()
+    for f in favour:
+        print(f.Eid, f.enabled, 'fav')
+    return redirect(request.META.get('HTTP_REFERER'), {'favourite': favour})# Redirects to the formal page or view
         
-    return redirect('.')
         
-        
-        
+
         
