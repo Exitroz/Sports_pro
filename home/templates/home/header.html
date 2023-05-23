@@ -1,7 +1,7 @@
  {% load static %}
  {% load fontawesome_5 %}
  <!-- Header-->
- <header class="header-3">
+ <header class="header-3" style="background-color: #222;">
     <!-- End headerbox-->
     <div class="headerbox">
         <div class="container">
@@ -19,7 +19,7 @@
                 <!-- Adds Header-->
                 <div class="col col-xl-12">
                     <!-- Call Nav Menu-->
-                    <a class="mobile-nav" href="#mobile-nav">{% fa5_icon 'bars' %}</a>
+                    <a class="mobile-nav" href="#mobile-nav" style="color: white;">{% fa5_icon 'bars' %}</a>
                     <!-- End Call Nav Menu-->
                 </div>
                 <!-- End Adds Header-->
@@ -29,42 +29,42 @@
     <!-- End headerbox-->
 
     <!-- mainmenu-->
-    <nav class="mainmenu">
+    <nav class="mainmenu" style="background-color: #222;">
         <div class="container">
             <!-- Menu-->
             <ul class="sf-menu" id="menu">
                 <li class="current">
-                    <a href="{% url 'home' %}">Home</a>
+                    <a href="{% url 'home' %}" style="color: white;">Home</a>
                 </li>
 
                 <li class="current">
-                    <a href="{% url 'live' %}">Live</a>
+                    <a href="{% url 'live' %}" style="color: white;">Live</a>
                 </li>
                 
                 <li class="current">
-                    <a href="{% url 'soccer' %}">Soccer</a>
+                    <a href="{% url 'soccer' %}" style="color: white;">Soccer</a>
                 </li>
 
                 <li class="current">
-                    <a href="">Favorites</a>
+                    <a href="" style="color: white;">Favorites</a>
+                </li>
+
+                {% comment %} <li>
+                    <a href="{% url 'fixturesByleague' 'england' 'premier-league' %}" style="color: white;">Soccer Leagues</a>
                 </li>
 
                 <li>
-                    <a href="{% url 'fixturesByleague' 'england' 'premier-league' %}">Soccer Leagues</a>
-                </li>
+                    <a href="{% url 'resultsBycompetion' 'champions-league' 'group-b' %}" style="color: white;">Soccer Competions</a>
+                </li> {% endcomment %}
 
                 <li>
-                    <a href="{% url 'resultsBycompetion' 'champions-league' 'group-b' %}">Soccer Competions</a>
-                </li>
-
-                <li>
-                    <a href="{% url 'basketball' %}">Basketball</a>
+                    <a href="{% url 'basketball' %}" style="color: white;">Basketball</a>
                 </li>
                 <li>
-                    <a href="">Predictions</a>
+                    <a href="" style="color: white;">Predictions</a>
                 </li>
                 <li>
-                    <a href="{% url 'news_post' %}">News</a>
+                    <a href="{% url 'news_post' %}" style="color: white;">News</a>
                 </li>
                 
             </ul>
@@ -76,37 +76,37 @@
 <!-- End Header-->
 
 <!-- Mobile Nav-->
-<div id="mobile-nav">
+<div id="mobile-nav" style="background-color: #222;">
     <!-- Menu-->
     <ul>
-        <li class="current">
+        {% comment %} <li class="current">
             <a href="{% url 'soccer' %}"">Soccer</a>
+        </li> {% endcomment %}
+
+        <li>
+            <a href="{% url 'live' %}" style="color: white;">Live</a>
         </li>
 
         <li>
-            <a href="{% url 'live' %}">Live</a>
+            <a href="" style="color: white;">Favorites</a>
         </li>
 
         <li>
-            <a href="">Favorites</a>
+            <a href="{% url 'fixturesByleague' 'england' 'premier-league' %}" style="color: white;">Football Leagues</a>
         </li>
 
         <li>
-            <a href="{% url 'fixturesByleague' 'england' 'premier-league' %}">Football Leagues</a>
+            <a href="{% url 'resultsBycompetion' 'champions-league' 'group-b' %}" style="color: white;">Football Competions</a>
         </li>
 
         <li>
-            <a href="{% url 'resultsBycompetion' 'champions-league' 'group-b' %}">Football Competions</a>
-        </li>
-
-        <li>
-            <a href="{% url 'basketball' %}">Basketball</a>
+            <a href="{% url 'basketball' %}" style="color: white;">Basketball</a>
         </li>
         <li>
-            <a href="">Predictions</a>
+            <a href="" style="color: white;">Predictions</a>
         </li>
         <li>
-            <a href="{% url 'news_post' %}">News</a>
+            <a href="{% url 'news_post' %}" style="color: white;">News</a>
         </li>
     </ul>
     <!-- End Menu-->

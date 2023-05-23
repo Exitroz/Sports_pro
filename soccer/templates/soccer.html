@@ -1,6 +1,8 @@
+
 {% extends 'base.html' %}
 {% load fontawesome_5 %}
 {% load static %}
+{% load fontawesome_5 %}
 
         <!-- layout-->
         {% block content%}
@@ -30,10 +32,11 @@
                                                         <div class="info-results"> 
                                                             <ul>    
                                                                 <li>
-                                                                    <span class="head">
-                                                                        Fixtures<span class="date">27 Jun 2017</span>
-                                                                    </span>
                                                                     {% for game in fixtures %}
+                                                                    <span class="head">
+                                                                        Fixtures<span class="date">{{game.Esd}}</span>
+                                                                    </span>
+                                                                    
                                                                     <div class="goals-result">
                                                                         <a href="" style="width: 150px;">
                                                                             <img src="https://lsm-static-prod.livescore.com/medium/{{game.T1.0.Img}}" alt="">
@@ -123,6 +126,51 @@
                                 <!-- End Point Table -->
                             </div>
 
+                             <!-- Section Area - Content Central -->
+                             <div class="col-lg-8">
+                                <section class="content-info">
+
+                                    <div class="container">
+                                        <div class="row">
+
+                                            <div class="col-lg-12">
+                                                <table class="table-striped table-responsive table-hover">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Team A</th>
+                                                            <th class="text-center">VS</th>
+                                                            <th>Team B</th>
+                                                            {% comment %} <th>Details</th> {% endcomment %}
+                                                        </tr>
+                                                    </thead>
+                                                    {% for game in fixtures %}
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                <img src="https://lsm-static-prod.livescore.com/medium/{{game.T1.0.Img}}" alt="icon">
+                                                                <strong>{{game.T1.0.Nm}}</strong><br>
+                                                                <small class="meta-text">{{Competion_name}}</small>
+                                                            </td>
+                                                            <td class="text-center">Vs</td>
+                                                            <td>
+                                                                <img src="https://lsm-static-prod.livescore.com/medium/{{game.T2.0.Img}}" alt="icon1">
+                                                                <strong>{{game.T2.0.Nm}}</strong><br>
+                                                                <small class="meta-text">{{Competion_name}}</small> 
+                                                            </td>
+                                                            {% comment %} <td>
+                                                                {{game.Esd}}<br>
+                                                                <small class="meta-text">{{game.Eps}}</small>
+                                                            </td> {% endcomment %}
+                                                        </tr>
+                                                    </tbody>
+                                                    {% endfor %}
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <!-- End Section Area -  Content Central -->
                         </div>
                     </div>
                 </div>
@@ -139,6 +187,7 @@
 
         {% endblock %}
         <!-- End layout-->
+
 
 
 

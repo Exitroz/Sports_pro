@@ -26,7 +26,7 @@
             <!-- End Section Title -->
 
             <!-- Section Area - Content Central -->
-            <section class="content-info">
+            <section class="content-info" style="background:url({% static 'img/slide/1.jpg' %}); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100vh; ">
 
                 <div class="container paddings-mini">
                     <div class="row">
@@ -43,7 +43,7 @@
                                         
                                         <li>
                                             <span class="head">
-                                                {{st.Snm}}<span class="date">27 Jun 2017</span>
+                                                {{st.Snm}}<span class="date">{{st.Events.0.Eps}}</span>
                                             </span>
                                         
                                             {% for game in st.Events %}
@@ -80,6 +80,7 @@
                                 </div>
                            </div>  
                            {% endfor %}
+
 
 
                             {% comment %} <table class="table-striped table-responsive table-hover"> 
