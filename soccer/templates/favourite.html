@@ -37,45 +37,44 @@
                         <div class="col-lg-12">
                             <div class="recent-results " >   
                                 <div class="info-results">
-                                    
+                                    {% for item in list_favoured %}
                                     <ul>
                                         
                                         <li>
                                             <span class="head">
-                                                {{st.Snm}}<span class="date">27 Jun 2017</span>
+                                                {{item.Stg.Snm}}
+                                                <span class="date">
+                                                    {{item.Esd}}
+                                                
+                                                    <span style="padding-left: 35px; padding-right: 15px;">{{item.Eps}}</span>
+                                                </span>
                                             </span>
-                                        
-                                            {% for game in st.Events %}
                                     
                                             <div class="goals-result">
                                                 
-                                                <a href="{% url 'singleResult' game.Eid %}" style="width: 150px;">
-                                                    <img src="https://lsm-static-prod.livescore.com/medium/{{game.T1.0.Img}}" alt="">
-                                                    {{game.T1.0.Nm}}
+                                                <a href="{% url 'singleResult' item.Eid %}" style="width: 150px;">
+                                                    <img src="https://lsm-static-prod.livescore.com/medium/{{item.T1.0.Img}}" alt="">
+                                                    {{item.T1.0.Nm}}
                                                 </a>
                                             
                                                 <span class="goals" >
-                                                    <b>{{game.Tr1}}</b> <b>{{game.Tr2}}</b>
+                                                    <b>{{item.Tr1}}</b> <b>{{item.Tr2}}</b>
                                                     {% comment %} <a href="single-result.html" class="btn theme">View More</a> {% endcomment %}
                                                 </span>
 
-                                                <a href="{% url 'singleResult' game.Eid %}"  style="width: 150px;">
-                                                    <img src="https://lsm-static-prod.livescore.com/medium/{{game.T2.0.Img}}" alt="">
-                                                    {{game.T2.0.Nm}}
+                                                <a href="{% url 'singleResult' item.Eid %}"  style="width: 150px;">
+                                                    <img src="https://lsm-static-prod.livescore.com/medium/{{item.T2.0.Img}}" alt="">
+                                                    {{item.T2.0.Nm}}
                                                 </a>
-                                                {% if liked %}
-                                                <a href="{% url 'liked' game.Eid %}" >{% fa5_icon 'star' color='red' %}</a>
-                                                {% else %}
-                                                <a href="{% url 'liked' game.Eid %}" >{% fa5_icon 'star' %}</a>
-                                                {% endif %}
+                                               
+                                                <a href="{% url 'liked' item.Eid %}" >{% fa5_icon 'star' color='red' %}</a>
 
                                             </div>
                                                 
-                                            {% endfor %}
                                         </li>
                                         
                                     </ul>
-                                    
+                                    {% endfor %}
                                 </div>
                            </div>  
                         </div>

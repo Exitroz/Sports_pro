@@ -399,28 +399,32 @@ def get_favourite(request):
     favoured = FavouriteModel.objects.filter(owner__ip=ip)
     print(favoured)
     
+    list_favoured = []
+    
     sc_url = "https://livescore6.p.rapidapi.com/matches/v2/get-scoreboard"
-    stat_url = "https://livescore6.p.rapidapi.com/matches/v2/get-statistics"
-    h2h_url = "https://livescore6.p.rapidapi.com/matches/v2/get-h2h"
     
-    querystring = {"Eid":"933010","Category":"soccer"}
+    
+    for fav in favoured:
+        print(fav, 'fav')
+        querystring = {"Eid":fav,"Category":"soccer"}
 
-    headers = {
-        "X-RapidAPI-Key": settings.API_KEY,
-        "X-RapidAPI-Host": "livescore6.p.rapidapi.com"
-    }
-    
-    sc_response = requests.get(sc_url, headers=headers, params=querystring)
-    stat_response = requests.get(stat_url, headers=headers, params=querystring)
-    h2h_response = requests.get(h2h_url, headers=headers, params=querystring)
-    
-    sc_data = sc_response.json()
-    stat_data = stat_response.json()
-    h2h_data = h2h_response.json()
-    
-    
+        headers = {
+            "X-RapidAPI-Key": settings.API_KEY,
+            "X-RapidAPI-Host": "livescore6.p.rapidapi.com"
+        }
+        
+        sc_response = requests.get(sc_url, headers=headers, params=querystring)
+        
+        
+        sc_data = sc_response.json()
+        list_favoured.append(sc_data)
+        
+        # print(sc_data,'sc_data')
+        # print("!!!!!!!!!!!!------------------------!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        
+        
     context = {
-        'favoured':favoured
+        'list_favoured':list_favoured
     }
     return render(request, template_name, context)
 
