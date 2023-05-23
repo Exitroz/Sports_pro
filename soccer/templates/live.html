@@ -64,16 +64,12 @@
                                                     <img src="https://lsm-static-prod.livescore.com/medium/{{game.T2.0.Img}}" alt="">
                                                     {{game.T2.0.Nm}}
                                                 </a>
-                                                
-                                                {% comment %} <form action="" method="post">
-                                                    {% csrf_token %}
-                                                    <input type="hidden" value="{{game.Eid}}" name="fname" />
-                                                     <a type="submit" >{% fa5_icon 'star' %}</a>
-                                                 </form>
-                                                 href="{% url 'favourite' game.Eid %}" 
-                                                  {% endcomment %}
+                                                {% if liked %}
+                                                <a href="{% url 'liked' game.Eid %}" >{% fa5_icon 'star' color='red' %}</a>
+                                                {% else %}
+                                                <a href="{% url 'liked' game.Eid %}" >{% fa5_icon 'star' %}</a>
+                                                {% endif %}
 
-                                                <a >{% fa5_icon 'star' %}</a>
                                             </div>
                                                 
                                             {% endfor %}
