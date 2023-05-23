@@ -1,13 +1,23 @@
 
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
+from django.http import HttpResponseRedirect
 import requests
 import datetime
 from django.conf import settings
 
 
 from django.http import JsonResponse
-from .models import FavouriteModel
+from .models import FavouriteModel, IpModel
 # Create your views here.
+
+def get_client_ip(request):
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')[0]
+    else:
+        ip = request.META.get('REMOTE_ADDR')
+    return ip
+
 
 def index(request):  
     dt = datetime.datetime.now()
@@ -191,10 +201,7 @@ def competion_events(request, league: str, stage: str):
                 elif  event_year >= dt.year and event_month > dt.month:
                     Fixtures.append(row)
                     
-        # print('Fixtures', len(Fixtures))
-        # print('Results', len(Results))
-        # print('Fixtures', len(Fixtures))
-        # print('Results', len(Results))
+       
         favoured = FavouriteModel.objects.all()
         context={
             'stages':stages,
@@ -296,8 +303,9 @@ def league_events(request, country: str, league: str):
 
 
 def live(request):
-    favoured = FavouriteModel.objects.all()
-    print(favoured, 'favourite')
+    ip = get_client_ip(request)
+    
+    favoured = FavouriteModel.objects.filter(owner__ip=ip)
     
     url = "https://livescore6.p.rapidapi.com/matches/v2/list-live"
 
@@ -323,7 +331,7 @@ def live(request):
         
         context = {
             'stages':stages,
-            'favourite':favoured
+            'liked':favoured
         }
         return render(request, template_name, context)
     else:
@@ -331,7 +339,7 @@ def live(request):
         error_message = {'error': response.reason}
         return JsonResponse(error_message, status=response.status_code)
     
-    return render(request, 'soccer.html', {'jsonResponse': jsonResponse, 'favourite':favoured})
+    return render(request, 'soccer.html', {'jsonResponse': jsonResponse, 'liked':favoured})
 
 
 def single_result(request, Eid: int):
@@ -382,55 +390,54 @@ def single_result(request, Eid: int):
     return render(request, template_name, context)
 
 
-# def get_livescore(request):
-#     # Replace with your LiveScore API endpoint URL and API key
-#     endpoint = 'https://livescore-api.com/api-client/scores/live.json'
-#     api_key = 'YOUR_API_KEY'
-
-#     # Set optional parameters for the API call
-#     params = {
-#         'key': api_key,
-#         'secret': 'YOUR_API_SECRET',
-#         'countries': 'england',
-#         'leagues': 'premier-league',
-#         'timezone': 'Europe/London'
-#     }
-
-#     # Make a GET request to the API endpoint using requests library
-#     response = requests.get(endpoint, params=params)
+def get_favourite(request):
+    template_name =  "favourite.html"
+    ip = get_client_ip(request)
+    if not IpModel.objects.filter(ip=ip).exists():
+        IpModel.objects.create(ip=ip)
     
-#     # Check if the API call was successful
-#     if response.status_code == 200:
-#         # Convert the response content to JSON
-#         data = response.json()
-#         # Return the data as a JSON response to the frontend
-#         return JsonResponse(data)
-#     else:
-#         # If the API call failed, return the error message as a JSON response
-#         error_message = {'error': response.reason}
-#         return JsonResponse(error_message, status=response.status_code)
+    favoured = FavouriteModel.objects.filter(owner__ip=ip)
+    print(favoured)
+    
+    sc_url = "https://livescore6.p.rapidapi.com/matches/v2/get-scoreboard"
+    stat_url = "https://livescore6.p.rapidapi.com/matches/v2/get-statistics"
+    h2h_url = "https://livescore6.p.rapidapi.com/matches/v2/get-h2h"
+    
+    querystring = {"Eid":"933010","Category":"soccer"}
+
+    headers = {
+        "X-RapidAPI-Key": settings.API_KEY,
+        "X-RapidAPI-Host": "livescore6.p.rapidapi.com"
+    }
+    
+    sc_response = requests.get(sc_url, headers=headers, params=querystring)
+    stat_response = requests.get(stat_url, headers=headers, params=querystring)
+    h2h_response = requests.get(h2h_url, headers=headers, params=querystring)
+    
+    sc_data = sc_response.json()
+    stat_data = stat_response.json()
+    h2h_data = h2h_response.json()
+    
+    
+    context = {
+        'favoured':favoured
+    }
+    return render(request, template_name, context)
 
 
 def favourite(request, eid):
     print(eid)
+    ip = get_client_ip(request)
+    if not IpModel.objects.filter(ip=ip).exists():
+        IpModel.objects.create(ip=ip)
+        
     favoured = FavouriteModel.objects.filter(Eid=eid).exists()
     if favoured:
-        obj = FavouriteModel.objects.get(Eid=eid)
-        print(obj, 'obj')
-        if obj.enabled:
-            obj.enabled = False
-            obj.save()
-        else:
-            obj.enabled = True
-            obj.save()
+        obj = FavouriteModel.objects.get(Eid=eid).delete()
     else:
-        FavouriteModel.objects.create(Eid=eid)
+        new = FavouriteModel.objects.create(Eid=eid)
+        new.owner.add(IpModel.objects.get(ip=ip).id)
+        new.save()
     
-    favour = FavouriteModel.objects.all()
-    for f in favour:
-        print(f.Eid, f.enabled, 'fav')
-    return redirect(request.META.get('HTTP_REFERER'), {'favourite': favour})# Redirects to the formal page or view
-        
-        
-
+    return redirect(request.META.get('HTTP_REFERER'))# Redirects to the formal page or view
         

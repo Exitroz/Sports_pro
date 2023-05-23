@@ -1,9 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-
-
-
-   
+{% load fontawesome_5 %}
         <!-- layout-->
         {% block content%}
 
@@ -106,6 +103,9 @@
                                                                         <img src="https://lsm-static-prod.livescore.com/medium/{{game.T2.0.Img}}" alt="">
                                                                         {{game.T2.0.Nm}}
                                                                     </a>
+
+                                                                    <a href="{% url 'liked' game.Eid %}" >{% fa5_icon 'star' %}</a>
+
                                                                 </div>
                                                                 {% endfor %}
                                                             </li>
@@ -116,68 +116,6 @@
                                                </div>  
                                                {% endfor %}
 
-
-                                                {% comment %} <table class="table-striped table-responsive table-hover">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Team A</th>
-                                                            <th class="text-center">VS</th>
-                                                            <th>Team B</th>
-                                                           
-                                                        </tr>
-                                                    </thead>
-                                                    {% for st in today_data %}
-
-                                                    
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>
-<<<<<<< HEAD
-                                                                <a href="{% url 'fixturesByleague' st.Ccd st.Scd %}">{{st.Snm}}</a>
-=======
-                                                                <h4><strong>{{st.Snm}}</strong></h4>
->>>>>>> f28475a9423c8383a9194714f8d52a81c38416bf
-                                                            </td>
-                                                            <td></td>
-                                                            <td></td>
-                                                        </tr>
-                                                        {% for game in st.Events %}
-                                                        <tr>
-                                                            <td>
-                                                                <div class="row">
-                                                                    <div class="col-lg-6">
-                                                                        <img src="https://lsm-static-prod.livescore.com/medium/{{game.T1.0.Img}}" alt="icon">
-                                                                        <strong>{{game.T1.0.Nm}}</strong><br>
-                                                                        <small class="meta-text">{% if st.CompN %} {{st.CompN}} {% else %} {{st.Snm}} {% endif %}</small></small>
-                                                                    </div>
-                                                                    <div class="col-lg-6">
-                                                                       
-                                                                        <strong class="float-sm-right">{{game.Tr1}}</strong><br>
-                                                                        
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td class="text-center">Vs</td>
-                                                            <td>
-                                                                <div class="row">
-                                                                    <div class="col-lg-3">
-                                                                       
-                                                                        <strong >{{game.Tr2}}</strong><br>
-                                                                        
-                                                                    </div>
-                                                                    <div class="col-lg-9 float-sm-right">
-                                                                        <img src="https://lsm-static-prod.livescore.com/medium/{{game.T2.0.Img}}" alt="icon1">
-                                                                        <strong>{{game.T2.0.Nm}}</strong><br>
-                                                                        <small class="meta-text">{% if st.CompN %} {{st.CompN}} {% else %} {{st.Snm}} {% endif %}</small> 
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                           
-                                                        </tr>
-                                                    </tbody>
-                                                    {% endfor %}
-                                                    {% endfor %}
-                                                </table> {% endcomment %}
                                             </div>
                                         </div>
                                     </div>

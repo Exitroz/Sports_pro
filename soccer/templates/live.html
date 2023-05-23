@@ -64,21 +64,12 @@
                                                     <img src="https://lsm-static-prod.livescore.com/medium/{{game.T2.0.Img}}" alt="">
                                                     {{game.T2.0.Nm}}
                                                 </a>
-                                                
-                                                {% comment %} <form action="" method="post">
-                                                    {% csrf_token %}
-                                                    <input type="hidden" value="{{game.Eid}}" name="fname" />
-                                                     <a type="submit" >{% fa5_icon 'star' %}</a>
-                                                 </form> {% endcomment %}
-                                              
-                                                {% for i in favourite %}
-                                                    {% if i.Eid == game.Eid and i.enabled %}
-                                                    <a href="{% url 'favourite' game.Eid %}" >{% fa5_icon 'star' color='red' %}</a>
-                                                    {% else %}
-                                                    <a href="{% url 'favourite' game.Eid %}" >{% fa5_icon 'star' color='green' %}</a>
-                                                    {% endif %}
-                                                {% endfor %}
-                                                
+                                                {% if liked %}
+                                                <a href="{% url 'liked' game.Eid %}" >{% fa5_icon 'star' color='red' %}</a>
+                                                {% else %}
+                                                <a href="{% url 'liked' game.Eid %}" >{% fa5_icon 'star' %}</a>
+                                                {% endif %}
+
                                             </div>
                                                 
                                             {% endfor %}

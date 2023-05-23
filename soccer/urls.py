@@ -4,6 +4,7 @@ from . import views
 urlpatterns = [
     path('', views.index, name='soccer'),
     path('live/', views.live, name='live'),
+    path('favourite/', views.get_favourite, name='favourite'),
     
     path('<str:country>/<str:league>/league/fixtures/', views.league_events, name='fixturesByleague'),
     path('<str:country>/<str:league>/league/results/', views.league_events, name='resultsByleague'),
@@ -15,5 +16,5 @@ urlpatterns = [
     
     path('single/<int:Eid>/', views.single_result, name='singleResult'),
     
-    path('<str:eid>/', views.favourite, name='favourite'),
+    path('<str:eid>/', views.favourite, name='liked'),
 ]
