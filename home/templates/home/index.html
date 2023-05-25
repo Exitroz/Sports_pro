@@ -70,14 +70,52 @@
             </div> 
             <!-- End section-hero-posts-->
             <!-- Section Area - Content Central -->
+            <style>
+                .con{
+                    margin-right: 190px; 
+                    margin-left: 190px;
+                    padding-top: 100px;
+                }
+                @media screen and (max-width: 991px) {
+                    .con{
+                        margin-right: 0px;
+                        margin-left: 0px;
+                    }
+                }
+            </style>
             <section class="content-info" style="background-color: #222;">
                 <!-- White Section -->
-                <div class="paddings ">
+                
+                <div class="con">
                     <div class="container">
                         <div class="row">  
                             <style>
+                                .dropdown a{
+                                    font-family:Roboto,Arial,sans-serif ; 
+                                    font-size:12px; 
+                                    color: greenyellow;
+                                    color: aquamarine;
+                                }
+                                .dropdown-item{
+                                    font-size: 11px !important;
+                                }
+                                .dropdown-menu{
+                                    background-color: #121212 !important;
+                                }
+                                .goals-result{
+                                    padding: 8px !important;
+                                    cursor: pointer;
+                                }
+                                .goals-result:hover{
+                                    background-color: #555555 !important;
+                                }
+                                .goals-result a{
+                                    font-family:Roboto,Arial,sans-serif !important; 
+                                    color: aquamarine !important;
+                                }
                                 .side{
                                     display: block;
+                                    border: 1px solid #555555;
                                 }
                                 @media screen and (max-width: 991px) {
                                     .side{
@@ -90,12 +128,13 @@
                                     }
                                 }
                             </style> 
-                            <div class="col-lg-12 side1">
-                               
-                                {% include "leagues_navbar.html" %}
+                            <div class="col-lg-12 side1" >
+                               <div style="border: 1px solid white;">
+                                   {% include "leagues_navbar.html" %}
+                               </div>
                             </div>
                             
-                            <div class="col-lg-3 side" style="background-color: #222;">
+                            <div class="col-lg-2 side" style="background-color: #222;">
                                 <!-- Point Table -->
                                 {% comment %} <div class="panel-box">
 
@@ -153,7 +192,7 @@
                                         
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px; color: white;">
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" ">
                                                 England
                                             </a>
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -172,7 +211,7 @@
                                          
                                          <li class="nav-item dropdown">
                                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px; color: white;">
+                                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                               Spain
                                           </a>
                                           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -197,7 +236,7 @@
                                         
                                         <li class="nav-item dropdown">
                                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px; color: white;">
+                                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                                               Italy
                                           </a>
                                           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -222,7 +261,7 @@
                                         
                                         <li class="nav-item dropdown">
                                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px; color: white;">
+                                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                                               Germany
                                           </a>
                                           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -247,7 +286,7 @@
                                         
                                         <li class="nav-item dropdown">
                                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px; color: white;">
+                                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                                               France
                                           </a>
                                           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -268,7 +307,7 @@
                                         
                                         <li class="nav-item dropdown">
                                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                                               Netherlands
                                           </a>
                                           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -286,7 +325,7 @@
                             
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                                                 Scotland
                                             </a>
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -310,7 +349,7 @@
                             
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                                                 Denmark
                                             </a>
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -324,7 +363,7 @@
                             
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                                                 Austria
                                             </a>
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -338,7 +377,7 @@
                             
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                                                 czech-republic
                                             </a>
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -352,7 +391,7 @@
                             
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                                                 Croatia
                                             </a>
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -366,7 +405,7 @@
                             
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                                                 Cyprus
                                             </a>
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -380,7 +419,7 @@
                             
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                                                 Egypt
                                             </a>
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -392,7 +431,7 @@
                             
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:15px;">
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
                                                 Nigeria
                                             </a>
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -419,7 +458,7 @@
                                                         <ul>
                                                             <li>
                                                                 <span class="head">
-                                                                    {{st.Snm}}<span class="date">{{st.Events.0.Eps}}</span>
+                                                                    <strong>{{st.Snm}}<span class="date">{{st.Events.0.Eps}}</span></strong>
                                                                 </span>
                                                             
                                                                 {% for game in st.Events %}
@@ -446,14 +485,9 @@
                                                                         <b style="font-size: 10px;">{{game.Tr2}}</b>
                                                                      
                                                                     </span>                              
-                                                                    
+                                                                   
                                                                 </div>
-                                                                <div class="goals-result">
-                                                                    <a href="{% url 'singleResult' game.Eid %}"  style="width: 150px;">
-                                                                        <img src="https://lsm-static-prod.livescore.com/medium/{{game.T2.0.Img}}" alt="">
-                                                                        {{game.T2.0.Nm}}
-                                                                    </a>
-                                                                </div>
+                                                                <hr style="border: 1px solid #121212;">
                                                                 {% endfor %}
                                                             </li>
                                                             
@@ -469,10 +503,10 @@
                                 </section>
                             </div>
                             <!-- End Section Area -  Content Central -->
-                            <aside class="col-lg-3" >
+                            <aside class="col-lg-4" >
 
-                                <div>
-                                    <h4>Searh </h4>
+                                <div style="border: 1px solid #555555;">
+                                    {% comment %} <h4>Searh </h4> {% endcomment %}
                                     <form class="search" action="#" method="Post" style="background-color: #222;">
                                         <div class="input-group">
                                             <input class="form-control" placeholder="Search..." name="email"  type="email" required="required">
@@ -484,7 +518,7 @@
                                 </div>
     
                                 <!-- Widget Categories-->
-                                <div class="panel-box">
+                                <div class="panel-box" style="border: 1px solid #555555;">
                                     <div class="" style="background-color: #222;">
                                         <h4 style="color: white;">Latest News</h4>
                                     </div>
