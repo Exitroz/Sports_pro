@@ -33,20 +33,20 @@
         <div class="container">
             <!-- Menu-->
             <ul class="sf-menu" id="menu">
-                <li class="current">
+                <li>
                     <a href="{% url 'home' %}" style="color: white;">Home</a>
                 </li>
 
-                <li class="current">
+                <li>
                     <a href="{% url 'live' %}" style="color: white;">Live</a>
                 </li>
                 
-                <li class="current">
+                {% comment %} <li class="current">
                     <a href="{% url 'soccer' %}" style="color: white;">Soccer</a>
-                </li>
+                </li> {% endcomment %}
 
-                <li class="current">
-                    <a href="" style="color: white;">Favorites</a>
+                <li>
+                    <a href="{% url 'favourite' %}" style="color: white;">Favorites</a>
                 </li>
 
                 {% comment %} <li>
@@ -88,16 +88,16 @@
         </li>
 
         <li>
-            <a href="" style="color: white;">Favorites</a>
+            <a href="{% url 'favourite' %}" style="color: white;">Favorites</a>
         </li>
 
-        <li>
+        {% comment %} <li>
             <a href="{% url 'fixturesByleague' 'england' 'premier-league' %}" style="color: white;">Football Leagues</a>
         </li>
 
         <li>
             <a href="{% url 'resultsBycompetion' 'champions-league' 'group-b' %}" style="color: white;">Football Competions</a>
-        </li>
+        </li> {% endcomment %}
 
         <li>
             <a href="{% url 'basketball' %}" style="color: white;">Basketball</a>

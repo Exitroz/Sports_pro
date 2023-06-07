@@ -1,0 +1,33 @@
+{% load static %}
+<aside class="col-lg-4" >
+
+    <div style="border: 1px solid #555555;">
+        {% comment %} <h4>Searh </h4> {% endcomment %}
+        <form class="search" action="#" method="Post" style="background-color: #222;">
+            <div class="input-group">
+                <input class="form-control" placeholder="Search..." name="email"  type="email" required="required">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="submit" name="subscribe" >Go!</button>
+                </span>
+            </div>
+        </form>
+    </div>
+
+    <!-- Widget Categories-->
+    <div class="panel-box" style="border: 1px solid #555555;">
+        <div class="" style="background-color: #222;">
+            <h4 style="color: white;">Latest News</h4>
+        </div>
+        <div class="info-panel" style="background-color: #222;">
+            <ul class="list">
+                <li><i class="fa fa-check"></i><a href="{% url 'category_post' 2021020913320920836 %}" style="color: white;">Soccer</a></li>
+                <li><i class="fa fa-check"></i><a href="{% url 'category_post' 2021020913321516170 %}" style="color: white;">Basketball</a></li>
+                <li><i class="fa fa-check"></i><a href="{% url 'category_post' 2022010516022274132 %}" style="color: white;">Transfers News</a></li>
+                <li><i class="fa fa-check"></i><a href="{% url 'category_post' 2021082315501532387 %}" style="color: white;">Champion League</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Widget Categories-->
+
+   
+</aside>
