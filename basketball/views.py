@@ -178,7 +178,7 @@ def live(request):
         error_message = {'error': response.reason}
         return JsonResponse(error_message, status=response.status_code)
     
-    return render(request, 'basketball.html', {'jsonResponse': jsonResponse})
+    return render(request, 'basketball_live.html', {'jsonResponse': jsonResponse})
 
 
 def single_result(request, Eid: int):

@@ -34,9 +34,9 @@
             <!-- Menu-->
             <ul class="sf-menu" id="menu">
                 <li>
-                    <a href="{% url 'home' %}" style="color: white;">Home</a>
+                    <a href="{% url 'home' %}" style="color: white;">Football</a>
                 </li>
-
+                
                 <li>
                     <a href="{% url 'live' %}" style="color: white;">Live</a>
                 </li>
@@ -51,11 +51,11 @@
 
                 {% comment %} <li>
                     <a href="{% url 'fixturesByleague' 'england' 'premier-league' %}" style="color: white;">Soccer Leagues</a>
-                </li>
-
-                <li>
-                    <a href="{% url 'resultsBycompetion' 'champions-league' 'group-b' %}" style="color: white;">Soccer Competions</a>
                 </li> {% endcomment %}
+
+                {% comment %} <li>
+                    <a href="{% url 'resultsBycompetion' 'champions-league' 'group-b' %}" style="color: white;">Soccer Competions</a>
+                </li>  {% endcomment %}
 
                 <li>
                     <a href="{% url 'basketball' %}" style="color: white;">Basketball</a>

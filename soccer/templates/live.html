@@ -48,13 +48,13 @@
                                 {% for st in stages %} 
                                 <div class="recent-results " >   
                                     <div class="info-results">
-                                        <ul>
+                                        <ul class="cover">
                                             <li>
                                                 <span class="head">
-                                                    <a href="">
+                                                    <a href="{% url 'fixturesByleague' st.Ccd st.Scd %}">
                                                         <img src="https://static.livescore.com/i2/fh/{{st.Ccd}}.jpg" alt=""> 
                                                     </a>
-                                                    <strong>{{st.Snm}}<span class="date"></span></strong><br>
+                                                    <strong><a href="{% url 'fixturesByleague' st.Ccd st.Scd %}">{{st.Snm}}</a><span class="date"></span></strong><br>
                                                     <span style="font-size: 10px;">{{st.Cnm}}</span>
                                                 </span>
                                             
