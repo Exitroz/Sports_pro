@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'whitenoise.runserver_nostatic',
+    # 'whitenoise.runserver_nostatic',
     'fontawesome_5',
     'home',
     'soccer',
@@ -52,7 +52,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    "whitenoise.middleware.WhiteNoiseMiddleware",
+    # "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -91,6 +91,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 
 
 
@@ -135,8 +136,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
-STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
-
+# STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
 # MEDIA_ROOT = BASE_DIR / 'images'
 
 # Default primary key field type
@@ -145,7 +145,8 @@ STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-API_KEY = "837e2eebbfmshd942cf451380ac6p125767jsn33e9d4abc51a"
+# API_KEY = "29339de81fmsh3e2695bddd2824ap16329djsna94d618ca237"
+API_KEY = "d31ffed9cdmshdd3b46d49113fffp17b050jsn36beb1a72767"
 
 
 
@@ -156,14 +157,7 @@ API_KEY = "837e2eebbfmshd942cf451380ac6p125767jsn33e9d4abc51a"
 
 
 
-
-
-
-
-
-
-
-# # production settings
+# # PRODUCTION SETTINGS
 
 # """
 # Django settings for sports_pro project.
@@ -180,7 +174,7 @@ API_KEY = "837e2eebbfmshd942cf451380ac6p125767jsn33e9d4abc51a"
 # from pathlib import Path
 # import os
 
-# # import dj_database_url
+# import dj_database_url
 # # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -189,13 +183,16 @@ API_KEY = "837e2eebbfmshd942cf451380ac6p125767jsn33e9d4abc51a"
 # # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-r=@*ai_l)lvce%j+rq!8pw+nlu8h33bh!&korld0p40ku*ou#l'
+# # SECRET_KEY = 'django-insecure-r=@*ai_l)lvce%j+rq!8pw+nlu8h33bh!&korld0p40ku*ou#l'
+# SECRET_KEY = os.environ.get('SECRET_KEY', default='kwdjwkdjwlhdk')
 
 # # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
+# DEBUG = False
 
-# ALLOWED_HOSTS = ["*"]
-
+# ALLOWED_HOSTS = []
+# RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+# if RENDER_EXTERNAL_HOSTNAME:    
+#     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 
 # # Application definition
@@ -207,7 +204,6 @@ API_KEY = "837e2eebbfmshd942cf451380ac6p125767jsn33e9d4abc51a"
 #     'django.contrib.sessions',
 #     'django.contrib.messages',
 #     'django.contrib.staticfiles',
-#     'whitenoise.runserver_nostatic',
 #     'fontawesome_5',
 #     'home',
 #     'soccer',
@@ -215,12 +211,14 @@ API_KEY = "837e2eebbfmshd942cf451380ac6p125767jsn33e9d4abc51a"
 #     'predictions',
 #     'basketball',
 #     'django_summernote',
+#     "corsheaders",
 # ]
 
 # MIDDLEWARE = [
 #     'django.middleware.security.SecurityMiddleware',
-#     "whitenoise.middleware.WhiteNoiseMiddleware",
+#     'whitenoise.middleware.WhiteNoiseMiddleware',
 #     'django.contrib.sessions.middleware.SessionMiddleware',
+#     "corsheaders.middleware.CorsMiddleware",
 #     'django.middleware.common.CommonMiddleware',
 #     'django.middleware.csrf.CsrfViewMiddleware',
 #     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -252,13 +250,21 @@ API_KEY = "837e2eebbfmshd942cf451380ac6p125767jsn33e9d4abc51a"
 # # Database
 # # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+# # DATABASES = {
+# #     'default': {
+# #         'ENGINE': 'django.db.backends.sqlite3',
+# #         'NAME': BASE_DIR / 'db.sqlite3',
+# #     }
+# # }
 
+# DATABASES = {
+#     'default': dj_database_url.config(        
+#     # Feel free to alter this value to suit your needs.        
+#     # default='postgresql://postgres:postgres@localhost:5432/mysite',        
+#     conn_max_age=600,
+#     conn_health_checks=True, 
+#     )
+# }
 
 
 # # Password validation
@@ -291,18 +297,23 @@ API_KEY = "837e2eebbfmshd942cf451380ac6p125767jsn33e9d4abc51a"
 
 # USE_TZ = True
 
-
+# CORS_ALLOW_ALL_ORIGINS: True
 # # Static files (CSS, JavaScript, Images)
 # # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 # STATIC_URL = 'static/'
 # # MEDIA_URL = '/images/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-# # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-# # STATICFILES_DIRS = [
-# #     BASE_DIR / 'static'
-# # ]
-# STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
+# # STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
+# STATICFILES_DIRS = [
+#     BASE_DIR / 'static'
+# ]
+
+# if not DEBUG:    # Tell Django to copy statics to the `staticfiles` directory
+#     # in your application directory on Render.
+#     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+#     # Turn on WhiteNoise storage backend that takes care of compressing static files
+#     # and creating unique names for each version so they can safely be cached forever.
+#     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # # MEDIA_ROOT = BASE_DIR / 'images'
 
@@ -312,7 +323,4 @@ API_KEY = "837e2eebbfmshd942cf451380ac6p125767jsn33e9d4abc51a"
 # DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-# API_KEY = 'bb17079e36msh74bf5d47086ca7ep13fc06jsnc033492ad114'
-
-
-
+# API_KEY = "29339de81fmsh3e2695bddd2824ap16329djsna94d618ca237"

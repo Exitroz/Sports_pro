@@ -21,8 +21,19 @@ def get_client_ip(request):
 
 def index(request):  
     dt = datetime.datetime.now()
+    # if dt.month <= 9:
+    #     month = "0"+str(dt.month)
+    # else:
+    #     month = str(dt.month)
+    
+    # if dt.day <= 9:
+    #     day = "0"+str(dt.day)
+    # else:
+    #     day = str(dt.day)
+        
     datefmt = str(dt.year)+str(dt.month)+str(dt.day)
     Fixtures = []  
+    # print(datefmt)
     
     url = "https://livescore6.p.rapidapi.com/matches/v2/list-by-league"    
     today_url = "https://livescore6.p.rapidapi.com/matches/v2/list-by-date"
@@ -55,7 +66,7 @@ def index(request):
             # print(stage.keys())
             competion_name = stage['CompN']
             events = stage['Events']
-            print('events', len(events))
+            # print('events', len(events))
             for row in events:
                 # print(row.keys())
                 # print(row['Esd'])
@@ -63,11 +74,11 @@ def index(request):
                 event_year = int(str(event_date)[0:4])
                 event_month = int(str(event_date)[4:6])
                 event_day = int(str(event_date)[6:8])
-                # print(event_year, 'ED',event_day, 'DTD',dt.day, 'EM',event_month, 'DTM',dt.month)
+                # print(event_year, 'ED',event_day, 'DTD',day, 'EM',event_month, 'DTM',month)
                 
                 if  event_year >= dt.year and event_month == dt.month :
                     Fixtures.append(row)
-            
+        print(Fixtures)    
         context = {
             'stages':stages,
             'today_data':today_data,
@@ -259,6 +270,8 @@ def league_events(request, country: str, league: str):
                 competion_name = stage['CompN']
             except:
                 competion_name = stage['Snm']
+            
+            country_name = stage['Cnm']
                 
             events = stage['Events']
             
@@ -292,6 +305,7 @@ def league_events(request, country: str, league: str):
             'Fixtures':reversed(Fixtures),
             'Results':reversed(Results),
             'Competion_name':competion_name,
+            'country_name': country_name,
         }
     else:
         context={
@@ -349,8 +363,10 @@ def single_result(request, Eid: int):
     url = "https://livescore6.p.rapidapi.com/matches/v2/get-statistics"
     board_url = "https://livescore6.p.rapidapi.com/matches/v2/get-scoreboard"
     info_url = "https://livescore6.p.rapidapi.com/matches/v2/get-info"
+    lineUps_url = "https://livescore6.p.rapidapi.com/matches/v2/get-lineups" 
     
     querystring = {"Category":"soccer","Eid":Eid}
+    
     
     headers = {
         "X-RapidAPI-Key": settings.API_KEY,
@@ -360,19 +376,23 @@ def single_result(request, Eid: int):
     response = requests.get(url, headers=headers, params=querystring)
     board_response = requests.get(board_url, headers=headers, params=querystring)
     info_response = requests.get(info_url, headers=headers, params=querystring)
+    lineUps_response = requests.get(lineUps_url, headers=headers, params=querystring)
     
     data = response.json()
-    stat = data['Stat']
+
     try:
+        stat = data['Stat']
         pstat = data['PStat']
     except:
+        stat = []
         pstat = []
     
     b_data = board_response.json()
-    print(b_data['Incs-s'])
+    # print(b_data['Incs-s'])
 
     
     info_data = info_response.json()
+    lineups_data = lineUps_response.json()
     
     context = {
         'info_data':info_data,
@@ -380,12 +400,8 @@ def single_result(request, Eid: int):
         'pstat':pstat,
         'b_data':b_data,
         'incs_s':b_data['Incs-s'],
-    }
-    context = {
-        'stat':stat,
-        'pstat':pstat,
-        'b_data':b_data,
-
+        'line_T1':lineups_data['Lu'][0]['Ps'],
+        'line_T2':lineups_data['Lu'][1]['Ps']
     }
     return render(request, template_name, context)
 
