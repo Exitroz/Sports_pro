@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block content %}
-{% include 'header.html'%}
+{% include 'home/header.html'%}
 
  <!-- Section Title -->
  <div class="section-title single-result" style="background:url({% static 'img/locations/3.jpg' %})">
@@ -39,19 +39,33 @@
                         {% for r in incs_s.1 %}
                         {% if r.Incs %}
                         {% for i in r.Incs %}
+                        {% if i.Sor == 1 %}
+                        {% if forloop.counter0 > 0 %}
+                        {% if i.Min == r.forloop.previtem.Min %}
+                        <li>{{i.Pn}} {{i.Min}}' Asst <i class="fa fa-futbol-o" aria-hidden="true"></i></li>
+                        {% endif %}
+                        {% else %}
                         <li>{{i.Pn}} {{i.Min}}' <i class="fa fa-futbol-o" aria-hidden="true"></i></li>
+                        {% endif %}
+                        {% endif %}
                         {% endfor %}
                         {% else %}
+                        {% if r.Sor == 1 %}
                         <li>{{r.Pn}} {{r.Min}}' <i class="fa fa-futbol-o" aria-hidden="true"></i></li>
+                        {% endif %}
                         {% endif %}
                         {% endfor %}
                         {% for r in incs_s.2 %}
                         {% if r.Incs %}
                         {% for i in r.Incs %}
+                        {% if i.Sor == 1 %}
                         <li>{{i.Pn}} {{i.Min}}' <i class="fa fa-futbol-o" aria-hidden="true"></i></li>
+                        {% endif %}
                         {% endfor %}
                         {% else %}
+                        {% if r.Sor == 1 %}
                         <li>{{r.Pn}} {{r.Min}}' <i class="fa fa-futbol-o" aria-hidden="true"></i></li>
+                        {% endif %}
                         {% endif %}
                         {% endfor %}
                         {% comment %} <li>{{incs_s.1.0.Pn}} {{incs_s.1.0.Min}}' <i class="fa fa-futbol-o" aria-hidden="true"></i></li> {% endcomment %}
@@ -82,19 +96,27 @@
                         {% for r in incs_s.1 %}
                         {% if r.Incs %}
                         {% for i in r.Incs %}
+                        {% if i.Sor == 0 %}
                         <li>{{i.Pn}} {{i.Min}}' <i class="fa fa-futbol-o" aria-hidden="true"></i></li>
+                        {% endif %}
                         {% endfor %}
                         {% else %}
+                        {% if r.Sor == 0 %}
                         <li>{{r.Pn}} {{r.Min}}' <i class="fa fa-futbol-o" aria-hidden="true"></i></li>
+                        {% endif %}
                         {% endif %}
                         {% endfor %}
                         {% for r in incs_s.2 %}
                         {% if r.Incs %}
                         {% for i in r.Incs %}
+                        {% if i.Sor == 0 %}
                         <li>{{i.Pn}} {{i.Min}}' <i class="fa fa-futbol-o" aria-hidden="true"></i></li>
+                        {% endif %}
                         {% endfor %}
                         {% else %}
+                        {% if r.Sor == 0 %}
                         <li>{{r.Pn}} {{r.Min}}' <i class="fa fa-futbol-o" aria-hidden="true"></i></li>
+                        {% endif %}
                         {% endif %}
                         {% endfor %}
                     </ul>
@@ -170,7 +192,7 @@
                 <div class="col-xl-12 col-md-12">
                     <!-- Nav Tabs -->
                     <ul class="nav nav-tabs" id="myTab">
-                        <li class="active"><a href="#summary" data-toggle="tab">Summary</a></li>
+                        <li class="active"><a href="#summary" data-toggle="tab">Line Ups</a></li>
                         <li><a href="#stats" data-toggle="tab">Mach Stats</a></li>
                     </ul>
                     <!-- End Nav Tabs -->
@@ -181,172 +203,82 @@
                     <div class="tab-content">
                         <!-- Tab One - Sumary -->
                         <div class="tab-pane active" id="summary">
-
-                            <div class="panel-box padding-b">
-                                <div class="titles">
-                                    <h4>Match Summary</h4>
+                            <div class="row match-stats">
+                                <div class="col-lg-5">
+                                    <div class="team">
+                                        <img src="https://lsm-static-prod.livescore.com/medium/{{b_data.T1.0.Img}}" alt="icon">
+                                        <a href="#">{{b_data.T1.0.Nm}}</a>
+                                    </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-lg-12 col-xl-4">
-                                        <img src="{% static 'img/clubs-teams/single-team.jpg' %}" alt="">
+
+                                <div class="col-lg-2">
+                                    <div class="result-match">
+                                        VS
                                     </div>
+                                </div>
 
-                                    <div class="col-lg-12 col-xl-8">
-                                        <p>The Colombia national football team (Spanish: Selección de fútbol de Colombia) represents Colombia in international football competitions and is overseen by the Colombian Football Federation. It is a member of the CONMEBOL and is currently ranked thirteenth in the FIFA World Rankings.[3] The team are nicknamed Los Cafeteros due to the coffee production in their country.</p>
-
-                                        <p>Since the mid-1980s, the national team has been a symbol fighting the country's negative reputation. This has made the sport popular and made the national team a sign of nationalism, pride and passion for many Colombians worldwide.</p>
-
-                                        <p> It is a member of the CONMEBOL and is currently ranked thirteenth in the FIFA World Rankings.[3] The team are nicknamed Los Cafeteros due to the coffee production in their country</p>
+                                <div class="col-lg-5">
+                                    <div class="team right">
+                                        <a href="3">{{b_data.T2.0.Nm}}</a>
+                                        <img src="https://lsm-static-prod.livescore.com/medium/{{b_data.T2.0.Img}}" alt="icon">
                                     </div>
+                                </div>
+
+                                <div class="col-lg-12">
+                                    
+                                    {% comment %} <div class="row">
+
+                                        <div class="col-lg-4">
+                                            {% for line in line_T1 %}
+                                            <ul>
+                                                <li>
+                                                    <span class="left"> </span>
+                                                    <span class="center"> </span>
+                                                    <span class="right">{{line.Fn}} {{line.Ln}}</span>
+                                                </li>
+                                            </ul>
+                                            {% endfor %}
+                                        </div>
+                                        <div class="col-lg-4">
+                                            {% for line in line_T1 %}
+                                            <ul>
+                                                <li>
+                                                    <span class="left"> </span>
+                                                    <span class="center">{{line.Pon}}</span>
+                                                    <span class="right"> </span>
+                                                </li>
+                                            </ul>
+                                            {% endfor %}
+                                        </div>
+                                        
+                                        <div class="col-lg-4">
+                                            {% for line in line_T2 %}
+                                            <ul>
+                                                <li>
+                                                   
+                                                    <span class="left">{{line.Fn}} {{line.Ln}}</span>
+                                        
+                                                </li>
+                                            </ul>
+                                            {% endfor %}
+                                        </div>
+                                    </div> {% endcomment %}
+                                    
+                                    <!-- This part is yet to be tested by me the upper part works well in large screens but not for mobile -->
+                                    <ul>
+                                        <li>
+                                            {% for line in line_T1 %}
+                                            <span class="left">{{line.Fn}} {{line.Ln}}</span>
+                                            <span class="center">{{line.Pon}}</span>
+                                            {% endfor %}
+                                            {% for line in line_T2 %}
+                                            <span class="right">{{line.Fn}} {{line.Ln}}</span>
+                                            {% endfor %}
+                                        </li>
+                                    </ul>
+
                                 </div>
                             </div>
-
-                            <!--Items Club News -->
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <h3 class="clear-title">Match News</h3>
-                                </div>
-
-                                <!--Item Club News -->
-                                <div class="col-lg-6 col-xl-3">
-                                    <!-- Widget Text-->
-                                    <div class="panel-box">
-                                        <div class="titles no-margin">
-                                            <h4><a href="#">World football's dates.</a></h4>
-                                        </div>
-                                        <a href="#"><img src="{% static 'img/blog/1.jpg' %}" alt=""></a>
-                                        <div class="row">
-                                            <div class="info-panel">
-                                                <p>Fans from all around the world can apply for 2018 FIFA World Cup™ tickets as the first window of sales.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Widget Text-->
-                                </div>
-                                <!--End Item Club News -->
-
-                                <!--Item Club News -->
-                                <div class="col-lg-6 col-xl-3">
-                                    <!-- Widget Text-->
-                                    <div class="panel-box">
-                                        <div class="titles no-margin">
-                                            <h4><a href="#">Mbappe’s year to remember</a></h4>
-                                        </div>
-                                        <a href="#"><img src="{% static 'img/blog/2.jpg' %}" alt=""></a>
-                                        <div class="row">
-                                            <div class="info-panel">
-                                                <p>Tickets may be purchased online by using Visa payment cards or Visa Checkout. Visa is the official.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Widget Text-->
-                                </div>
-                                <!--End Item Club News -->
-
-                                <!--Item Club News -->
-                                <div class="col-lg-6 col-xl-3">
-                                    <!-- Widget Text-->
-                                    <div class="panel-box">
-                                        <div class="titles no-margin">
-                                            <h4><a href="#">Egypt are one family</a></h4>
-                                        </div>
-                                        <a href="#"><img src="{% static 'img/blog/3.jpg' %}" alt=""></a>
-                                        <div class="row">
-                                            <div class="info-panel">
-                                                <p>Successful applicants who have applied for supporter tickets and conditional supporter tickets will.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Widget Text-->
-                                </div>
-                                <!--End Item Club News -->
-
-                                <!--Item Club News -->
-                                <div class="col-lg-6 col-xl-3">
-                                    <!-- Widget Text-->
-                                    <div class="panel-box">
-                                        <div class="titles no-margin">
-                                            <h4><a href="#">Egypt are one family</a></h4>
-                                        </div>
-                                        <a href="#"><img src="{% static 'img/blog/4.jpg' %}" alt=""></a>
-                                        <div class="row">
-                                            <div class="info-panel">
-                                                <p>Successful applicants who have applied for supporter tickets and conditional supporter tickets will.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- End Widget Text-->
-                                </div>
-                                <!--End Item Club News -->
-
-                            </div>
-                            <!--End Items Club News -->
-
-
-                            <!--Items Club video -->
-                            <div class="row no-line-height">
-                                <div class="col-md-12">
-                                    <h3 class="clear-title">Match Videos</h3>
-                                </div>
-
-                                <!--Item Club News -->
-                                <div class="col-lg-6 col-xl-4">
-                                    <!-- Widget Text-->
-                                    <div class="panel-box">
-                                        <div class="titles no-margin">
-                                            <h4><a href="#">Eliminatory to the world.</a></h4>
-                                        </div>
-                                        <iframe class="video" src="https://www.youtube.com/embed/Ln8rXkeeyP0" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-                                    </div>
-                                    <!-- End Widget Text-->
-                                </div>
-                                <!--End Item Club News -->
-
-                                <!--Item Club News -->
-                                <div class="col-lg-6 col-xl-4">
-                                    <!-- Widget Text-->
-                                    <div class="panel-box">
-                                        <div class="titles no-margin">
-                                            <h4><a href="#">Colombia classification</a></h4>
-                                        </div>
-                                        <iframe class="video" src="https://www.youtube.com/embed/Z5cackyUfgk" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-                                    </div>
-                                    <!-- End Widget Text-->
-                                </div>
-                                <!--End Item Club News -->
-
-                                <!--Item Club News -->
-                                <div class="col-lg-6 col-xl-4">
-                                    <!-- Widget Text-->
-                                    <div class="panel-box">
-                                        <div class="titles no-margin">
-                                            <h4><a href="#">World Cup goal</a></h4>
-                                        </div>
-                                        <iframe class="video" src="https://www.youtube.com/embed/hW3hnUoUS0k" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-                                    </div>
-                                    <!-- End Widget Text-->
-                                </div>
-                                <!--End Item Club News -->
-                            </div>
-                            <!--End Items Club video -->
-
-                            <!--Sponsors CLub -->
-                            <div class="row no-line-height">
-                                    <div class="col-md-12">
-                                        <h3 class="clear-title">Match Sponsors</h3>
-                                    </div>
-                            </div>
-                            <!--End Sponsors CLub -->
-
-                            <ul class="sponsors-carousel">
-                                <li><a href="#"><img src="{% static 'img/sponsors/1.png' %}" alt=""></a></li>
-                                <li><a href="#"><img src="{% static 'img/sponsors/2.png' %}" alt=""></a></li>
-                                <li><a href="#"><img src="{% static 'img/sponsors/3.png' %}" alt=""></a></li>
-                                <li><a href="#"><img src="{% static 'img/sponsors/4.png' %}" alt=""></a></li>
-                                <li><a href="#"><img src="{% static 'img/sponsors/5.png' %}" alt=""></a></li>
-                                <li><a href="#"><img src="{% static 'img/sponsors/3.png' %}" alt=""></a></li>
-                            </ul>
-
                         </div>
                         <!-- Tab One - Sumary -->
 

@@ -179,6 +179,7 @@ API_KEY = "837e2eebbfmshd942cf451380ac6p125767jsn33e9d4abc51a"
 
 # from pathlib import Path
 # import os
+# import dj_database_url
 
 # # import dj_database_url
 # # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -189,14 +190,16 @@ API_KEY = "837e2eebbfmshd942cf451380ac6p125767jsn33e9d4abc51a"
 # # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-r=@*ai_l)lvce%j+rq!8pw+nlu8h33bh!&korld0p40ku*ou#l'
+# SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
 
 # # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
+# DEBUG = 'RENDER' not in os.environ
 
-# ALLOWED_HOSTS = ["*"]
+# ALLOWED_HOSTS = []
 
-
+# RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+# if RENDER_EXTERNAL_HOSTNAME:
+#     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 
 # # Application definition
 
@@ -219,7 +222,7 @@ API_KEY = "837e2eebbfmshd942cf451380ac6p125767jsn33e9d4abc51a"
 
 # MIDDLEWARE = [
 #     'django.middleware.security.SecurityMiddleware',
-#     "whitenoise.middleware.WhiteNoiseMiddleware",
+#     'whitenoise.middleware.WhiteNoiseMiddleware',
 #     'django.contrib.sessions.middleware.SessionMiddleware',
 #     'django.middleware.common.CommonMiddleware',
 #     'django.middleware.csrf.CsrfViewMiddleware',
@@ -252,13 +255,16 @@ API_KEY = "837e2eebbfmshd942cf451380ac6p125767jsn33e9d4abc51a"
 # # Database
 # # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+# # Database
+# # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         # Feel free to alter this value to suit your needs.
+#         default='postgresql://postgres:postgres@localhost:5432/mysite',
+#         conn_max_age=600
+#     )
+# }
 
 
 # # Password validation
@@ -295,14 +301,14 @@ API_KEY = "837e2eebbfmshd942cf451380ac6p125767jsn33e9d4abc51a"
 # # Static files (CSS, JavaScript, Images)
 # # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-# STATIC_URL = 'static/'
-# # MEDIA_URL = '/images/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-# # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-# # STATICFILES_DIRS = [
-# #     BASE_DIR / 'static'
-# # ]
-# STATICFILES_STORAGE="whitenoise.storage.CompressedManifestStaticFilesStorage"
+# if not DEBUG:
+#     # Tell Django to copy statics to the `staticfiles` directory
+#     # in your application directory on Render.
+#     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+#     # Turn on WhiteNoise storage backend that takes care of compressing static files
+#     # and creating unique names for each version so they can safely be cached forever.
+#     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # # MEDIA_ROOT = BASE_DIR / 'images'
 
