@@ -184,6 +184,34 @@
             {% include 'footer.html'%}
             <!-- End footer-->
         </div>
+    
+        <script>
+            function searchList() {
+                // Retrieve the search keyword
+                var input = document.getElementById('searchInput');
+                var filter = input.value.toUpperCase();
+                
+                // Retrieve the unordered list and list items
+                var ul = document.getElementById('navlist');
+                var li = ul.getElementsByTagName('li');
+                
+                // Loop through all list items and hide those that don't match the search query
+                for (var i = 0; i < li.length; i++) {
+                    var item = li[i];
+                    var textValue = item.textContent || item.innerText;
+                
+                    if (textValue.toUpperCase().indexOf(filter) > -1) {
+                    item.style.display = '';
+                    } else {
+                    item.style.display = 'none';
+                    }
+                }
+                }
+                
+                // Attach an event listener to the search input
+                var input = document.getElementById('searchInput');
+                input.addEventListener('input', searchList);
+        </script>      
 
         {% endblock %}
         <!-- End layout-->

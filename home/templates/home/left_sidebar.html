@@ -60,7 +60,24 @@
             display: none;
         }
     }
+
+    #searchInput {
+        width: 130px;
+        margin: 5px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #222;
+    }
+        
+    #searchInput::placeholder {
+        color: #fff;
+    }
+
 </style> 
+
 <div class="col-lg-12 side1" >
    <div style="border: 1px solid white;">
        {% include "leagues_navbar.html" %}
@@ -120,9 +137,9 @@
     </div> {% endcomment %}
     <!-- End Point Table -->
     <div style="background-color: #222;">
-        <ul class="navbar-nav mr-auto" >
-  
-            
+        <input type="text" id="searchInput" placeholder="Search" >
+
+        <ul class="navbar-nav mr-auto" id='navlist'>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style=" ">
